@@ -17,6 +17,10 @@
 		0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */; };
 		0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */; };
 		0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */; };
+		0D8B5A3B228FD275001D1A44 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A39228FD275001D1A44 /* QuizViewController.swift */; };
+		0D8B5A3C228FD275001D1A44 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A3A228FD275001D1A44 /* QuizViewController.xib */; };
+		0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */; };
+		0D8B5A40228FD2FD001D1A44 /* ResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A3E228FD2FD001D1A44 /* ResultViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleViewController.xib; sourceTree = "<group>"; };
 		0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
+		0D8B5A39228FD275001D1A44 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
+		0D8B5A3A228FD275001D1A44 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
+		0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		0D8B5A3E228FD2FD001D1A44 /* ResultViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +113,9 @@
 			children = (
 				0D8B5A33228FD1AB001D1A44 /* Extension */,
 				0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */,
-				0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */,
-				0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */,
+				0D8B5A36228FD235001D1A44 /* Title */,
+				0D8B5A37228FD242001D1A44 /* Quiz */,
+				0D8B5A38228FD24C001D1A44 /* Result */,
 				0D8B5A03228FADE4001D1A44 /* ViewController.swift */,
 				0D8B5A05228FADE4001D1A44 /* Main.storyboard */,
 				0D8B5A08228FADE6001D1A44 /* Assets.xcassets */,
@@ -140,6 +149,33 @@
 				0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0D8B5A36228FD235001D1A44 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */,
+				0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		0D8B5A37228FD242001D1A44 /* Quiz */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A39228FD275001D1A44 /* QuizViewController.swift */,
+				0D8B5A3A228FD275001D1A44 /* QuizViewController.xib */,
+			);
+			path = Quiz;
+			sourceTree = "<group>";
+		};
+		0D8B5A38228FD24C001D1A44 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */,
+				0D8B5A3E228FD2FD001D1A44 /* ResultViewController.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +282,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8B5A3C228FD275001D1A44 /* QuizViewController.xib in Resources */,
+				0D8B5A40228FD2FD001D1A44 /* ResultViewController.xib in Resources */,
 				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
@@ -275,9 +313,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */,
+				0D8B5A3B228FD275001D1A44 /* QuizViewController.swift in Sources */,
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
+				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

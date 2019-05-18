@@ -1,5 +1,5 @@
 //
-//  TitleViewController.swift
+//  QuizViewController.swift
 //  WhoLeg
 //
 //  Created by 佐川晴海 on 2019/05/18.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TitleViewController: UIViewController {
+class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
