@@ -24,6 +24,7 @@
 		0D8B5A44228FD3D2001D1A44 /* QuizView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A43228FD3D2001D1A44 /* QuizView.xib */; };
 		0D8B5A46228FE01F001D1A44 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A45228FE01F001D1A44 /* Resource */; };
 		0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A48228FE0EA001D1A44 /* QuizInfo.swift */; };
+		0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A4C228FF0D1001D1A44 /* TitleModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		0D8B5A43228FD3D2001D1A44 /* QuizView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizView.xib; sourceTree = "<group>"; };
 		0D8B5A45228FE01F001D1A44 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
 		0D8B5A48228FE0EA001D1A44 /* QuizInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizInfo.swift; sourceTree = "<group>"; };
+		0D8B5A4C228FF0D1001D1A44 /* TitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */,
+				0D8B5A4C228FF0D1001D1A44 /* TitleModel.swift */,
 				0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */,
 			);
 			path = Title;
@@ -335,6 +338,7 @@
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
 				0D8B5A42228FD3B7001D1A44 /* QuizView.swift in Sources */,
+				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
