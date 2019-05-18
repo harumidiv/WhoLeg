@@ -5,7 +5,8 @@
 ## Description
 「だれのあし」はいろんな生き物の足の画像からそれがなんであるかを当てるクイズアプリです。
 
-https://user-images.githubusercontent.com/42649032/57971912-4687b200-79cf-11e9-85cd-f256625a5a3b.png
+
+![icon](https://user-images.githubusercontent.com/42649032/57971967-dfb6c880-79cf-11e9-8238-0d6ced3f3de5.png)
 
 
 ## Requirements
