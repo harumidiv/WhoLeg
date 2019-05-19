@@ -30,10 +30,16 @@ class QuizViewController: UIViewController {
             optionD.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
         }
     }
+    @IBOutlet weak var resultLabel: UILabel! {
+        didSet {
+            resultLabel.text = ""
+        }
+    }
     
     var quizData: QuizInfo
     
     // MARK: - Initializer
+    
     init(quizData: QuizInfo) {
         self.quizData = quizData
         super.init(nibName: String(describing: QuizViewController.self), bundle: nil)
@@ -43,6 +49,7 @@ class QuizViewController: UIViewController {
     }
     
     // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         optionA.setTitle(quizData.quiz[0].choice.a, for: .normal)
@@ -50,7 +57,6 @@ class QuizViewController: UIViewController {
         optionC.setTitle(quizData.quiz[0].choice.c, for: .normal)
         optionD.setTitle(quizData.quiz[0].choice.d, for: .normal)
         image.image = UIImage(named: quizData.quiz[0].image)
-        
     }
     
     // MARK: - Event
@@ -58,8 +64,13 @@ class QuizViewController: UIViewController {
     @objc func tapAnswer(_ sender: UIButton){
         if quizData.quiz[0].answer == sender.titleLabel?.text {
             print("正解")
+            resultLabel.text = "⚪︎"
+            resultLabel.font = UIFont.systemFont(ofSize: 400)
+            resultLabel.textColor = UIColor(appColor: .c1)
         } else {
             print("不正解")
+            resultLabel.text = "✖︎"
+            resultLabel.textColor =  UIColor(appColor: .c2)
         }
     }
 }

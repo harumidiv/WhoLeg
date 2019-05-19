@@ -17,6 +17,7 @@
                 <outlet property="optionB" destination="gni-dG-Ply" id="Qor-S3-G5R"/>
                 <outlet property="optionC" destination="hk4-Tu-pTo" id="Myb-0M-GpK"/>
                 <outlet property="optionD" destination="wCI-eO-hFO" id="Idc-GT-w8h"/>
+                <outlet property="resultLabel" destination="NVo-Ni-Ibk" id="hve-JU-JzF"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,6 +45,12 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-ei-cJw">
                     <rect key="frame" x="16" y="44" width="382" height="455.5"/>
                 </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✖︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-Ni-Ibk">
+                    <rect key="frame" x="16" y="14" width="382" height="477.5"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="400"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -62,9 +69,12 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wCI-eO-hFO" secondAttribute="trailing" constant="20" id="fAM-yq-mt2"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S8U-0b-jfB" secondAttribute="trailing" constant="20" id="fea-2P-895"/>
                 <constraint firstItem="S8U-0b-jfB" firstAttribute="top" secondItem="QdE-ei-cJw" secondAttribute="bottom" constant="16" id="jKb-v8-bfU"/>
+                <constraint firstItem="NVo-Ni-Ibk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-30" id="kXd-s6-v6f"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NVo-Ni-Ibk" secondAttribute="trailing" constant="16" id="lBJ-fd-VYh"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gni-dG-Ply" secondAttribute="trailing" constant="20" id="nUA-1b-eBC"/>
                 <constraint firstItem="hk4-Tu-pTo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="pWq-UT-go8"/>
                 <constraint firstItem="hk4-Tu-pTo" firstAttribute="top" secondItem="gni-dG-Ply" secondAttribute="bottom" constant="20" id="rXb-IH-fXC"/>
+                <constraint firstItem="NVo-Ni-Ibk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="rb0-G6-cc5"/>
                 <constraint firstItem="gni-dG-Ply" firstAttribute="top" secondItem="S8U-0b-jfB" secondAttribute="bottom" constant="20" id="vmg-Yk-tYJ"/>
                 <constraint firstItem="wCI-eO-hFO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="wji-Ud-EVH"/>
             </constraints>
