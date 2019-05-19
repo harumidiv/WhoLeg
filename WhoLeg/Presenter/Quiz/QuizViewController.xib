@@ -27,19 +27,19 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCI-eO-hFO" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
-                    <rect key="frame" x="10" y="790.5" width="384" height="71.5"/>
+                    <rect key="frame" x="10" y="790.5" width="394" height="71.5"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-0b-jfB" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
-                    <rect key="frame" x="10" y="515.5" width="384" height="71.5"/>
+                    <rect key="frame" x="10" y="515.5" width="394" height="71.5"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gni-dG-Ply" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
-                    <rect key="frame" x="10" y="607" width="384" height="71.5"/>
+                    <rect key="frame" x="10" y="607" width="394" height="71.5"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-Tu-pTo" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
-                    <rect key="frame" x="10" y="698.5" width="384" height="72"/>
+                    <rect key="frame" x="10" y="698.5" width="394" height="72"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-ei-cJw">
@@ -61,17 +61,17 @@
                 <constraint firstItem="gni-dG-Ply" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="GsR-WZ-cox"/>
                 <constraint firstItem="S8U-0b-jfB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="N1A-an-cJM"/>
                 <constraint firstItem="wCI-eO-hFO" firstAttribute="top" secondItem="hk4-Tu-pTo" secondAttribute="bottom" constant="20" id="S1E-Zp-P3P"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hk4-Tu-pTo" secondAttribute="trailing" constant="20" id="VDC-kH-Xm4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hk4-Tu-pTo" secondAttribute="trailing" constant="10" id="VDC-kH-Xm4"/>
                 <constraint firstItem="QdE-ei-cJw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VUu-2A-Mok"/>
                 <constraint firstItem="wCI-eO-hFO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Zms-MF-Y7D"/>
                 <constraint firstItem="gni-dG-Ply" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="azU-T5-yf5"/>
                 <constraint firstItem="S8U-0b-jfB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="b5r-hZ-pUp"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wCI-eO-hFO" secondAttribute="trailing" constant="20" id="fAM-yq-mt2"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S8U-0b-jfB" secondAttribute="trailing" constant="20" id="fea-2P-895"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wCI-eO-hFO" secondAttribute="trailing" constant="10" id="fAM-yq-mt2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S8U-0b-jfB" secondAttribute="trailing" constant="10" id="fea-2P-895"/>
                 <constraint firstItem="S8U-0b-jfB" firstAttribute="top" secondItem="QdE-ei-cJw" secondAttribute="bottom" constant="16" id="jKb-v8-bfU"/>
                 <constraint firstItem="NVo-Ni-Ibk" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="-30" id="kXd-s6-v6f"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NVo-Ni-Ibk" secondAttribute="trailing" constant="16" id="lBJ-fd-VYh"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gni-dG-Ply" secondAttribute="trailing" constant="20" id="nUA-1b-eBC"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gni-dG-Ply" secondAttribute="trailing" constant="10" id="nUA-1b-eBC"/>
                 <constraint firstItem="hk4-Tu-pTo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="pWq-UT-go8"/>
                 <constraint firstItem="hk4-Tu-pTo" firstAttribute="top" secondItem="gni-dG-Ply" secondAttribute="bottom" constant="20" id="rXb-IH-fXC"/>
                 <constraint firstItem="NVo-Ni-Ibk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="rb0-G6-cc5"/>

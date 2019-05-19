@@ -26,7 +26,6 @@ class QuizOptionButton: UIButton {
     }
     private func setupAttribute(){
         layer.cornerRadius = self.frame.height/2
-        layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMaxXMinYCorner]
         backgroundColor = UIColor(hex: "#F4B400")
         setTitleColor(.white, for: .normal)
         titleLabel?.font = UIFont.boldSystemFont(ofSize: 40.0)
