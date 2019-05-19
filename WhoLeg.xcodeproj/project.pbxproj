@@ -24,6 +24,8 @@
 		0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A4C228FF0D1001D1A44 /* TitleModel.swift */; };
 		0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A5022914FC8001D1A44 /* QuizViewController.swift */; };
 		0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A5122914FC8001D1A44 /* QuizViewController.xib */; };
+		0D8B5A57229150B3001D1A44 /* QuizOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A56229150B3001D1A44 /* QuizOptionButton.swift */; };
+		0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A58229150BD001D1A44 /* QuizOptionButton.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,8 @@
 		0D8B5A4C228FF0D1001D1A44 /* TitleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleModel.swift; sourceTree = "<group>"; };
 		0D8B5A5022914FC8001D1A44 /* QuizViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewController.swift; sourceTree = "<group>"; };
 		0D8B5A5122914FC8001D1A44 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
+		0D8B5A56229150B3001D1A44 /* QuizOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOptionButton.swift; sourceTree = "<group>"; };
+		0D8B5A58229150BD001D1A44 /* QuizOptionButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizOptionButton.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,9 +125,7 @@
 				0D8B5A33228FD1AB001D1A44 /* Extension */,
 				0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */,
 				0D8B5A47228FE0DB001D1A44 /* Domain */,
-				0D8B5A36228FD235001D1A44 /* Title */,
-				0D8B5A37228FD242001D1A44 /* Quiz */,
-				0D8B5A38228FD24C001D1A44 /* Result */,
+				0D8B5A5522915071001D1A44 /* Presenter */,
 				0D8B5A03228FADE4001D1A44 /* ViewController.swift */,
 				0D8B5A05228FADE4001D1A44 /* Main.storyboard */,
 				0D8B5A08228FADE6001D1A44 /* Assets.xcassets */,
@@ -193,6 +195,26 @@
 				0D8B5A48228FE0EA001D1A44 /* QuizInfo.swift */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		0D8B5A5422915055001D1A44 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A56229150B3001D1A44 /* QuizOptionButton.swift */,
+				0D8B5A58229150BD001D1A44 /* QuizOptionButton.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		0D8B5A5522915071001D1A44 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A5422915055001D1A44 /* CustomView */,
+				0D8B5A36228FD235001D1A44 /* Title */,
+				0D8B5A37228FD242001D1A44 /* Quiz */,
+				0D8B5A38228FD24C001D1A44 /* Result */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,6 +324,7 @@
 				0D8B5A40228FD2FD001D1A44 /* ResultViewController.xib in Resources */,
 				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A46228FE01F001D1A44 /* Resource in Resources */,
+				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
@@ -330,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D8B5A57229150B3001D1A44 /* QuizOptionButton.swift in Sources */,
 				0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */,
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
