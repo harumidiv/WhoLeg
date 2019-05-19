@@ -10,10 +10,26 @@ import UIKit
 
 class QuizViewController: UIViewController {
     @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var optionA: QuizOptionButton!
-    @IBOutlet weak var optionB: QuizOptionButton!
-    @IBOutlet weak var optionC: QuizOptionButton!
-    @IBOutlet weak var optionD: QuizOptionButton!
+    @IBOutlet weak var optionA: QuizOptionButton! {
+        didSet {
+            optionA.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
+        }
+    }
+    @IBOutlet weak var optionB: QuizOptionButton!{
+        didSet {
+            optionB.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
+        }
+    }
+    @IBOutlet weak var optionC: QuizOptionButton!{
+        didSet {
+            optionC.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
+        }
+    }
+    @IBOutlet weak var optionD: QuizOptionButton!{
+        didSet {
+            optionD.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
+        }
+    }
     
     var quizData: QuizInfo
     
@@ -35,5 +51,15 @@ class QuizViewController: UIViewController {
         optionD.setTitle(quizData.quiz[0].choice.d, for: .normal)
         image.image = UIImage(named: quizData.quiz[0].image)
         
+    }
+    
+    // MARK: - Event
+    
+    @objc func tapAnswer(_ sender: UIButton){
+        if quizData.quiz[0].answer == sender.titleLabel?.text {
+            print("正解")
+        } else {
+            print("不正解")
+        }
     }
 }
