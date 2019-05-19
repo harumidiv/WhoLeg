@@ -26,6 +26,8 @@
 		0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A5122914FC8001D1A44 /* QuizViewController.xib */; };
 		0D8B5A57229150B3001D1A44 /* QuizOptionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A56229150B3001D1A44 /* QuizOptionButton.swift */; };
 		0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A58229150BD001D1A44 /* QuizOptionButton.xib */; };
+		0D8B5A6322919509001D1A44 /* QuizPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A6222919509001D1A44 /* QuizPresenter.swift */; };
+		0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A6422919513001D1A44 /* QuizModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +73,8 @@
 		0D8B5A5122914FC8001D1A44 /* QuizViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizViewController.xib; sourceTree = "<group>"; };
 		0D8B5A56229150B3001D1A44 /* QuizOptionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOptionButton.swift; sourceTree = "<group>"; };
 		0D8B5A58229150BD001D1A44 /* QuizOptionButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizOptionButton.xib; sourceTree = "<group>"; };
+		0D8B5A6222919509001D1A44 /* QuizPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizPresenter.swift; sourceTree = "<group>"; };
+		0D8B5A6422919513001D1A44 /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 			children = (
 				0D8B5A5022914FC8001D1A44 /* QuizViewController.swift */,
 				0D8B5A5122914FC8001D1A44 /* QuizViewController.xib */,
+				0D8B5A6222919509001D1A44 /* QuizPresenter.swift */,
+				0D8B5A6422919513001D1A44 /* QuizModel.swift */,
 			);
 			path = Quiz;
 			sourceTree = "<group>";
@@ -356,9 +362,11 @@
 				0D8B5A57229150B3001D1A44 /* QuizOptionButton.swift in Sources */,
 				0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */,
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
+				0D8B5A6322919509001D1A44 /* QuizPresenter.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
 				0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */,
 				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
+				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,

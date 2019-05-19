@@ -37,6 +37,10 @@ class QuizViewController: UIViewController {
     }
     
     var quizData: QuizInfo
+    lazy var rand = Int.random(in: 0..<quizData.quiz.count)
+    fileprivate lazy var presenter: QuizPresenter  = {
+        return QuizPresenterImpl(model: QuizModelImpl(), output: self)
+    }()
     
     // MARK: - Initializer
     
@@ -52,25 +56,54 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        optionA.setTitle(quizData.quiz[0].choice.a, for: .normal)
-        optionB.setTitle(quizData.quiz[0].choice.b, for: .normal)
-        optionC.setTitle(quizData.quiz[0].choice.c, for: .normal)
-        optionD.setTitle(quizData.quiz[0].choice.d, for: .normal)
-        image.image = UIImage(named: quizData.quiz[0].image)
+        setQuizData()
+    }
+    
+    // MARK: - PrivateMethod
+    
+    private func setQuizData(){
+        optionA.setTitle(quizData.quiz[rand].choice.a, for: .normal)
+        optionB.setTitle(quizData.quiz[rand].choice.b, for: .normal)
+        optionC.setTitle(quizData.quiz[rand].choice.c, for: .normal)
+        optionD.setTitle(quizData.quiz[rand].choice.d, for: .normal)
+        image.image = UIImage(named: quizData.quiz[rand].image)
     }
     
     // MARK: - Event
     
     @objc func tapAnswer(_ sender: UIButton){
-        if quizData.quiz[0].answer == sender.titleLabel?.text {
-            print("正解")
+        presenter.answerCheck(select: sender.titleLabel!.text!, answer: quizData.quiz[rand].answer)
+    }
+    
+}
+
+extension QuizViewController: QuizPresenterOutput {
+    func answerResult(answer: Bool) {
+        if answer {
             resultLabel.text = "⚪︎"
-            resultLabel.font = UIFont.systemFont(ofSize: 400)
             resultLabel.textColor = UIColor(appColor: .c1)
+            optionA.isEnabled = false
+            optionB.isEnabled = false
+            optionC.isEnabled = false
+            optionD.isEnabled = false
         } else {
-            print("不正解")
             resultLabel.text = "✖︎"
             resultLabel.textColor =  UIColor(appColor: .c2)
+            optionA.isEnabled = false
+            optionB.isEnabled = false
+            optionC.isEnabled = false
+            optionD.isEnabled = false
+        }
+        
+        //quizデータの削除
+        quizData.quiz.remove(at: rand)
+        
+        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false){_ in
+            if self.quizData.quiz.isEmpty {
+                self.navigationController?.pushViewController(ResultViewController(), animated: true)
+            } else {
+                self.navigationController?.pushViewController(QuizViewController(quizData: self.quizData), animated: true)
+            }
         }
     }
 }
