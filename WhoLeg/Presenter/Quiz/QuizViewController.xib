@@ -12,6 +12,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="QuizViewController" customModule="WhoLeg" customModuleProvider="target">
             <connections>
+                <outlet property="image" destination="QdE-ei-cJw" id="Iju-QK-aEB"/>
+                <outlet property="optionA" destination="S8U-0b-jfB" id="7vx-vI-ESr"/>
+                <outlet property="optionB" destination="gni-dG-Ply" id="Qor-S3-G5R"/>
+                <outlet property="optionC" destination="hk4-Tu-pTo" id="Myb-0M-GpK"/>
+                <outlet property="optionD" destination="wCI-eO-hFO" id="Idc-GT-w8h"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

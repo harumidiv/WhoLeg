@@ -1,6 +1,6 @@
 {
 	"quiz": [{
-			"image": "",
+			"image": "simauma.png",
 			"answer": "きりん",
 			"choice": {
 				"a": "きりん",
@@ -10,7 +10,7 @@
 			}
 		},
 		{
-			"image": "",
+			"image": "kirin.png",
 			"answer": "ごりら",
 			"choice": {
 				"a": "きりん",
@@ -20,7 +20,7 @@
 			}
 		},
 		{
-			"image": "",
+			"image": "zou.png",
 			"answer": "しまうま",
 			"choice": {
 				"a": "きりん",
@@ -28,6 +28,16 @@
 				"c": "しまうま",
 				"d": "らいおん"
 			}
-		}
+		},
+        {
+            "image": "otama.png",
+            "answer": "しまうま",
+            "choice": {
+                "a": "きりん",
+                "b": "ごりら",
+                "c": "しまうま",
+                "d": "らいおん"
+            }
+        }
 	]
 }

@@ -11,17 +11,15 @@ import UIKit
 class TitleViewController: UIViewController {
 
     private var model: TitleModel = TitleModel()
-    
+    var jsonData: QuizInfo!
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "だれのあし？"
         
-        let json = model.getQuizJson()
-        print(json.quiz[0].answer)
-        
+        jsonData = model.getQuizJson()
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.navigationController?.pushViewController(QuizViewController(), animated: true)
+        self.navigationController?.pushViewController(QuizViewController(quizData: jsonData), animated: true)
     }
 }
