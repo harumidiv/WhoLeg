@@ -19,8 +19,55 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCI-eO-hFO" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
+                    <rect key="frame" x="10" y="790.5" width="384" height="71.5"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-0b-jfB" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
+                    <rect key="frame" x="10" y="515.5" width="384" height="71.5"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gni-dG-Ply" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
+                    <rect key="frame" x="10" y="607" width="384" height="71.5"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-Tu-pTo" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
+                    <rect key="frame" x="10" y="698.5" width="384" height="72"/>
+                    <state key="normal" title="Button"/>
+                </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-ei-cJw">
+                    <rect key="frame" x="16" y="44" width="382" height="455.5"/>
+                </imageView>
+            </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QdE-ei-cJw" secondAttribute="trailing" constant="16" id="BM2-wd-9vD"/>
+                <constraint firstItem="wCI-eO-hFO" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="DPs-zi-eT0"/>
+                <constraint firstItem="QdE-ei-cJw" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Dc6-la-v7G"/>
+                <constraint firstItem="hk4-Tu-pTo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="GPx-z4-zfh"/>
+                <constraint firstItem="gni-dG-Ply" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="GsR-WZ-cox"/>
+                <constraint firstItem="S8U-0b-jfB" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="N1A-an-cJM"/>
+                <constraint firstItem="wCI-eO-hFO" firstAttribute="top" secondItem="hk4-Tu-pTo" secondAttribute="bottom" constant="20" id="S1E-Zp-P3P"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="hk4-Tu-pTo" secondAttribute="trailing" constant="20" id="VDC-kH-Xm4"/>
+                <constraint firstItem="QdE-ei-cJw" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="VUu-2A-Mok"/>
+                <constraint firstItem="wCI-eO-hFO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="Zms-MF-Y7D"/>
+                <constraint firstItem="gni-dG-Ply" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="azU-T5-yf5"/>
+                <constraint firstItem="S8U-0b-jfB" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="b5r-hZ-pUp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wCI-eO-hFO" secondAttribute="trailing" constant="20" id="fAM-yq-mt2"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="S8U-0b-jfB" secondAttribute="trailing" constant="20" id="fea-2P-895"/>
+                <constraint firstItem="S8U-0b-jfB" firstAttribute="top" secondItem="QdE-ei-cJw" secondAttribute="bottom" constant="16" id="jKb-v8-bfU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gni-dG-Ply" secondAttribute="trailing" constant="20" id="nUA-1b-eBC"/>
+                <constraint firstItem="hk4-Tu-pTo" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.08" id="pWq-UT-go8"/>
+                <constraint firstItem="hk4-Tu-pTo" firstAttribute="top" secondItem="gni-dG-Ply" secondAttribute="bottom" constant="20" id="rXb-IH-fXC"/>
+                <constraint firstItem="gni-dG-Ply" firstAttribute="top" secondItem="S8U-0b-jfB" secondAttribute="bottom" constant="20" id="vmg-Yk-tYJ"/>
+                <constraint firstItem="wCI-eO-hFO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="wji-Ud-EVH"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="47.826086956521742" y="104.46428571428571"/>
         </view>
     </objects>
+    <resources>
+        <image name="kirin" width="1200" height="1200"/>
+    </resources>
 </document>
