@@ -38,6 +38,7 @@ class QuizViewController: UIViewController {
     
     var quizData: QuizInfo
     lazy var rand = Int.random(in: 0..<quizData.quiz.count)
+    let wireframe: QuizWireframe! = QuizWireframeImpl()
     fileprivate lazy var presenter: QuizPresenter  = {
         return QuizPresenterImpl(model: QuizModelImpl(), output: self)
     }()
@@ -104,9 +105,9 @@ extension QuizViewController: QuizPresenterOutput {
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false){_ in
             if self.quizData.quiz.isEmpty {
-                self.navigationController?.pushViewController(ResultViewController(score: self.score), animated: true)
+                self.wireframe.showResult(vc: self, score: self.score)
             } else {
-                self.navigationController?.pushViewController(QuizViewController(quizData: self.quizData, score: self.score), animated: true)
+                self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score)
             }
         }
     }
