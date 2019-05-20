@@ -20,6 +20,6 @@ class TitleViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.navigationController?.pushViewController(QuizViewController(quizData: jsonData), animated: true)
+        self.navigationController?.pushViewController(QuizViewController(quizData: jsonData, score: 0), animated: true)
     }
 }

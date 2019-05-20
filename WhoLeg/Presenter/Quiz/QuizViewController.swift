@@ -41,11 +41,14 @@ class QuizViewController: UIViewController {
     fileprivate lazy var presenter: QuizPresenter  = {
         return QuizPresenterImpl(model: QuizModelImpl(), output: self)
     }()
+
+    var score: Int
     
     // MARK: - Initializer
     
-    init(quizData: QuizInfo) {
+    init(quizData: QuizInfo, score: Int) {
         self.quizData = quizData
+        self.score = score
         super.init(nibName: String(describing: QuizViewController.self), bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -80,6 +83,7 @@ class QuizViewController: UIViewController {
 extension QuizViewController: QuizPresenterOutput {
     func answerResult(answer: Bool) {
         if answer {
+            score = score + 1
             resultLabel.text = "⚪︎"
             resultLabel.textColor = UIColor(appColor: .c1)
             optionA.isEnabled = false
@@ -100,9 +104,9 @@ extension QuizViewController: QuizPresenterOutput {
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false){_ in
             if self.quizData.quiz.isEmpty {
-                self.navigationController?.pushViewController(ResultViewController(), animated: true)
+                self.navigationController?.pushViewController(ResultViewController(score: self.score), animated: true)
             } else {
-                self.navigationController?.pushViewController(QuizViewController(quizData: self.quizData), animated: true)
+                self.navigationController?.pushViewController(QuizViewController(quizData: self.quizData, score: self.score), animated: true)
             }
         }
     }
