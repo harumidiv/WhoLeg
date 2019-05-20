@@ -45,13 +45,14 @@ class QuizViewController: UIViewController {
     private var presenter: QuizPresenter!
     private var wireframe: QuizWireframe!
     var score: Int
-    
+    let count: Int
     // MARK: - Initializer
     
     
-    init(quizData: QuizInfo, score: Int) {
+    init(quizData: QuizInfo, score: Int, count: Int) {
         self.quizData = quizData
         self.score = score
+        self.count = count
         super.init(nibName: String(describing: QuizViewController.self), bundle: nil)
     }
     required init?(coder aDecoder: NSCoder) {
@@ -113,10 +114,10 @@ extension QuizViewController: QuizPresenterOutput {
         quizData.quiz.remove(at: rand)
         
         Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false){_ in
-            if self.quizData.quiz.isEmpty {
+            if self.count >= 10 {
                 self.wireframe.showResult(vc: self, score: self.score)
             } else {
-                self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score)
+                self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score, count: self.count+1)
             }
         }
     }
