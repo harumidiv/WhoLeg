@@ -15,7 +15,10 @@ protocol QuizWireframe: class {
 
 class QuizWireframeImpl: QuizWireframe {
     func showNextQuiz(vc: UIViewController, data: QuizInfo, score: Int) {
-        vc.navigationController?.pushViewController(QuizViewController(quizData: data, score: score), animated: true)
+        
+        let quizViewController = QuizViewController(quizData: data, score: score)
+        quizViewController.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: quizViewController), wireframe: QuizWireframeImpl())
+        vc.navigationController?.pushViewController(quizViewController, animated: true)
     }
     
     func showResult(vc: UIViewController, score: Int) {

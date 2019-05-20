@@ -10,16 +10,30 @@ import UIKit
 
 class TitleViewController: UIViewController {
 
-    private var model: TitleModel = TitleModel()
+    private var presenter: TitlePresenter!
+    
     var jsonData: QuizInfo!
+    
+    func injector(presenter: TitlePresenter){
+        self.presenter = presenter
+    }
+    
+    // MARK: - LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "だれのあし？"
         
-        jsonData = model.getQuizJson()
+        jsonData = presenter.getJsonData()
     }
 
+    
+    // MAKR: - Event
+    
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.navigationController?.pushViewController(QuizViewController(quizData: jsonData, score: 0), animated: true)
+        let quizViewController = QuizViewController(quizData: jsonData, score: 0)
+        quizViewController.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: quizViewController), wireframe: QuizWireframeImpl())
+        self.navigationController?.pushViewController(quizViewController, animated: true)
+        
     }
 }

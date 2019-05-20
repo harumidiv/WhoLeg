@@ -38,14 +38,16 @@ class QuizViewController: UIViewController {
     
     var quizData: QuizInfo
     lazy var rand = Int.random(in: 0..<quizData.quiz.count)
-    let wireframe: QuizWireframe! = QuizWireframeImpl()
-    fileprivate lazy var presenter: QuizPresenter  = {
-        return QuizPresenterImpl(model: QuizModelImpl(), output: self)
-    }()
-
+//    let wireframe: QuizWireframe! = QuizWireframeImpl()
+//    fileprivate lazy var presenter: QuizPresenter  = {
+//        return QuizPresenterImpl(model: QuizModelImpl(), output: self)
+//    }()
+    private var presenter: QuizPresenter!
+    private var wireframe: QuizWireframe!
     var score: Int
     
     // MARK: - Initializer
+    
     
     init(quizData: QuizInfo, score: Int) {
         self.quizData = quizData
@@ -54,6 +56,13 @@ class QuizViewController: UIViewController {
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - MethodInjection
+    
+    func injector(presenter: QuizPresenter, wireframe: QuizWireframe) {
+        self.presenter = presenter
+        self.wireframe = wireframe
     }
     
     // MARK: - LifeCycle

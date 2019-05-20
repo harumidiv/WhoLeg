@@ -15,9 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        let nv = UINavigationController(rootViewController: TitleViewController())
-        window?.rootViewController = nv
         
+        let titleViewController = TitleViewController()
+        titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl()))
+        
+        let nv = UINavigationController(rootViewController: titleViewController)
+        window?.rootViewController = nv
         UINavigationBar.appearance().barTintColor = UIColor(hex: "#0F9D58")
         UINavigationBar.appearance().tintColor = .white
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]

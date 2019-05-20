@@ -8,11 +8,11 @@
 
 import Foundation
 
-protocol TitleModelDelegate {
-    
+protocol TitleModel {
+    func getQuizJson() -> QuizInfo 
 }
 
-class TitleModel {
+class TitleModelImpl: TitleModel {
     func getQuizJson() -> QuizInfo {
         let path: String = Bundle.main.path(forResource: "Resource/quiz", ofType: "json")!
         var jsonData: QuizInfo!
