@@ -27,7 +27,6 @@ class TitleViewController: UIViewController {
         jsonData = presenter.getJsonData()
     }
 
-    
     // MAKR: - Event
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

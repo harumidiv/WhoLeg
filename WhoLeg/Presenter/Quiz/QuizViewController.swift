@@ -36,18 +36,17 @@ class QuizViewController: UIViewController {
         }
     }
     
-    var quizData: QuizInfo
+    
     lazy var rand = Int.random(in: 0..<quizData.quiz.count)
-//    let wireframe: QuizWireframe! = QuizWireframeImpl()
-//    fileprivate lazy var presenter: QuizPresenter  = {
-//        return QuizPresenterImpl(model: QuizModelImpl(), output: self)
-//    }()
+    var quizData: QuizInfo
     private var presenter: QuizPresenter!
     private var wireframe: QuizWireframe!
     var score: Int
     let count: Int
-    // MARK: - Initializer
+    var isBeforeAnswer = true
     
+    
+    // MARK: - Initializer
     
     init(quizData: QuizInfo, score: Int, count: Int) {
         self.quizData = quizData
@@ -86,7 +85,10 @@ class QuizViewController: UIViewController {
     // MARK: - Event
     
     @objc func tapAnswer(_ sender: UIButton){
-        presenter.answerCheck(select: sender.titleLabel!.text!, answer: quizData.quiz[rand].answer)
+        if isBeforeAnswer {
+            presenter.answerCheck(select: sender.titleLabel!.text!, answer: quizData.quiz[rand].answer)
+            isBeforeAnswer = false
+        }
     }
     
 }
