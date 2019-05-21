@@ -33,6 +33,5 @@ class TitleViewController: UIViewController {
         let quizViewController = QuizViewController(quizData: jsonData, score: 0, count: 1)
         quizViewController.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: quizViewController), wireframe: QuizWireframeImpl())
         self.navigationController?.pushViewController(quizViewController, animated: true)
-        
     }
 }
