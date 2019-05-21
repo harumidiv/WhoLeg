@@ -11,9 +11,15 @@ import UIKit
 class ResultViewController: UIViewController {
 
     let score: Int
+    
+    private var presenter: ResultPresenter!
+    
     init(score: Int) {
         self.score = score
         super.init(nibName: String(describing: ResultViewController.self), bundle: nil)
+    }
+    func injector(presenter: ResultPresenter) {
+        self.presenter = presenter
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -42,14 +48,17 @@ class ResultViewController: UIViewController {
         let returnButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(returnStartScreen(_:)))
         navigationItem.leftBarButtonItem = returnButton
         
-        let retryButton: UIBarButtonItem = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(returnStartScreen(_:)))
+        let retryButton: UIBarButtonItem = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(retryQuiz(_:)))
         navigationItem.rightBarButtonItem = retryButton
     }
     @objc func returnStartScreen(_ sender: UIBarButtonItem){
-        print("tapped")
+        let vc = TitleViewController()
+        vc.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc func retryQuiz(_ sender: UIBarButtonItem) {
-        
-        //self.navigationController?.pushViewController(QuizViewController(quizData: QuizInfo(), score: 0, count: 1), animated: true)
+        let vc = QuizViewController(quizData: presenter.getjson(), score: 0, count: 1)
+        vc.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: vc), wireframe: QuizWireframeImpl())
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

@@ -36,6 +36,8 @@
 		0D8B5A732293CC0E001D1A44 /* ResultBadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A722293CC0E001D1A44 /* ResultBadView.swift */; };
 		0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A742293CC18001D1A44 /* ResultBadView.xib */; };
 		0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A79229413ED001D1A44 /* QuizRepository.swift */; };
+		0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */; };
+		0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7D22941599001D1A44 /* ResultModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,8 @@
 		0D8B5A722293CC0E001D1A44 /* ResultBadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBadView.swift; sourceTree = "<group>"; };
 		0D8B5A742293CC18001D1A44 /* ResultBadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultBadView.xib; sourceTree = "<group>"; };
 		0D8B5A79229413ED001D1A44 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
+		0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
+		0D8B5A7D22941599001D1A44 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +213,8 @@
 			isa = PBXGroup;
 			children = (
 				0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */,
+				0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */,
+				0D8B5A7D22941599001D1A44 /* ResultModel.swift */,
 			);
 			path = Result;
 			sourceTree = "<group>";
@@ -406,10 +412,12 @@
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
+				0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,
 				0D8B5A732293CC0E001D1A44 /* ResultBadView.swift in Sources */,
+				0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

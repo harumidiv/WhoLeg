@@ -22,6 +22,8 @@ class QuizWireframeImpl: QuizWireframe {
     }
     
     func showResult(vc: UIViewController, score: Int) {
-        vc.navigationController?.pushViewController(ResultViewController(score: score), animated: true)
+        let resultViewController = ResultViewController(score: score)
+        resultViewController.injector(presenter: ResultPresenterImpl(model: ResultModelImpl(quizRepository: QuizRepositoryImpl())))
+        vc.navigationController?.pushViewController(resultViewController, animated: true)
     }
 }
