@@ -23,7 +23,7 @@ class TitleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "だれのあし？"
-        
+        self.navigationItem.hidesBackButton = true
         jsonData = presenter.getJsonData()
     }
 

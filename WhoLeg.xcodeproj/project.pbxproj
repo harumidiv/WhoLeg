@@ -38,6 +38,7 @@
 		0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A79229413ED001D1A44 /* QuizRepository.swift */; };
 		0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */; };
 		0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7D22941599001D1A44 /* ResultModel.swift */; };
+		0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 		0D8B5A79229413ED001D1A44 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 		0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		0D8B5A7D22941599001D1A44 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
+		0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +216,7 @@
 			children = (
 				0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */,
 				0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */,
+				0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */,
 				0D8B5A7D22941599001D1A44 /* ResultModel.swift */,
 			);
 			path = Result;
@@ -408,6 +411,7 @@
 				0D8B5A6322919509001D1A44 /* QuizPresenter.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
 				0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */,
+				0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */,
 				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,

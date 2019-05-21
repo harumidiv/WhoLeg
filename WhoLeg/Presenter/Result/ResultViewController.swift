@@ -13,13 +13,15 @@ class ResultViewController: UIViewController {
     let score: Int
     
     private var presenter: ResultPresenter!
+    private var wireframe: ResultWireframe!
     
     init(score: Int) {
         self.score = score
         super.init(nibName: String(describing: ResultViewController.self), bundle: nil)
     }
-    func injector(presenter: ResultPresenter) {
+    func injector(presenter: ResultPresenter, wireframe: ResultWireframe) {
         self.presenter = presenter
+        self.wireframe = wireframe
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -52,13 +54,15 @@ class ResultViewController: UIViewController {
         navigationItem.rightBarButtonItem = retryButton
     }
     @objc func returnStartScreen(_ sender: UIBarButtonItem){
-        let vc = TitleViewController()
-        vc.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
-        self.navigationController?.pushViewController(vc, animated: true)
+        wireframe.showTitle(vc: self)
+//        let vc = TitleViewController()
+//        vc.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
     @objc func retryQuiz(_ sender: UIBarButtonItem) {
-        let vc = QuizViewController(quizData: presenter.getjson(), score: 0, count: 1)
-        vc.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: vc), wireframe: QuizWireframeImpl())
-        self.navigationController?.pushViewController(vc, animated: true)
+        wireframe.showRetryQuiz(vc: self, data: presenter.getjson())
+//        let vc = QuizViewController(quizData: presenter.getjson(), score: 0, count: 1)
+//        vc.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: vc), wireframe: QuizWireframeImpl())
+//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
