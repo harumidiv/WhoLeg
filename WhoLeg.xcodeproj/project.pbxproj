@@ -39,6 +39,10 @@
 		0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */; };
 		0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7D22941599001D1A44 /* ResultModel.swift */; };
 		0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */; };
+		0D8B5A82229425F4001D1A44 /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A81229425F4001D1A44 /* RoundView.swift */; };
+		0D8B5A852294261F001D1A44 /* RoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A842294261F001D1A44 /* RoundView.xib */; };
+		0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A8622942698001D1A44 /* RoundImage.swift */; };
+		0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A88229426CE001D1A44 /* RoundImage.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +101,10 @@
 		0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		0D8B5A7D22941599001D1A44 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWireframe.swift; sourceTree = "<group>"; };
+		0D8B5A81229425F4001D1A44 /* RoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
+		0D8B5A842294261F001D1A44 /* RoundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundView.xib; sourceTree = "<group>"; };
+		0D8B5A8622942698001D1A44 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
+		0D8B5A88229426CE001D1A44 /* RoundImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundImage.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,12 +243,11 @@
 			children = (
 				0D8B5A56229150B3001D1A44 /* QuizOptionButton.swift */,
 				0D8B5A58229150BD001D1A44 /* QuizOptionButton.xib */,
-				0D8B5A6A2293CB28001D1A44 /* ResultGoodView.swift */,
-				0D8B5A6C2293CB34001D1A44 /* ResultGoodView.xib */,
-				0D8B5A6E2293CBE1001D1A44 /* ResultNormalView.swift */,
-				0D8B5A702293CBEE001D1A44 /* ResultNormalView.xib */,
-				0D8B5A722293CC0E001D1A44 /* ResultBadView.swift */,
-				0D8B5A742293CC18001D1A44 /* ResultBadView.xib */,
+				0D8B5A81229425F4001D1A44 /* RoundView.swift */,
+				0D8B5A842294261F001D1A44 /* RoundView.xib */,
+				0D8B5A8622942698001D1A44 /* RoundImage.swift */,
+				0D8B5A88229426CE001D1A44 /* RoundImage.xib */,
+				0D8B5A8322942605001D1A44 /* Result */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -262,6 +269,19 @@
 				0D8B5A79229413ED001D1A44 /* QuizRepository.swift */,
 			);
 			path = Infra;
+			sourceTree = "<group>";
+		};
+		0D8B5A8322942605001D1A44 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A6A2293CB28001D1A44 /* ResultGoodView.swift */,
+				0D8B5A6C2293CB34001D1A44 /* ResultGoodView.xib */,
+				0D8B5A6E2293CBE1001D1A44 /* ResultNormalView.swift */,
+				0D8B5A702293CBEE001D1A44 /* ResultNormalView.xib */,
+				0D8B5A722293CC0E001D1A44 /* ResultBadView.swift */,
+				0D8B5A742293CC18001D1A44 /* ResultBadView.xib */,
+			);
+			path = Result;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,7 +396,9 @@
 				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
+				0D8B5A852294261F001D1A44 /* RoundView.xib in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
+				0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */,
 				0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,6 +425,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D8B5A6F2293CBE1001D1A44 /* ResultNormalView.swift in Sources */,
+				0D8B5A82229425F4001D1A44 /* RoundView.swift in Sources */,
 				0D8B5A57229150B3001D1A44 /* QuizOptionButton.swift in Sources */,
 				0D8B5A672292ECA4001D1A44 /* QuizWireframe.swift in Sources */,
 				0D8B5A6B2293CB28001D1A44 /* ResultGoodView.swift in Sources */,
@@ -415,6 +438,7 @@
 				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
+				0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
 				0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
