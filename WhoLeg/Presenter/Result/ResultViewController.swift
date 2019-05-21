@@ -24,9 +24,13 @@ class ResultViewController: UIViewController {
         if score == 10 {
             self.view = ResultGoodView()
         } else if score > 5 {
-            self.view = ResultNormalView()
+            let view = ResultNormalView()
+            view.label.text = "\(score)/10\nまずまずだね"
+            self.view = view
         } else {
-            self.view = ResultBadView()
+            let view = ResultBadView()
+            view.label.text = "\(score)/10\nうーん..."
+            self.view = view
         }
     }
     

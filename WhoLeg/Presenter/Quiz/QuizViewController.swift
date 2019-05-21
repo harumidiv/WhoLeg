@@ -117,7 +117,7 @@ extension QuizViewController: QuizPresenterOutput {
         //quizデータの削除
         quizData.quiz.remove(at: rand)
         
-        Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false){_ in
+        Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false){_ in
             if self.count >= 10 {
                 self.wireframe.showResult(vc: self, score: self.score)
             } else {

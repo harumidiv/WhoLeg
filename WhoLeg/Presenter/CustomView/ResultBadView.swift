@@ -29,7 +29,4 @@ class ResultBadView: UIView {
         v.frame = self.bounds
         addSubview(v)
     }
-    func setResultText(score: Int){
-        label.text = "\(score)/10\nうーん..."
-    }
 }
