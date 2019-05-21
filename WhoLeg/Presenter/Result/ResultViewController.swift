@@ -20,6 +20,16 @@ class ResultViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func loadView() {
+        if score == 10 {
+            self.view = ResultGoodView()
+        } else if score > 5 {
+            self.view = ResultNormalView()
+        } else {
+            self.view = ResultBadView()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("score:\(score)")
