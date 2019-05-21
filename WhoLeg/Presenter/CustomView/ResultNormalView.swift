@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable
 class ResultNormalView: UIView {
+    @IBOutlet weak var label: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib()

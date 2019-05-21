@@ -10,6 +10,7 @@ import UIKit
 
 @IBDesignable
 class ResultBadView: UIView {
+    @IBOutlet weak var label: UILabel!
     override init(frame: CGRect) {
         super.init(frame: frame)
         loadFromNib()
@@ -27,5 +28,8 @@ class ResultBadView: UIView {
         let v = UINib(nibName: "ResultBadView", bundle: Bundle(for: ResultGoodView.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
         v.frame = self.bounds
         addSubview(v)
+    }
+    func setResultText(score: Int){
+        label.text = "\(score)/10\nうーん..."
     }
 }

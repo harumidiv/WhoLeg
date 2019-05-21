@@ -32,6 +32,7 @@ class ResultViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "スコア"
         self.navigationItem.hidesBackButton = true
         print("score:\(score)")
     }
