@@ -10,20 +10,27 @@ import UIKit
 
 @IBDesignable
 class ResultGoodView: UIView{
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupAttribute()
+        loadFromNib()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupAttribute()
+        loadFromNib()
     }
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
-        setupAttribute()
+        loadFromNib()
     }
     private func setupAttribute(){
        backgroundColor = .orange
+    }
+    private func loadFromNib() {
+        let v = UINib(nibName: "ResultGoodView", bundle: Bundle(for: ResultGoodView.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
+        v.frame = self.bounds
+        v.backgroundColor = .orange
+        addSubview(v)
     }
 }
