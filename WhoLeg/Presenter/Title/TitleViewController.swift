@@ -10,6 +10,8 @@ import UIKit
 
 class TitleViewController: UIViewController {
 
+    @IBOutlet weak var image: RoundImage!
+    @IBOutlet weak var label: UILabel!
     private var presenter: TitlePresenter!
     
     var jsonData: QuizInfo!
@@ -25,11 +27,14 @@ class TitleViewController: UIViewController {
         title = "だれのあし？"
         self.navigationItem.hidesBackButton = true
         jsonData = presenter.getJsonData()
+        
+        let rand = Int.random(in: 0..<jsonData.quiz.count)
+        image.image = UIImage(named: jsonData.quiz[rand].image)
+        label.text = jsonData.quiz[rand].answer
     }
 
     // MAKR: - Event
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    @IBAction func quizStart(_ sender: Any) {
         let quizViewController = QuizViewController(quizData: jsonData, score: 0, count: 1)
         quizViewController.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: quizViewController), wireframe: QuizWireframeImpl())
         self.navigationController?.pushViewController(quizViewController, animated: true)

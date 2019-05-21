@@ -12,6 +12,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TitleViewController" customModule="WhoLeg" customModuleProvider="target">
             <connections>
+                <outlet property="image" destination="GNb-KU-JB4" id="7Mq-Wu-Ub3"/>
+                <outlet property="label" destination="FHm-VT-cCQ" id="NRU-WF-GZS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -39,14 +41,17 @@
                         <constraint firstAttribute="height" constant="300" id="qgf-AO-iWT"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-lq-4Yu">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-lq-4Yu">
                     <rect key="frame" x="119.5" y="671" width="175" height="175"/>
-                    <color key="backgroundColor" red="0.3921568627" green="0.25490196079999999" blue="0.64313725489999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="175" id="496-OL-Nn0"/>
                         <constraint firstAttribute="height" constant="175" id="gjr-Sl-PLj"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
+                    <state key="normal" title="Button" image="start"/>
+                    <connections>
+                        <action selector="quizStart:" destination="-1" eventType="touchUpInside" id="mP4-Gu-R9V"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="きりん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHm-VT-cCQ">
                     <rect key="frame" x="146.5" y="460" width="121" height="48"/>
@@ -55,7 +60,7 @@
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="FHm-VT-cCQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="03D-AB-f6i"/>
                 <constraint firstItem="FHm-VT-cCQ" firstAttribute="top" secondItem="MpX-Fc-xCu" secondAttribute="bottom" constant="16" id="0Yo-ik-x1U"/>
@@ -74,5 +79,6 @@
     </objects>
     <resources>
         <image name="kirin" width="1200" height="1200"/>
+        <image name="start" width="691" height="691"/>
     </resources>
 </document>
