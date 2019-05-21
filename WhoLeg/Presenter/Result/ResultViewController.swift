@@ -38,6 +38,18 @@ class ResultViewController: UIViewController {
         super.viewDidLoad()
         title = "スコア"
         self.navigationItem.hidesBackButton = true
-        print("score:\(score)")
+        
+        let returnButton:UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(returnStartScreen(_:)))
+        navigationItem.leftBarButtonItem = returnButton
+        
+        let retryButton: UIBarButtonItem = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(returnStartScreen(_:)))
+        navigationItem.rightBarButtonItem = retryButton
+    }
+    @objc func returnStartScreen(_ sender: UIBarButtonItem){
+        print("tapped")
+    }
+    @objc func retryQuiz(_ sender: UIBarButtonItem) {
+        
+        //self.navigationController?.pushViewController(QuizViewController(quizData: QuizInfo(), score: 0, count: 1), animated: true)
     }
 }

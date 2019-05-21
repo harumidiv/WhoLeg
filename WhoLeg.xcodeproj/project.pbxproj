@@ -35,6 +35,7 @@
 		0D8B5A712293CBEE001D1A44 /* ResultNormalView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A702293CBEE001D1A44 /* ResultNormalView.xib */; };
 		0D8B5A732293CC0E001D1A44 /* ResultBadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A722293CC0E001D1A44 /* ResultBadView.swift */; };
 		0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A742293CC18001D1A44 /* ResultBadView.xib */; };
+		0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A79229413ED001D1A44 /* QuizRepository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		0D8B5A702293CBEE001D1A44 /* ResultNormalView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultNormalView.xib; sourceTree = "<group>"; };
 		0D8B5A722293CC0E001D1A44 /* ResultBadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultBadView.swift; sourceTree = "<group>"; };
 		0D8B5A742293CC18001D1A44 /* ResultBadView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultBadView.xib; sourceTree = "<group>"; };
+		0D8B5A79229413ED001D1A44 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 				0D8B5A45228FE01F001D1A44 /* Resource */,
 				0D8B5A33228FD1AB001D1A44 /* Extension */,
 				0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */,
+				0D8B5A78229413BA001D1A44 /* Infra */,
 				0D8B5A47228FE0DB001D1A44 /* Domain */,
 				0D8B5A5522915071001D1A44 /* Presenter */,
 				0D8B5A03228FADE4001D1A44 /* ViewController.swift */,
@@ -242,6 +245,14 @@
 				0D8B5A38228FD24C001D1A44 /* Result */,
 			);
 			path = Presenter;
+			sourceTree = "<group>";
+		};
+		0D8B5A78229413BA001D1A44 /* Infra */ = {
+			isa = PBXGroup;
+			children = (
+				0D8B5A79229413ED001D1A44 /* QuizRepository.swift */,
+			);
+			path = Infra;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +407,7 @@
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
+				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,
 				0D8B5A732293CC0E001D1A44 /* ResultBadView.swift in Sources */,
 			);

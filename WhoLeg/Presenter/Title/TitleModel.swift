@@ -13,16 +13,13 @@ protocol TitleModel {
 }
 
 class TitleModelImpl: TitleModel {
+    let quizRepository: QuizRepository
+    
+    init(quizRepository:QuizRepository) {
+        self.quizRepository = quizRepository
+    }
+    
     func getQuizJson() -> QuizInfo {
-        let path: String = Bundle.main.path(forResource: "Resource/quiz", ofType: "json")!
-        var jsonData: QuizInfo!
-        do {
-            let content = try String(contentsOfFile: path)
-            jsonData = try JSONDecoder().decode(QuizInfo.self, from: content.data(using: .utf8)!)
-            return jsonData
-        } catch  {
-            // TODO: Error handling
-            return jsonData
-        }
+        return quizRepository.getJsonData()
     }
 }

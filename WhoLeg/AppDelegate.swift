@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         let titleViewController = TitleViewController()
-        titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl()))
+        titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository:QuizRepositoryImpl())))
         
         let nv = UINavigationController(rootViewController: titleViewController)
         window?.rootViewController = nv
