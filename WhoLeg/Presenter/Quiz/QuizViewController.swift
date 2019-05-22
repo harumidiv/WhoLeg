@@ -36,7 +36,6 @@ class QuizViewController: UIViewController {
         }
     }
     
-    
     lazy var rand = Int.random(in: 0..<quizData.quiz.count)
     var quizData: QuizInfo
     private var presenter: QuizPresenter!
@@ -71,18 +70,14 @@ class QuizViewController: UIViewController {
         super.viewDidLoad()
         self.navigationItem.hidesBackButton = true
         title = "\(count)/10"
-        setQuizData()
-    }
-    
-    // MARK: - PrivateMethod
-    
-    private func setQuizData(){
-        optionA.setTitle(quizData.quiz[rand].choice.a, for: .normal)
-        optionB.setTitle(quizData.quiz[rand].choice.b, for: .normal)
-        optionC.setTitle(quizData.quiz[rand].choice.c, for: .normal)
-        optionD.setTitle(quizData.quiz[rand].choice.d, for: .normal)
+        
         image.image = UIImage(named: quizData.quiz[rand].image)
+        presenter.createRandomElement(a: quizData.quiz[rand].choice.a,
+                                      b: quizData.quiz[rand].choice.b,
+                                      c: quizData.quiz[rand].choice.c,
+                                      d: quizData.quiz[rand].choice.d)
     }
+    
     
     // MARK: - Event
     
@@ -96,6 +91,14 @@ class QuizViewController: UIViewController {
 }
 
 extension QuizViewController: QuizPresenterOutput {
+    
+    func showQuiz(choice: [String]) {
+        optionA.setTitle(choice[0], for: .normal)
+        optionB.setTitle(choice[1], for: .normal)
+        optionC.setTitle(choice[2], for: .normal)
+        optionD.setTitle(choice[3], for: .normal)
+    }
+    
     func answerResult(answer: Bool) {
         if answer {
             score = score + 1
