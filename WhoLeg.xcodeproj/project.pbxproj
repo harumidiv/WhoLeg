@@ -43,6 +43,7 @@
 		0D8B5A852294261F001D1A44 /* RoundView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A842294261F001D1A44 /* RoundView.xib */; };
 		0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A8622942698001D1A44 /* RoundImage.swift */; };
 		0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A88229426CE001D1A44 /* RoundImage.xib */; };
+		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,7 @@
 		0D8B5A842294261F001D1A44 /* RoundView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundView.xib; sourceTree = "<group>"; };
 		0D8B5A8622942698001D1A44 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		0D8B5A88229426CE001D1A44 /* RoundImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundImage.xib; sourceTree = "<group>"; };
+		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */,
+				0DC42A5F229592AA00A19088 /* Swift+Addition.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 				0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */,
 				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
+				0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
 				0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
