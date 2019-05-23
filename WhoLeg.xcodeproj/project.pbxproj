@@ -44,6 +44,8 @@
 		0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A8622942698001D1A44 /* RoundImage.swift */; };
 		0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A88229426CE001D1A44 /* RoundImage.xib */; };
 		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
+		0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A612296F02800A19088 /* InformationViewController.swift */; };
+		0DC42A642296F02800A19088 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A622296F02800A19088 /* InformationViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +109,8 @@
 		0D8B5A8622942698001D1A44 /* RoundImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundImage.swift; sourceTree = "<group>"; };
 		0D8B5A88229426CE001D1A44 /* RoundImage.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RoundImage.xib; sourceTree = "<group>"; };
 		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
+		0DC42A612296F02800A19088 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		0DC42A622296F02800A19088 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -260,6 +264,7 @@
 			children = (
 				0D8B5A5422915055001D1A44 /* CustomView */,
 				0D8B5A36228FD235001D1A44 /* Title */,
+				0DC42A652296F03900A19088 /* Information */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
 			);
@@ -285,6 +290,15 @@
 				0D8B5A742293CC18001D1A44 /* ResultBadView.xib */,
 			);
 			path = Result;
+			sourceTree = "<group>";
+		};
+		0DC42A652296F03900A19088 /* Information */ = {
+			isa = PBXGroup;
+			children = (
+				0DC42A612296F02800A19088 /* InformationViewController.swift */,
+				0DC42A622296F02800A19088 /* InformationViewController.xib */,
+			);
+			path = Information;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +408,7 @@
 				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A712293CBEE001D1A44 /* ResultNormalView.xib in Resources */,
 				0D8B5A46228FE01F001D1A44 /* Resource in Resources */,
+				0DC42A642296F02800A19088 /* InformationViewController.xib in Resources */,
 				0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */,
 				0D8B5A6D2293CB34001D1A44 /* ResultGoodView.xib in Resources */,
 				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
@@ -450,6 +465,7 @@
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,
 				0D8B5A732293CC0E001D1A44 /* ResultBadView.swift in Sources */,
 				0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */,
+				0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
