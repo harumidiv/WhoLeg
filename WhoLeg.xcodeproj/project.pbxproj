@@ -46,6 +46,8 @@
 		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
 		0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A612296F02800A19088 /* InformationViewController.swift */; };
 		0DC42A642296F02800A19088 /* InformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A622296F02800A19088 /* InformationViewController.xib */; };
+		0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A662296F24400A19088 /* AppAboutViewController.swift */; };
+		0DC42A692296F24400A19088 /* AppAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A672296F24400A19088 /* AppAboutViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
 		0DC42A612296F02800A19088 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		0DC42A622296F02800A19088 /* InformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationViewController.xib; sourceTree = "<group>"; };
+		0DC42A662296F24400A19088 /* AppAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutViewController.swift; sourceTree = "<group>"; };
+		0DC42A672296F24400A19088 /* AppAboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppAboutViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,6 +269,7 @@
 				0D8B5A5422915055001D1A44 /* CustomView */,
 				0D8B5A36228FD235001D1A44 /* Title */,
 				0DC42A652296F03900A19088 /* Information */,
+				0DC42A6A2296F24F00A19088 /* AppAbout */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
 			);
@@ -299,6 +304,15 @@
 				0DC42A622296F02800A19088 /* InformationViewController.xib */,
 			);
 			path = Information;
+			sourceTree = "<group>";
+		};
+		0DC42A6A2296F24F00A19088 /* AppAbout */ = {
+			isa = PBXGroup;
+			children = (
+				0DC42A662296F24400A19088 /* AppAboutViewController.swift */,
+				0DC42A672296F24400A19088 /* AppAboutViewController.xib */,
+			);
+			path = AppAbout;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -411,6 +425,7 @@
 				0DC42A642296F02800A19088 /* InformationViewController.xib in Resources */,
 				0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */,
 				0D8B5A6D2293CB34001D1A44 /* ResultGoodView.xib in Resources */,
+				0DC42A692296F24400A19088 /* AppAboutViewController.xib in Resources */,
 				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
@@ -457,6 +472,7 @@
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
+				0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */,
 				0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
 				0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */,
