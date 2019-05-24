@@ -8,6 +8,9 @@
 
 import Foundation
 
+// userDefault gloval constant
+let userDefault = UserDefaults.standard
+
 public protocol ClassNameProtocol {
     static var className: String { get }
     var className: String { get }

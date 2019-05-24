@@ -42,8 +42,17 @@ extension PictureBookViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let quizData = data.quiz[indexPath.row]
         let cell = tableView.dequeueReusableCell(with: PictureBookTableViewCell.self, for: indexPath)
-        cell.quizImage?.image = UIImage(named:data.quiz[indexPath.row].image)!
+        cell.selectionStyle = .none
+        cell.quizImage?.image = UIImage(named:quizData.image)!
+        // TODO クイズに正解していたらUserDegaultで検証
+        if userDefault.object(forKey: quizData.image) != nil {
+            cell.label?.text = quizData.answer
+        } else {
+            cell.label.text = "? ? ?"
+        }
+        
         
         return cell
     }

@@ -19,6 +19,14 @@
                 <rect key="frame" x="0.0" y="0.0" width="289" height="67.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sud-cR-jMK" customClass="RoundView" customModule="WhoLeg" customModuleProvider="target">
+                        <rect key="frame" x="15" y="7" width="52" height="52"/>
+                        <color key="backgroundColor" red="0.0" green="0.50980392159999999" blue="0.3921568627" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="52" id="5Rs-C2-9dU"/>
+                            <constraint firstAttribute="height" constant="52" id="zfN-xg-tmj"/>
+                        </constraints>
+                    </view>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahiru" translatesAutoresizingMaskIntoConstraints="NO" id="nVs-Xr-gRV" customClass="RoundImage" customModule="WhoLeg" customModuleProvider="target">
                         <rect key="frame" x="16" y="8" width="50" height="50"/>
                         <constraints>
@@ -26,19 +34,24 @@
                             <constraint firstAttribute="width" constant="50" id="q65-q3-LpN"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q21-Dp-4MJ">
-                        <rect key="frame" x="98" y="12" width="82.5" height="42"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="???" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q21-Dp-4MJ">
+                        <rect key="frame" x="98" y="12" width="52.5" height="42"/>
                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="textAppColor" value="c3"/>
+                        </userDefinedRuntimeAttributes>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="nVs-Xr-gRV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="5Mm-Nd-lCO"/>
+                    <constraint firstItem="sud-cR-jMK" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="7" id="91B-ze-HLz"/>
                     <constraint firstItem="q21-Dp-4MJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="AJh-fA-MWw"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="q21-Dp-4MJ" secondAttribute="trailing" constant="8" id="Ksb-6X-JqB"/>
                     <constraint firstItem="nVs-Xr-gRV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eIk-xr-Qij"/>
                     <constraint firstItem="q21-Dp-4MJ" firstAttribute="leading" secondItem="nVs-Xr-gRV" secondAttribute="trailing" constant="32" id="hVV-PR-gQB"/>
+                    <constraint firstItem="sud-cR-jMK" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="zpO-be-WAS"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
