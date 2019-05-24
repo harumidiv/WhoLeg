@@ -49,6 +49,8 @@
 		0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A662296F24400A19088 /* AppAboutViewController.swift */; };
 		0DC42A692296F24400A19088 /* AppAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A672296F24400A19088 /* AppAboutViewController.xib */; };
 		0DC42A6C2298139900A19088 /* UILabel+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A6B2298139900A19088 /* UILabel+IB.swift */; };
+		0DC42A7022981BC500A19088 /* PictureBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */; };
+		0DC42A7122981BC500A19088 /* PictureBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -117,6 +119,8 @@
 		0DC42A662296F24400A19088 /* AppAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutViewController.swift; sourceTree = "<group>"; };
 		0DC42A672296F24400A19088 /* AppAboutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppAboutViewController.xib; sourceTree = "<group>"; };
 		0DC42A6B2298139900A19088 /* UILabel+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+IB.swift"; sourceTree = "<group>"; };
+		0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookViewController.swift; sourceTree = "<group>"; };
+		0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureBookViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -271,6 +275,7 @@
 			children = (
 				0D8B5A5422915055001D1A44 /* CustomView */,
 				0D8B5A36228FD235001D1A44 /* Title */,
+				0DC42A6D22981BA700A19088 /* PictureBook */,
 				0DC42A652296F03900A19088 /* Information */,
 				0DC42A6A2296F24F00A19088 /* AppAbout */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
@@ -316,6 +321,15 @@
 				0DC42A672296F24400A19088 /* AppAboutViewController.xib */,
 			);
 			path = AppAbout;
+			sourceTree = "<group>";
+		};
+		0DC42A6D22981BA700A19088 /* PictureBook */ = {
+			isa = PBXGroup;
+			children = (
+				0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */,
+				0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */,
+			);
+			path = PictureBook;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +449,7 @@
 				0D8B5A852294261F001D1A44 /* RoundView.xib in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
 				0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */,
+				0DC42A7122981BC500A19088 /* PictureBookViewController.xib in Resources */,
 				0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +490,7 @@
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
+				0DC42A7022981BC500A19088 /* PictureBookViewController.swift in Sources */,
 				0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */,
 				0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,

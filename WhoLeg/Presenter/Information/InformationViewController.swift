@@ -46,7 +46,12 @@ extension InformationViewController: UITableViewDataSource {
 extension InformationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationController?.pushViewController(AppAboutViewController(), animated: true)
+        if indexPath.row == 1 {
+            self.navigationController?.pushViewController(PictureBookViewController(), animated: true)
+        } else {
+            
+            self.navigationController?.pushViewController(AppAboutViewController(), animated: true)
+        }
     }
 }
 
