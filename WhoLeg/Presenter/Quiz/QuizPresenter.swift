@@ -11,6 +11,7 @@ import Foundation
 protocol QuizPresenter {
     func answerCheck(select: String, answer: String)
     func createRandomElement(a:String, b: String, c: String, d: String)
+    func saveCorrectAnswerData(key: String)
 }
 
 protocol QuizPresenterOutput: class {
@@ -19,6 +20,9 @@ protocol QuizPresenterOutput: class {
 }
 
 class QuizPresenterImpl: QuizPresenter {
+    func saveCorrectAnswerData(key: String) {
+        model.saveCorrectAnswerData(key: key)
+    }
     
     private weak var output: QuizPresenterOutput?
     private var model: QuizModel

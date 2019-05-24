@@ -11,9 +11,14 @@ import Foundation
 protocol QuizModel {
     func stringComParison(lhs: String, rhs: String) -> Bool
     func createRandomElement(a: String, b: String, c: String, d: String) -> [String]
+    func saveCorrectAnswerData(key: String)
 }
 
 class QuizModelImpl: QuizModel {
+    func saveCorrectAnswerData(key: String) {
+        userDefault.set(true, forKey: key)
+    }
+    
     func createRandomElement(a: String, b: String, c: String, d: String) -> [String] {
         let arr = [a, b, c, d]
         return arr.shuffled()
