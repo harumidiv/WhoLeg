@@ -14,6 +14,8 @@ class AppAboutViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        title = "このアプリについて"
+        
          let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         label.text =
         """

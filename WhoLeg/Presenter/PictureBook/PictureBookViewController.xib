@@ -33,13 +33,22 @@
                                 <userDefinedRuntimeAttribute type="string" keyPath="textAppColor" value="c3"/>
                             </userDefinedRuntimeAttributes>
                         </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-aq-a2w">
+                            <rect key="frame" x="0.0" y="119" width="414" height="1"/>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="2zr-WY-rLp"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="1I1-wq-uAS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GWK-2g-aF0" secondAttribute="leading" constant="16" id="Iam-qT-AN6"/>
+                        <constraint firstItem="vbd-aq-a2w" firstAttribute="leading" secondItem="GWK-2g-aF0" secondAttribute="leading" id="KSW-gD-Kp5"/>
                         <constraint firstItem="1I1-wq-uAS" firstAttribute="centerX" secondItem="GWK-2g-aF0" secondAttribute="centerX" id="Rm0-t0-HC3"/>
                         <constraint firstAttribute="height" constant="120" id="UTu-7c-PiB"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1I1-wq-uAS" secondAttribute="trailing" constant="16" id="ZOS-zm-jmg"/>
+                        <constraint firstAttribute="trailing" secondItem="vbd-aq-a2w" secondAttribute="trailing" id="uKy-tk-Rfl"/>
                         <constraint firstItem="1I1-wq-uAS" firstAttribute="top" secondItem="GWK-2g-aF0" secondAttribute="top" constant="50" id="vac-Nx-KAr"/>
                     </constraints>
                 </view>
@@ -54,6 +63,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GWK-2g-aF0" secondAttribute="trailing" id="0bf-AP-a5I"/>
                 <constraint firstItem="GW3-3H-tH4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="BnP-5Z-DAn"/>
                 <constraint firstItem="GWK-2g-aF0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="BuE-Jb-cPA"/>
+                <constraint firstItem="GW3-3H-tH4" firstAttribute="top" secondItem="vbd-aq-a2w" secondAttribute="bottom" id="VWD-DD-Hef"/>
                 <constraint firstItem="GW3-3H-tH4" firstAttribute="top" secondItem="GWK-2g-aF0" secondAttribute="bottom" id="aAZ-eK-Cic"/>
                 <constraint firstAttribute="bottom" secondItem="GW3-3H-tH4" secondAttribute="bottom" id="c1n-5a-Uue"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GW3-3H-tH4" secondAttribute="trailing" id="ev1-rt-bNZ"/>
