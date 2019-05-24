@@ -101,6 +101,7 @@ extension QuizViewController: QuizPresenterOutput {
     
     func answerResult(answer: Bool) {
         if answer {
+            presenter.saveCorrectAnswerData(key: quizData.quiz[rand].image)
             score = score + 1
             resultLabel.text = "⚪︎"
             resultLabel.textColor = UIColor(appColor: .c1)
