@@ -12,6 +12,7 @@ extension UIColor {
     enum AppColor: String {
         case c1
         case c2
+        case c3
         
         var hex: String {
             switch self {
@@ -19,6 +20,8 @@ extension UIColor {
                 return "#0F9D58"
             case .c2:
                 return "#39475D"
+            case .c3:
+                return "#5C5142"
             }
         }
     }
