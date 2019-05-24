@@ -51,6 +51,10 @@
 		0DC42A6C2298139900A19088 /* UILabel+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A6B2298139900A19088 /* UILabel+IB.swift */; };
 		0DC42A7022981BC500A19088 /* PictureBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */; };
 		0DC42A7122981BC500A19088 /* PictureBookViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */; };
+		0DC42A752298211000A19088 /* PictureBookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A732298211000A19088 /* PictureBookTableViewCell.swift */; };
+		0DC42A762298211000A19088 /* PictureBookTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0DC42A742298211000A19088 /* PictureBookTableViewCell.xib */; };
+		0DC42A7822983DDF00A19088 /* UITableView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7722983DDF00A19088 /* UITableView+Addition.swift */; };
+		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +125,10 @@
 		0DC42A6B2298139900A19088 /* UILabel+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+IB.swift"; sourceTree = "<group>"; };
 		0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookViewController.swift; sourceTree = "<group>"; };
 		0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureBookViewController.xib; sourceTree = "<group>"; };
+		0DC42A732298211000A19088 /* PictureBookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookTableViewCell.swift; sourceTree = "<group>"; };
+		0DC42A742298211000A19088 /* PictureBookTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureBookTableViewCell.xib; sourceTree = "<group>"; };
+		0DC42A7722983DDF00A19088 /* UITableView+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Addition.swift"; sourceTree = "<group>"; };
+		0DC42A7922983E1200A19088 /* NSObject+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+Addition.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -210,6 +218,8 @@
 				0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */,
 				0DC42A5F229592AA00A19088 /* Swift+Addition.swift */,
 				0DC42A6B2298139900A19088 /* UILabel+IB.swift */,
+				0DC42A7722983DDF00A19088 /* UITableView+Addition.swift */,
+				0DC42A7922983E1200A19088 /* NSObject+Addition.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -275,8 +285,8 @@
 			children = (
 				0D8B5A5422915055001D1A44 /* CustomView */,
 				0D8B5A36228FD235001D1A44 /* Title */,
-				0DC42A6D22981BA700A19088 /* PictureBook */,
 				0DC42A652296F03900A19088 /* Information */,
+				0DC42A6D22981BA700A19088 /* PictureBook */,
 				0DC42A6A2296F24F00A19088 /* AppAbout */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
@@ -328,8 +338,18 @@
 			children = (
 				0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */,
 				0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */,
+				0DC42A72229820F200A19088 /* cell */,
 			);
 			path = PictureBook;
+			sourceTree = "<group>";
+		};
+		0DC42A72229820F200A19088 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				0DC42A732298211000A19088 /* PictureBookTableViewCell.swift */,
+				0DC42A742298211000A19088 /* PictureBookTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -443,6 +463,7 @@
 				0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */,
 				0D8B5A6D2293CB34001D1A44 /* ResultGoodView.xib in Resources */,
 				0DC42A692296F24400A19088 /* AppAboutViewController.xib in Resources */,
+				0DC42A762298211000A19088 /* PictureBookTableViewCell.xib in Resources */,
 				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
@@ -487,6 +508,7 @@
 				0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */,
 				0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */,
 				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
+				0DC42A7822983DDF00A19088 /* UITableView+Addition.swift in Sources */,
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
@@ -498,10 +520,12 @@
 				0DC42A6C2298139900A19088 /* UILabel+IB.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,
+				0DC42A752298211000A19088 /* PictureBookTableViewCell.swift in Sources */,
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,
 				0D8B5A732293CC0E001D1A44 /* ResultBadView.swift in Sources */,
 				0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */,
 				0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */,
+				0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

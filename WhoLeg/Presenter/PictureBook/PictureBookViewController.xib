@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PictureBookViewController" customModule="WhoLeg" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="GW3-3H-tH4" id="TQ6-6q-AQR"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GWK-2g-aF0">
-                    <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="120"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1I1-wq-uAS">
                             <rect key="frame" x="60" y="50" width="294.5" height="41"/>
@@ -37,13 +38,13 @@
                     <constraints>
                         <constraint firstItem="1I1-wq-uAS" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="GWK-2g-aF0" secondAttribute="leading" constant="16" id="Iam-qT-AN6"/>
                         <constraint firstItem="1I1-wq-uAS" firstAttribute="centerX" secondItem="GWK-2g-aF0" secondAttribute="centerX" id="Rm0-t0-HC3"/>
-                        <constraint firstAttribute="height" constant="100" id="UTu-7c-PiB"/>
+                        <constraint firstAttribute="height" constant="120" id="UTu-7c-PiB"/>
                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="1I1-wq-uAS" secondAttribute="trailing" constant="16" id="ZOS-zm-jmg"/>
                         <constraint firstItem="1I1-wq-uAS" firstAttribute="top" secondItem="GWK-2g-aF0" secondAttribute="top" constant="50" id="vac-Nx-KAr"/>
                     </constraints>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="GW3-3H-tH4">
-                    <rect key="frame" x="0.0" y="144" width="414" height="752"/>
+                    <rect key="frame" x="0.0" y="164" width="414" height="732"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <color key="sectionIndexBackgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </tableView>

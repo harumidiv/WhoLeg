@@ -40,7 +40,7 @@ class TitleViewController: UIViewController {
     
     @objc func showInformation(_ sender: UIBarButtonItem) {
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.navigationController?.pushViewController(InformationViewController(), animated: true)
+        self.navigationController?.pushViewController(InformationViewController(data: jsonData), animated: true)
     }
     
     @IBAction func quizStart(_ sender: Any) {
