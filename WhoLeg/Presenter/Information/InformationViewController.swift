@@ -17,16 +17,17 @@ class InformationViewController: UIViewController {
         }
     }
     
-    let information = ["このアプリについて"]
+    let information = ["ずかん", "このアプリについて"]
     
+    override func viewWillAppear(_ animated: Bool) {
+        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
+            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
-
-
 }
 
 extension InformationViewController: UITableViewDataSource {
