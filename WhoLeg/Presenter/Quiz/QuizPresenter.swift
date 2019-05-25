@@ -12,6 +12,8 @@ protocol QuizPresenter {
     func answerCheck(select: String, answer: String)
     func createRandomElement(a:String, b: String, c: String, d: String)
     func saveCorrectAnswerData(key: String)
+    func correctSoundPlay()
+    func mistakeSoundPlay()
 }
 
 protocol QuizPresenterOutput: class {
@@ -20,17 +22,29 @@ protocol QuizPresenterOutput: class {
 }
 
 class QuizPresenterImpl: QuizPresenter {
-    func saveCorrectAnswerData(key: String) {
-        model.saveCorrectAnswerData(key: key)
-    }
-    
+
     private weak var output: QuizPresenterOutput?
     private var model: QuizModel
     
+    
+    // MARK: - Initializer
     init(model: QuizModel, output: QuizPresenterOutput) {
         self.output = output
         self.model = model
     }
+    
+    func correctSoundPlay(){
+        model.correctSoundPlay()
+    }
+    
+    func mistakeSoundPlay(){
+        model.mistakeSoundPlay()
+    }
+    
+    func saveCorrectAnswerData(key: String) {
+        model.saveCorrectAnswerData(key: key)
+    }
+    
     
     func createRandomElement(a: String, b: String, c: String, d: String) {
         let element = model.createRandomElement(a: a, b: b, c: c, d: d)

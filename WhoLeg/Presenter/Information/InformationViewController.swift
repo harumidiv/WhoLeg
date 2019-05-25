@@ -49,6 +49,7 @@ class InformationViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        title = "じょうほう"
         super.viewDidLoad()
     }
 }
