@@ -102,6 +102,7 @@ extension QuizViewController: QuizPresenterOutput {
     func answerResult(answer: Bool) {
         if answer {
             presenter.saveCorrectAnswerData(key: quizData.quiz[rand].image)
+            presenter.correctSoundPlay()
             score = score + 1
             resultLabel.text = "⚪︎"
             resultLabel.textColor = UIColor(appColor: .c1)
@@ -110,6 +111,7 @@ extension QuizViewController: QuizPresenterOutput {
             optionC.isEnabled = false
             optionD.isEnabled = false
         } else {
+            presenter.mistakeSoundPlay()
             resultLabel.text = "✖︎"
             resultLabel.textColor =  UIColor(appColor: .c2)
             optionA.isEnabled = false
