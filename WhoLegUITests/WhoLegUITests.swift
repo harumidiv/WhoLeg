@@ -62,9 +62,6 @@ class WhoLegUITests: XCTestCase {
         XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["ずかん"]/*[[".cells.staticTexts[\"ずかん\"]",".staticTexts[\"ずかん\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         snapshot("zukan")
         
-        
-        
-        
     }
 
 }
