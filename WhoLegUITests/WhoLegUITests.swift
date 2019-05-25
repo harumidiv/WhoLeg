@@ -20,9 +20,7 @@ class WhoLegUITests: XCTestCase {
     override func tearDown() {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
-
-   
-    func testExample() {
+    func testSnapShot(){
         snapshot("title")
         XCUIApplication().buttons["Button"].tap()
         let app = XCUIApplication()
@@ -58,18 +56,14 @@ class WhoLegUITests: XCTestCase {
         snapshot("result")
         
         XCUIApplication().navigationBars["スコア"].buttons["Reply"].tap()
-         Thread.sleep(forTimeInterval: 0.3)
+        Thread.sleep(forTimeInterval: 0.3)
         XCUIApplication().navigationBars["だれのあし？"].buttons["information"].tap()
-         Thread.sleep(forTimeInterval: 0.3)
+        Thread.sleep(forTimeInterval: 0.3)
         XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["ずかん"]/*[[".cells.staticTexts[\"ずかん\"]",".staticTexts[\"ずかん\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         snapshot("zukan")
         
         
         
-        
-    }
-    
-    func testSnapShot(){
         
     }
 
