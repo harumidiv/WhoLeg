@@ -28,18 +28,22 @@
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wCI-eO-hFO" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
                     <rect key="frame" x="10" y="790.5" width="394" height="71.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="button4"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S8U-0b-jfB" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
                     <rect key="frame" x="10" y="515.5" width="394" height="71.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="button1"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gni-dG-Ply" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
                     <rect key="frame" x="10" y="607" width="394" height="71.5"/>
+                    <accessibility key="accessibilityConfiguration" identifier="button2"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hk4-Tu-pTo" customClass="QuizOptionButton" customModule="WhoLeg" customModuleProvider="target">
                     <rect key="frame" x="10" y="698.5" width="394" height="72"/>
+                    <accessibility key="accessibilityConfiguration" identifier="button3"/>
                     <state key="normal" title="Button"/>
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-ei-cJw">
