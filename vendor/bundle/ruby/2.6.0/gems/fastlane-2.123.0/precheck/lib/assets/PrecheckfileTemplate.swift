@@ -5,7 +5,7 @@
 // fastlane precheck --help
 
 class Precheckfile: PrecheckfileProtocol {
-    //var defaultRuleLevel: String { return "error" }
+    // var defaultRuleLevel: String { return "error" }
 }
 
 // You have three possible values for defaultRuleLevel

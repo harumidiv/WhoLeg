@@ -20,7 +20,7 @@ class QuizRepositoryImpl: QuizRepository {
             let content = try String(contentsOfFile: path)
             jsonData = try JSONDecoder().decode(QuizInfo.self, from: content.data(using: .utf8)!)
             return jsonData
-        } catch  {
+        } catch {
             // TODO: Error handling
             return jsonData
         }

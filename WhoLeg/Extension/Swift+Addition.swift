@@ -9,11 +9,11 @@
 import Foundation
 
 extension Array {
-    mutating func shuffle(){
-        let n = self.count
-        for i in 0 ..< n{
+    mutating func shuffle() {
+        let n = count
+        for i in 0 ..< n {
             let r = Int(arc4random_uniform(UInt32(n - i))) + i
-            self.swapAt(i, r)
+            swapAt(i, r)
         }
     }
 }

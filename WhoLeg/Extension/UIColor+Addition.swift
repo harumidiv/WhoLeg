@@ -13,7 +13,7 @@ extension UIColor {
         case c1
         case c2
         case c3
-        
+
         var hex: String {
             switch self {
             case .c1:
@@ -25,7 +25,7 @@ extension UIColor {
             }
         }
     }
-    
+
     convenience init(hex: String, alpha: CGFloat) {
         var rgbHex = hex
         if rgbHex.prefix(1) == "#" {
@@ -37,11 +37,11 @@ extension UIColor {
         let b = CGFloat(Int(v[4] + v[5], radix: 16) ?? 0)
         self.init(red: r / 255, green: g / 255, blue: b / 255, alpha: alpha)
     }
-    
+
     convenience init(hex: String) {
         self.init(hex: hex, alpha: 1.0)
     }
-    
+
     convenience init(appColor: AppColor) {
         self.init(hex: appColor.hex, alpha: 1.0)
     }

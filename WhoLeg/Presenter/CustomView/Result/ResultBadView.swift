@@ -15,18 +15,20 @@ class ResultBadView: UIView {
         super.init(frame: frame)
         loadFromNib()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         loadFromNib()
     }
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         loadFromNib()
     }
+
     private func loadFromNib() {
         let v = UINib(nibName: "ResultBadView", bundle: Bundle(for: ResultGoodView.self)).instantiate(withOwner: self, options: nil)[0] as! UIView
-        v.frame = self.bounds
+        v.frame = bounds
         addSubview(v)
     }
 }

@@ -7,7 +7,7 @@
 // Remove the // in front of the line to enable the option
 
 class Gymfile: GymfileProtocol {
-  //var sdk: String { return "iphoneos9.0" }
-  //var scheme: String { return "Example" }
-  var outputDirectory: String { return "./" }
+    // var sdk: String { return "iphoneos9.0" }
+    // var scheme: String { return "Example" }
+    var outputDirectory: String { return "./" }
 }

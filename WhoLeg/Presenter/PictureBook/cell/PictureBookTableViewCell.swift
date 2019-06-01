@@ -9,8 +9,6 @@
 import UIKit
 
 class PictureBookTableViewCell: UITableViewCell {
-
-
     @IBOutlet weak var quizImage: RoundImage!
     @IBOutlet weak var label: UILabel!
     override func awakeFromNib() {
@@ -23,5 +21,4 @@ class PictureBookTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }

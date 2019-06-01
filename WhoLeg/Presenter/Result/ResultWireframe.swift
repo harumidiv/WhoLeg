@@ -8,9 +8,9 @@
 
 import UIKit
 
-protocol ResultWireframe{
+protocol ResultWireframe {
     func showTitle(vc: UIViewController)
-    func showRetryQuiz(vc:UIViewController, data: QuizInfo)
+    func showRetryQuiz(vc: UIViewController, data: QuizInfo)
 }
 
 class ResultWireframeImpl: ResultWireframe {
@@ -19,12 +19,10 @@ class ResultWireframeImpl: ResultWireframe {
         titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
         vc.navigationController?.pushViewController(titleViewController, animated: true)
     }
-    
+
     func showRetryQuiz(vc: UIViewController, data: QuizInfo) {
         let quizViewController = QuizViewController(quizData: data, score: 0, count: 1)
         quizViewController.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: quizViewController), wireframe: QuizWireframeImpl())
         vc.navigationController?.pushViewController(quizViewController, animated: true)
     }
-    
-    
 }

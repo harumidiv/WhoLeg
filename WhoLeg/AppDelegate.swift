@@ -10,15 +10,12 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        
         let titleViewController = TitleViewController()
-        titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository:QuizRepositoryImpl())))
-        
+        titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
+
         let nv = UINavigationController(rootViewController: titleViewController)
         window?.rootViewController = nv
         UINavigationBar.appearance().barTintColor = UIColor(hex: "#0F9D58")
@@ -48,7 +45,4 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
-
