@@ -1,4 +1,4 @@
-protocol SnapshotfileProtocol: class {
+protocol SnapshotfileProtocol: AnyObject {
     var workspace: String? { get }
     var project: String? { get }
     var xcargs: String? { get }

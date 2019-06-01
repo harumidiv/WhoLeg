@@ -1,4 +1,4 @@
-protocol MatchfileProtocol: class {
+protocol MatchfileProtocol: AnyObject {
     var type: String { get }
     var readonly: Bool { get }
     var appIdentifier: [String] { get }

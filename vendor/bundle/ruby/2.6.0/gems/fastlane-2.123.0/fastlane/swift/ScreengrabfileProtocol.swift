@@ -1,4 +1,4 @@
-protocol ScreengrabfileProtocol: class {
+protocol ScreengrabfileProtocol: AnyObject {
     var androidHome: String? { get }
     var buildToolsVersion: String? { get }
     var locales: [String] { get }

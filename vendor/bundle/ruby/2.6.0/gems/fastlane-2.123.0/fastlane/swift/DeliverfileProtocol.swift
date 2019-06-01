@@ -1,4 +1,4 @@
-protocol DeliverfileProtocol: class {
+protocol DeliverfileProtocol: AnyObject {
     var username: String { get }
     var appIdentifier: String? { get }
     var appVersion: String? { get }

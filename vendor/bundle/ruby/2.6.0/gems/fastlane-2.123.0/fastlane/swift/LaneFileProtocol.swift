@@ -14,7 +14,7 @@
 
 import Foundation
 
-public protocol LaneFileProtocol: class {
+public protocol LaneFileProtocol: AnyObject {
     var fastlaneVersion: String { get }
     static func runLane(named: String, parameters: [String: String]) -> Bool
 

@@ -1,4 +1,4 @@
-protocol PrecheckfileProtocol: class {
+protocol PrecheckfileProtocol: AnyObject {
     var appIdentifier: String { get }
     var username: String { get }
     var teamId: String? { get }

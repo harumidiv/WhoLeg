@@ -27,12 +27,12 @@ func desc(_ laneDescription: String) {
 }
 
 class Runner {
-    fileprivate var thread: Thread!
-    fileprivate var socketClient: SocketClient!
-    fileprivate let dispatchGroup: DispatchGroup = DispatchGroup()
-    fileprivate var returnValue: String? // lol, so safe
-    fileprivate var currentlyExecutingCommand: RubyCommandable?
-    fileprivate var shouldLeaveDispatchGroupDuringDisconnect = false
+    private var thread: Thread!
+    private var socketClient: SocketClient!
+    private let dispatchGroup: DispatchGroup = DispatchGroup()
+    private var returnValue: String? // lol, so safe
+    private var currentlyExecutingCommand: RubyCommandable?
+    private var shouldLeaveDispatchGroupDuringDisconnect = false
 
     func executeCommand(_ command: RubyCommandable) -> String {
         dispatchGroup.enter()

@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol QuizWireframe: class {
+protocol QuizWireframe: AnyObject {
     func showNextQuiz(vc: UIViewController, data: QuizInfo, score: Int, count: Int)
     func showResult(vc: UIViewController, score: Int)
 }

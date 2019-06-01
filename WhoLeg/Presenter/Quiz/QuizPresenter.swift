@@ -16,7 +16,7 @@ protocol QuizPresenter {
     func mistakeSoundPlay()
 }
 
-protocol QuizPresenterOutput: class {
+protocol QuizPresenterOutput: AnyObject {
     func answerResult(answer: Bool)
     func showQuiz(choice: [String])
 }

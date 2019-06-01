@@ -1,4 +1,4 @@
-protocol ScanfileProtocol: class {
+protocol ScanfileProtocol: AnyObject {
     var workspace: String? { get }
     var project: String? { get }
     var scheme: String? { get }

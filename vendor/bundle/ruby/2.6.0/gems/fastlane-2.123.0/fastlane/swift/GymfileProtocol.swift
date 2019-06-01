@@ -1,4 +1,4 @@
-protocol GymfileProtocol: class {
+protocol GymfileProtocol: AnyObject {
     var workspace: String? { get }
     var project: String? { get }
     var scheme: String? { get }
