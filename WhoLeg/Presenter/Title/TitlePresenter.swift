@@ -8,21 +8,18 @@
 
 import Foundation
 
-
 protocol TitlePresenter {
     func getJsonData() -> QuizInfo
 }
 
-
-class TitlePresenterImpl: TitlePresenter{
-    
+class TitlePresenterImpl: TitlePresenter {
     private var model: TitleModel
-    
+
     init(model: TitleModel) {
         self.model = model
     }
-    
-    func getJsonData()  -> QuizInfo {
+
+    func getJsonData() -> QuizInfo {
         return model.getQuizJson()
     }
 }

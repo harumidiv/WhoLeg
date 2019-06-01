@@ -17,6 +17,7 @@ class ResultPresenterImpl: ResultPresenter {
     init(model: ResultModel) {
         self.model = model
     }
+
     func getjson() -> QuizInfo {
         return model.getJson()
     }

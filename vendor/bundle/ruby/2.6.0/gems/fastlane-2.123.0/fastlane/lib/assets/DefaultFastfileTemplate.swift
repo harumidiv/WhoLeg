@@ -9,5 +9,5 @@
 import Foundation
 
 class Fastfile: LaneFile {
-[[LANES]]
+    [[LANES]]
 }

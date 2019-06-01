@@ -14,18 +14,19 @@ class RoundView: UIView {
         super.init(frame: frame)
         setupAttribute()
     }
-    
+
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupAttribute()
     }
+
     override func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         setupAttribute()
     }
-    private func setupAttribute(){
-        layer.cornerRadius = self.frame.height/2
+
+    private func setupAttribute() {
+        layer.cornerRadius = frame.height / 2
         backgroundColor = UIColor(appColor: .c1)
     }
-
 }

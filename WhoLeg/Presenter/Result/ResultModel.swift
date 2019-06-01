@@ -17,6 +17,7 @@ class ResultModelImpl: ResultModel {
     init(quizRepository: QuizRepository) {
         self.quizRepository = quizRepository
     }
+
     func getJson() -> QuizInfo {
         return quizRepository.getJsonData()
     }

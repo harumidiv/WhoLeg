@@ -2,7 +2,7 @@
 
 class Snapshotfile: SnapshotfileProtocol {
     // A list of devices you want to take the screenshots from
-    //var devices: [String] { return [
+    // var devices: [String] { return [
     //    "iPhone 6",
     //    "iPhone 6 Plus",
     //    "iPhone 5",
@@ -10,14 +10,14 @@ class Snapshotfile: SnapshotfileProtocol {
     //    "iPad Pro (9.7-inch)",
     //    "Apple TV 1080p"
     //    ]
-    //}
+    // }
 
     // locales not supported in Swift yet
     var languages: [String] { return [
         "en-US",
         "de-DE",
         "it-IT"
-        ]
+    ]
     }
 
     // The name of the scheme which contains the UI Tests

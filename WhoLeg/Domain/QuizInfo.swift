@@ -12,11 +12,10 @@ struct QuizInfo: Codable {
     var quiz: [Quiz]
 }
 
-struct Quiz: Codable{
+struct Quiz: Codable {
     var image: String
     var answer: String
     var choice: Choice
-    
 }
 
 struct Choice: Codable {

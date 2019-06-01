@@ -7,7 +7,7 @@
 // Remove the // in front of the line to enable the option
 
 class Scanfile: ScanfileProtocol {
-    //var scheme: String? { return "Example" }
-    //var openReport: Bool { return true }
-    //var clean: Bool { return true }
+    // var scheme: String? { return "Example" }
+    // var openReport: Bool { return true }
+    // var clean: Bool { return true }
 }

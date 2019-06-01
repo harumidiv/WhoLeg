@@ -9,20 +9,19 @@
 import UIKit
 
 class AppAboutViewController: UIViewController {
-
     @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         title = "このアプリについて"
-        
-         let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+
+        let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
         label.text =
-        """
-        だれのあし
-        バージョン : \(version)
-        
-        (C) Harumi Sagawa
-        """
+            """
+            だれのあし
+            バージョン : \(version)
+            
+            (C) Harumi Sagawa
+            """
     }
 }

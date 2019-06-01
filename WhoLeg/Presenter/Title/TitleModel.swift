@@ -9,16 +9,16 @@
 import Foundation
 
 protocol TitleModel {
-    func getQuizJson() -> QuizInfo 
+    func getQuizJson() -> QuizInfo
 }
 
 class TitleModelImpl: TitleModel {
     let quizRepository: QuizRepository
-    
-    init(quizRepository:QuizRepository) {
+
+    init(quizRepository: QuizRepository) {
         self.quizRepository = quizRepository
     }
-    
+
     func getQuizJson() -> QuizInfo {
         return quizRepository.getJsonData()
     }

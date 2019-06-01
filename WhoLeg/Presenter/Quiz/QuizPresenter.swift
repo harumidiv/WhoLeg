@@ -10,7 +10,7 @@ import Foundation
 
 protocol QuizPresenter {
     func answerCheck(select: String, answer: String)
-    func createRandomElement(a:String, b: String, c: String, d: String)
+    func createRandomElement(a: String, b: String, c: String, d: String)
     func saveCorrectAnswerData(key: String)
     func correctSoundPlay()
     func mistakeSoundPlay()
@@ -22,35 +22,33 @@ protocol QuizPresenterOutput: class {
 }
 
 class QuizPresenterImpl: QuizPresenter {
-
     private weak var output: QuizPresenterOutput?
     private var model: QuizModel
-    
-    
+
     // MARK: - Initializer
+
     init(model: QuizModel, output: QuizPresenterOutput) {
         self.output = output
         self.model = model
     }
-    
-    func correctSoundPlay(){
+
+    func correctSoundPlay() {
         model.correctSoundPlay()
     }
-    
-    func mistakeSoundPlay(){
+
+    func mistakeSoundPlay() {
         model.mistakeSoundPlay()
     }
-    
+
     func saveCorrectAnswerData(key: String) {
         model.saveCorrectAnswerData(key: key)
     }
-    
-    
+
     func createRandomElement(a: String, b: String, c: String, d: String) {
         let element = model.createRandomElement(a: a, b: b, c: c, d: d)
         output?.showQuiz(choice: element)
     }
-    
+
     func answerCheck(select: String, answer: String) {
         let result = model.stringComParison(lhs: select, rhs: answer)
         output?.answerResult(answer: result)
