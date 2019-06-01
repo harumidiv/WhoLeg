@@ -20,7 +20,7 @@ class AppAboutViewController: UIViewController {
             """
             だれのあし
             バージョン : \(version)
-            
+
             (C) Harumi Sagawa
             """
     }

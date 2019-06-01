@@ -24,14 +24,16 @@ class QuizModelImpl: QuizModel {
     init() {
         var path = Bundle.main.path(forResource: "Resource/sound/miss", ofType: "mp3")
         var url = URL(fileURLWithPath: path!)
-        do { try mistakeSound = AVAudioPlayer(contentsOf: url) }
-        catch { fatalError() }
+        do {
+            try mistakeSound = AVAudioPlayer(contentsOf: url)
+        } catch { fatalError() }
         mistakeSound.prepareToPlay()
 
         path = Bundle.main.path(forResource: "Resource/sound/success", ofType: "mp3")
         url = URL(fileURLWithPath: path!)
-        do { try correctSound = AVAudioPlayer(contentsOf: url) }
-        catch { fatalError() }
+        do {
+            try correctSound = AVAudioPlayer(contentsOf: url)
+        } catch { fatalError() }
         correctSound.prepareToPlay()
     }
 

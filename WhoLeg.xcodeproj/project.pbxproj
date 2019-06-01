@@ -406,8 +406,8 @@
 				0D8B59FA228FADE4001D1A44 /* Sources */,
 				0D8B59FB228FADE4001D1A44 /* Frameworks */,
 				0D8B59FC228FADE4001D1A44 /* Resources */,
-				0DC8EED722A29D27008785F4 /* SwiftLint */,
 				0DC8EED822A2A40E008785F4 /* Swiftformat */,
+				0D5C54B622A2A56600654631 /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -540,7 +540,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0DC8EED722A29D27008785F4 /* SwiftLint */ = {
+		0D5C54B622A2A56600654631 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
