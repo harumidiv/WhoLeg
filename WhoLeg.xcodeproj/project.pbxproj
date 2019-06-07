@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04E7DAD3B997D3C528517C82 /* Pods_WhoLeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */; };
+		0D724D6922AA785D009AACAB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D724D6822AA785C009AACAB /* Settings.bundle */; };
 		0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */; };
 		0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A03228FADE4001D1A44 /* ViewController.swift */; };
 		0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A05228FADE4001D1A44 /* Main.storyboard */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLegUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D724D6822AA785C009AACAB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = WhoLeg/Settings.bundle; sourceTree = "<group>"; };
 		0D8B59FE228FADE4001D1A44 /* WhoLeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoLeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D8B5A03228FADE4001D1A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +178,7 @@
 		0D8B59F5228FADE4001D1A44 = {
 			isa = PBXGroup;
 			children = (
+				0D724D6822AA785C009AACAB /* Settings.bundle */,
 				0D8B5A00228FADE4001D1A44 /* WhoLeg */,
 				0D8B5A15228FADE6001D1A44 /* WhoLegTests */,
 				0D8B5A20228FADE6001D1A44 /* WhoLegUITests */,
@@ -408,6 +411,7 @@
 				0D8B59FC228FADE4001D1A44 /* Resources */,
 				0DC8EED822A2A40E008785F4 /* Swiftformat */,
 				0D5C54B622A2A56600654631 /* SwiftLint */,
+				0D31083722A9642000DDE2A7 /* LicensePlist */,
 			);
 			buildRules = (
 			);
@@ -504,6 +508,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D724D6922AA785D009AACAB /* Settings.bundle in Resources */,
 				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A712293CBEE001D1A44 /* ResultNormalView.xib in Resources */,
 				0D8B5A46228FE01F001D1A44 /* Resource in Resources */,
@@ -540,6 +545,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D31083722A9642000DDE2A7 /* LicensePlist */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = LicensePlist;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\n${PODS_ROOT}/LicensePlist/license-plist --output-path $PRODUCT_NAME/Settings.bundle --github-token YOUR_GITHUB_TOKEN\nfi\n";
+		};
 		0D5C54B622A2A56600654631 /* SwiftLint */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

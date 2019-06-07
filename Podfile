@@ -9,6 +9,7 @@ target 'WhoLeg' do
   # Pods for WhoLeg
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
+  pod 'LicensePlist'
 
   target 'WhoLegTests' do
     inherit! :search_paths
