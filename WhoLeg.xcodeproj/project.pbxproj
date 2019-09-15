@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		04E7DAD3B997D3C528517C82 /* Pods_WhoLeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */; };
+		053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */; };
 		0D724D6922AA785D009AACAB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D724D6822AA785C009AACAB /* Settings.bundle */; };
 		0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */; };
 		0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A03228FADE4001D1A44 /* ViewController.swift */; };
@@ -80,6 +81,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryTests.swift; sourceTree = "<group>"; };
 		08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLegUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D724D6822AA785C009AACAB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = WhoLeg/Settings.bundle; sourceTree = "<group>"; };
 		0D8B59FE228FADE4001D1A44 /* WhoLeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoLeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -220,6 +222,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8B5A16228FADE6001D1A44 /* WhoLegTests.swift */,
+				053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */,
 				0D8B5A18228FADE6001D1A44 /* Info.plist */,
 			);
 			path = WhoLegTests;
@@ -709,6 +712,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */,
 				0D8B5A17228FADE6001D1A44 /* WhoLegTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
