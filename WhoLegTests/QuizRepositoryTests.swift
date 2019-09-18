@@ -30,4 +30,18 @@ class QuizRepositoryTests: XCTestCase {
             }
         }
     }
+
+    func testJsonImageStringContainToAssets() {
+        let repository = QuizRepositoryImpl()
+        let quizData = repository.getJsonData()
+
+        quizData.quiz.forEach { q in
+            let image: UIImage? = UIImage(named: q.image)
+            if image != nil {
+                XCTAssertNotNil(image)
+            } else {
+                XCTAssertNotNil(image)
+            }
+        }
+    }
 }
