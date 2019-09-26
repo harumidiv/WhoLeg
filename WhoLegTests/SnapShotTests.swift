@@ -7,17 +7,18 @@
 //
 
 import FBSnapshotTestCase
-@testable import WhoLegTests
+@testable import WhoLeg
 
 class SnapShotTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
-        recordMode = false
+        recordMode = true
     }
 
-    func testView() {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: 60, height: 60))
-        view.backgroundColor = .green
-        FBSnapshotVerifyView(view)
+    func testInformationScreen() {
+        let vc = TitleViewController()
+        let presenter = TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl()))
+        vc.injector(presenter: presenter)
+        FBSnapshotVerifyView(vc.view)
     }
 }
