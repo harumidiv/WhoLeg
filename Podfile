@@ -12,8 +12,8 @@ target 'WhoLeg' do
   pod 'LicensePlist'
 
   target 'WhoLegTests' do
-    inherit! :search_paths
-    # Pods for testing
+    use_frameworks!
+    pod 'iOSSnapshotTestCase'
   end
 
   target 'WhoLegUITests' do

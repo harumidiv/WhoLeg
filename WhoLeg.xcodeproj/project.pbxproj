@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		04E7DAD3B997D3C528517C82 /* Pods_WhoLeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */; };
 		053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */; };
+		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
 		0D724D6922AA785D009AACAB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D724D6822AA785C009AACAB /* Settings.bundle */; };
 		0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */; };
 		0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A03228FADE4001D1A44 /* ViewController.swift */; };
@@ -60,7 +61,7 @@
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
 		6A4CE5B3BAE208D357F55077 /* Pods_WhoLegUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */; };
-		8C51ED7C95F549B4008255A3 /* Pods_WhoLegTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFA1F9E71A9054B50AB9B614 /* Pods_WhoLegTests.framework */; };
+		CAAB645102F40BAAD6433F80 /* Pods_WhoLeg_WhoLegTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,8 @@
 
 /* Begin PBXFileReference section */
 		053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryTests.swift; sourceTree = "<group>"; };
+		05E5D722233C840F00916809 /* SnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTests.swift; sourceTree = "<group>"; };
+		08029E2D35A54B2FEEB9B214 /* Pods-WhoLeg-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
 		08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLegUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D724D6822AA785C009AACAB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = WhoLeg/Settings.bundle; sourceTree = "<group>"; };
 		0D8B59FE228FADE4001D1A44 /* WhoLeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoLeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,7 +148,8 @@
 		584C3FD79D6FF4C95DCAFF12 /* Pods-WhoLeg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.release.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.release.xcconfig"; sourceTree = "<group>"; };
 		5AC864F7FAFAABB85CEEB6CA /* Pods-WhoLeg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.debug.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.debug.xcconfig"; sourceTree = "<group>"; };
 		8581950AC1E9AF5F52676B2B /* Pods-WhoLegUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegUITests.debug.xcconfig"; path = "Target Support Files/Pods-WhoLegUITests/Pods-WhoLegUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		AFA1F9E71A9054B50AB9B614 /* Pods_WhoLegTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLegTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B9B4BFF17B4C6A70AE060F0 /* Pods-WhoLeg-WhoLegTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg-WhoLegTests.debug.xcconfig"; path = "Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLeg_WhoLegTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C22053ADB83E54E6A4B90650 /* Pods-WhoLegTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegTests.debug.xcconfig"; path = "Target Support Files/Pods-WhoLegTests/Pods-WhoLegTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -162,7 +166,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8C51ED7C95F549B4008255A3 /* Pods_WhoLegTests.framework in Frameworks */,
+				CAAB645102F40BAAD6433F80 /* Pods_WhoLeg_WhoLegTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +228,7 @@
 				0D8B5A16228FADE6001D1A44 /* WhoLegTests.swift */,
 				053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */,
 				0D8B5A18228FADE6001D1A44 /* Info.plist */,
+				05E5D722233C840F00916809 /* SnapShotTests.swift */,
 			);
 			path = WhoLegTests;
 			sourceTree = "<group>";
@@ -387,6 +392,8 @@
 				4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */,
 				8581950AC1E9AF5F52676B2B /* Pods-WhoLegUITests.debug.xcconfig */,
 				2263196256B0880C1D3CAF99 /* Pods-WhoLegUITests.release.xcconfig */,
+				9B9B4BFF17B4C6A70AE060F0 /* Pods-WhoLeg-WhoLegTests.debug.xcconfig */,
+				08029E2D35A54B2FEEB9B214 /* Pods-WhoLeg-WhoLegTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -395,8 +402,8 @@
 			isa = PBXGroup;
 			children = (
 				2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */,
-				AFA1F9E71A9054B50AB9B614 /* Pods_WhoLegTests.framework */,
 				08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */,
+				B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -433,6 +440,7 @@
 				0D8B5A0E228FADE6001D1A44 /* Sources */,
 				0D8B5A0F228FADE6001D1A44 /* Frameworks */,
 				0D8B5A10228FADE6001D1A44 /* Resources */,
+				3C3FCBEFAD9979E8607FB7A6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -602,6 +610,23 @@
 			shellPath = /bin/sh;
 			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/SwiftFormat/CommandLineTool/swiftformat\" . --exclude Carthage,Pods --stripunusedargs closure-only --disable strongOutlets,trailingCommas\n\n\n";
 		};
+		3C3FCBEFAD9979E8607FB7A6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		85485B68C7045B8E4A54D04F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -639,7 +664,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WhoLegTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-WhoLeg-WhoLegTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -713,6 +738,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */,
+				05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */,
 				0D8B5A17228FADE6001D1A44 /* WhoLegTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -917,7 +943,7 @@
 		};
 		0D8B5A2A228FADE6001D1A44 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C22053ADB83E54E6A4B90650 /* Pods-WhoLegTests.debug.xcconfig */;
+			baseConfigurationReference = 9B9B4BFF17B4C6A70AE060F0 /* Pods-WhoLeg-WhoLegTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -939,7 +965,7 @@
 		};
 		0D8B5A2B228FADE6001D1A44 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */;
+			baseConfigurationReference = 08029E2D35A54B2FEEB9B214 /* Pods-WhoLeg-WhoLegTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
