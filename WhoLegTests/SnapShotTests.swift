@@ -12,13 +12,18 @@ import FBSnapshotTestCase
 class SnapShotTests: FBSnapshotTestCase {
     override func setUp() {
         super.setUp()
-        recordMode = true
+        recordMode = false
     }
 
     func testInformationScreen() {
         let vc = TitleViewController()
         let presenter = TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl()))
         vc.injector(presenter: presenter)
-        FBSnapshotVerifyView(vc.view)
+
+        let nc = UINavigationController(rootViewController: vc)
+        let window = UIWindow(frame: nc.view.frame)
+        window.addSubview(nc.view)
+
+        FBSnapshotVerifyView(nc.view)
     }
 }
