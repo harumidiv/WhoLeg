@@ -60,6 +60,7 @@
 		0DC42A7822983DDF00A19088 /* UITableView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7722983DDF00A19088 /* UITableView+Addition.swift */; };
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
+		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
 		6A4CE5B3BAE208D357F55077 /* Pods_WhoLegUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */; };
 		CAAB645102F40BAAD6433F80 /* Pods_WhoLeg_WhoLegTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */; };
 /* End PBXBuildFile section */
@@ -144,6 +145,7 @@
 		0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SnapshotHelper.swift; path = fastlane/SnapshotHelper.swift; sourceTree = SOURCE_ROOT; };
 		2263196256B0880C1D3CAF99 /* Pods-WhoLegUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegUITests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegUITests/Pods-WhoLegUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4959F87E23448BE900DEB4DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegTests/Pods-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
 		584C3FD79D6FF4C95DCAFF12 /* Pods-WhoLeg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.release.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.release.xcconfig"; sourceTree = "<group>"; };
 		5AC864F7FAFAABB85CEEB6CA /* Pods-WhoLeg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.debug.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.debug.xcconfig"; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				0D8B5A03228FADE4001D1A44 /* ViewController.swift */,
 				0D8B5A05228FADE4001D1A44 /* Main.storyboard */,
 				0D8B5A08228FADE6001D1A44 /* Assets.xcassets */,
+				4959F87E23448BE900DEB4DB /* Colors.xcassets */,
 				0D8B5A0A228FADE6001D1A44 /* LaunchScreen.storyboard */,
 				0D8B5A0D228FADE6001D1A44 /* Info.plist */,
 			);
@@ -227,8 +230,8 @@
 			children = (
 				0D8B5A16228FADE6001D1A44 /* WhoLegTests.swift */,
 				053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */,
-				0D8B5A18228FADE6001D1A44 /* Info.plist */,
 				05E5D722233C840F00916809 /* SnapShotTests.swift */,
+				0D8B5A18228FADE6001D1A44 /* Info.plist */,
 			);
 			path = WhoLegTests;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				0D8B5A6D2293CB34001D1A44 /* ResultGoodView.xib in Resources */,
 				0DC42A692296F24400A19088 /* AppAboutViewController.xib in Resources */,
 				0DC42A762298211000A19088 /* PictureBookTableViewCell.xib in Resources */,
+				4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */,
 				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
