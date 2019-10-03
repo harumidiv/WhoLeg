@@ -34,7 +34,7 @@
                         </label>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vbd-aq-a2w">
                             <rect key="frame" x="0.0" y="119" width="414" height="1"/>
-                            <color key="backgroundColor" red="0.96862745098039216" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="backgroundColor" name="Background"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="1" id="2zr-WY-rLp"/>
                             </constraints>
@@ -74,7 +74,7 @@
     </objects>
     <resources>
         <namedColor name="Background">
-            <color red="0.92156862745098034" green="0.92156862745098034" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92199999094009399" green="0.92199999094009399" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
