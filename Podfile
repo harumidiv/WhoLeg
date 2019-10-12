@@ -9,7 +9,7 @@ target 'WhoLeg' do
   # Pods for WhoLeg
   pod 'SwiftLint'
   pod 'SwiftFormat/CLI'
-  pod 'LicensePlist'
+  pod 'LicensePlist', '2.6.0'
 
   target 'WhoLegTests' do
     use_frameworks!
