@@ -47,6 +47,7 @@
                 </button>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="QdE-ei-cJw">
                     <rect key="frame" x="16" y="44" width="382" height="455.5"/>
+                    <color key="backgroundColor" name="Background"/>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="✖︎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NVo-Ni-Ibk">
                     <rect key="frame" x="16" y="14" width="382" height="477.5"/>
@@ -88,7 +89,7 @@
     <resources>
         <image name="kirin" width="1200" height="1200"/>
         <namedColor name="Background">
-            <color red="0.92199999094009399" green="0.92199999094009399" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.082000002264976501" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

@@ -26,6 +26,7 @@
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-KU-JB4" customClass="RoundImage" customModule="WhoLeg" customModuleProvider="target">
                             <rect key="frame" x="10" y="10" width="280" height="280"/>
+                            <color key="backgroundColor" name="Background"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="280" id="D28-eP-Kbl"/>
                                 <constraint firstAttribute="width" constant="280" id="HIb-Xc-0cs"/>
@@ -80,7 +81,7 @@
         <image name="kirin" width="1200" height="1200"/>
         <image name="start" width="691" height="691"/>
         <namedColor name="Background">
-            <color red="0.92156862745098034" green="0.92156862745098034" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.082000002264976501" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

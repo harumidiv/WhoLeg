@@ -74,7 +74,7 @@
     </objects>
     <resources>
         <namedColor name="Background">
-            <color red="0.92199999094009399" green="0.92199999094009399" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.078000001609325409" green="0.082000002264976501" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

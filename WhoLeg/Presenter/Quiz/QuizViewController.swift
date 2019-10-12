@@ -75,12 +75,7 @@ class QuizViewController: UIViewController {
         navigationItem.hidesBackButton = true
         title = "\(count)/10"
 
-        let srcImage = UIImage(named: quizData.quiz[rand].image)!
-        UIGraphicsBeginImageContextWithOptions(srcImage.size, true, 0.0)
-        srcImage.draw(in: CGRect(origin: CGPoint.zero, size: srcImage.size))
-        let remakedImage = UIGraphicsGetImageFromCurrentImageContext()!
-        image.image = createMaskImage(image: remakedImage)
-        UIGraphicsEndImageContext()
+        image.image = UIImage(named: quizData.quiz[rand].image)!
 
         presenter.createRandomElement(a: quizData.quiz[rand].choice.a,
                                       b: quizData.quiz[rand].choice.b,
@@ -95,17 +90,6 @@ class QuizViewController: UIViewController {
             presenter.answerCheck(select: sender.titleLabel!.text!, answer: quizData.quiz[rand].answer)
             isBeforeAnswer = false
         }
-    }
-
-    // MARK: - PrivateMethod
-
-    private func createMaskImage(image: UIImage) -> UIImage {
-        let cgImage = image.cgImage
-
-        let maskColor: [CGFloat] = [255, 255, 255, 255, 255, 255]
-        let maskedImage = cgImage?.copy(maskingColorComponents: maskColor)
-
-        return UIImage(cgImage: maskedImage!)
     }
 }
 
