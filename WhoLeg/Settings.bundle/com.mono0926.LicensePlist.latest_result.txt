@@ -2,7 +2,7 @@ name: LicensePlist, nameSpecified:
 body: MIT License
 
 Copyrig…
-version: 2.5.0
+version: 2.6.0
 
 name: SwiftFormat, nameSpecified: 
 body: MIT License
