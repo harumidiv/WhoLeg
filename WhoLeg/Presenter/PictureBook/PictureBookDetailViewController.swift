@@ -6,6 +6,7 @@
 //  Copyright © 2019 佐川晴海. All rights reserved.
 //
 
+import SafariServices
 import UIKit
 
 class PictureBookDetailViewController: UIViewController {
@@ -36,7 +37,7 @@ class PictureBookDetailViewController: UIViewController {
     }
 
     // MARK: - Initializer
-    
+
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: PictureBookDetailViewController.self), bundle: nil)
@@ -47,17 +48,16 @@ class PictureBookDetailViewController: UIViewController {
     }
 
     // MARK: - Lifecycle
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "クイズ詳細"
     }
-    
-    //MARK: - Eevnt
+
+    // MARK: - Eevnt
 
     @IBAction func detailTapped(_ sender: Any) {
-        navigationController?.pushViewController(
-            QuizWebInformationViewController(url: viewModel.url), animated: true
-        )
+        let vc = SFSafariViewController(url: viewModel.url)
+        present(vc, animated: true, completion: nil)
     }
 }
