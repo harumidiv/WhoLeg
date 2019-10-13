@@ -30,7 +30,7 @@ class PictureBookDetailViewController: UIViewController {
 
     @IBOutlet weak var detailButton: UIButton! {
         didSet {
-            detailButton.setTitle(viewModel.text + "について", for: .normal)
+            detailButton.setTitle(viewModel.text + "って何？", for: .normal)
         }
     }
 
@@ -49,7 +49,8 @@ class PictureBookDetailViewController: UIViewController {
     }
 
     @IBAction func detailTapped(_ sender: Any) {
-        //TODO
-        //JSONの中にwikipediaのurlを含める
+        // TODO:
+        // JSONの中にwikipediaのurlを含める
+        print("aaaaa")
     }
 }

@@ -34,10 +34,10 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-5O-vf6">
-                    <rect key="frame" x="107" y="802" width="200" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-5O-vf6" customClass="InformationButton" customModule="WhoLeg" customModuleProvider="target">
+                    <rect key="frame" x="107" y="772" width="200" height="60"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="200" id="X3z-Qb-kfz"/>
+                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="X3z-Qb-kfz"/>
                     </constraints>
                     <state key="normal" title="Button"/>
                     <connections>
@@ -53,7 +53,9 @@
                 <constraint firstItem="KK9-5O-vf6" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FwZ-A2-ue7" secondAttribute="bottom" constant="16" id="DMb-pQ-kqi"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="KK9-5O-vf6" secondAttribute="bottom" constant="30" id="Tqn-al-jrf"/>
                 <constraint firstItem="QVV-mc-2bs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="WpX-Gq-uzo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="KK9-5O-vf6" secondAttribute="trailing" constant="16" id="cry-3U-SHn"/>
                 <constraint firstItem="FwZ-A2-ue7" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="dBl-Kf-zxC"/>
+                <constraint firstItem="KK9-5O-vf6" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="l1f-zt-Ghl"/>
                 <constraint firstItem="QVV-mc-2bs" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="p1W-Og-Km4"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FwZ-A2-ue7" secondAttribute="trailing" constant="16" id="ul5-xQ-4oh"/>
             </constraints>
