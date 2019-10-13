@@ -75,7 +75,8 @@ class QuizViewController: UIViewController {
         navigationItem.hidesBackButton = true
         title = "\(count)/10"
 
-        image.image = UIImage(named: quizData.quiz[rand].image)
+        image.image = UIImage(named: quizData.quiz[rand].image)!
+
         presenter.createRandomElement(a: quizData.quiz[rand].choice.a,
                                       b: quizData.quiz[rand].choice.b,
                                       c: quizData.quiz[rand].choice.c,

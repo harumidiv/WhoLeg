@@ -37,3 +37,7 @@ Pods/*
 # bandler
 vendor/*
 vendor/bundle/*
+
+# snapshotTest
+WhoLegTests/ReferenceImages_64/*
+WhoLegTests/FailureDiffs
