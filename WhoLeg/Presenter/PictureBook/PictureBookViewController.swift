@@ -51,8 +51,10 @@ extension PictureBookViewController: UITableViewDataSource {
 
         if userDefault.object(forKey: quizData.image) != nil {
             cell.label?.text = quizData.answer
+            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         } else {
             cell.label.text = "? ? ?"
+            cell.accessoryType = UITableViewCell.AccessoryType.none
         }
 
         return cell
