@@ -483,23 +483,23 @@
             }
         }, {
             "image": "seireiusi.png",
-            "answer": "せいれいうし",
-            "url": "https://dic.pixiv.net/a/精霊牛",
+            "answer": "しょうりょううし",
+            "url": "https://dic.pixiv.net/a/%E7%B2%BE%E9%9C%8A%E7%89%9B",
             "choice": {
-                "a": "せいれいうし",
-                "b": "せいれいうま",
-                "c": "せいれいとら",
-                "d": "せいれいぞう"
+                "a": "しょうりょううし",
+                "b": "しょうりょううま",
+                "c": "しょうりょうとら",
+                "d": "しょうりょうぞう"
             }
         }, {
             "image": "seireiuma.png",
-            "answer": "せいれいうま",
+            "answer": "しょうりょううま",
             "url": "https://dic.pixiv.net/a/%E7%B2%BE%E9%9C%8A%E9%A6%AC",
             "choice": {
-                "a": "せいれいうし",
-                "b": "せいれいうま",
-                "c": "せいれいとら",
-                "d": "せいれいぞう"
+                "a": "しょうりょううし",
+                "b": "しょうりょううま",
+                "c": "しょうりょうとら",
+                "d": "しょうりょうぞう"
             }
         }, {
             "image": "amagaeru.png",
