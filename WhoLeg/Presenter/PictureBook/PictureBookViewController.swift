@@ -68,11 +68,15 @@ extension PictureBookViewController: UITableViewDataSource {
 }
 
 extension PictureBookViewController: UITableViewDelegate {
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let quizData = data.quiz[indexPath.row]
+
         if tableView.cellForRow(at: indexPath)?.tag == 1 {
-            navigationController?.pushViewController(PictureBookDetailViewController(), animated: true)
+            let viewModel = PictureBookDetailViewController.ViewModel(image: UIImage(named: quizData.image)!, text: quizData.answer)
+
+            let vc = PictureBookDetailViewController(viewModel: viewModel)
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            navigationController?.pushViewController(vc, animated: true)
         }
     }
 }
