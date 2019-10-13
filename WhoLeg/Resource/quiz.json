@@ -2,6 +2,7 @@
     "quiz": [{
             "image": "simauma.png",
             "answer": "しまうま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%9E%E3%82%A6%E3%83%9E",
             "choice": {
                 "a": "きりん",
                 "b": "いぬ",
@@ -12,6 +13,7 @@
         {
             "image": "kirin.png",
             "answer": "きりん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%AA%E3%83%B3",
             "choice": {
                 "a": "おらんうーたん",
                 "b": "きりん",
@@ -22,6 +24,7 @@
         {
             "image": "zou.png",
             "answer": "ぞう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BE%E3%82%A6",
             "choice": {
                 "a": "ぞう",
                 "b": "ごりら",
@@ -32,6 +35,7 @@
         {
             "image": "otama.png",
             "answer": "おたまじゃくし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%82%BF%E3%83%9E%E3%82%B8%E3%83%A3%E3%82%AF%E3%82%B7",
             "choice": {
                 "a": "げんごろう",
                 "b": "たがめ",
@@ -42,6 +46,7 @@
         {
             "image": "maguro.png",
             "answer": "まぐろ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%82%B0%E3%83%AD",
             "choice": {
                 "a": "まぐろ",
                 "b": "さんま",
@@ -52,6 +57,7 @@
         {
             "image": "neko.png",
             "answer": "ねこ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8D%E3%82%B3",
             "choice": {
                 "a": "はむすたー",
                 "b": "ねこ",
@@ -62,6 +68,7 @@
         {
             "image": "huramingo.png",
             "answer": "ふらみんご",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%95%E3%83%A9%E3%83%9F%E3%83%B3%E3%82%B4",
             "choice": {
                 "a": "あひる",
                 "b": "きりん",
@@ -72,6 +79,7 @@
         {
             "image": "ika.png",
             "answer": "いか",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%AB",
             "choice": {
                 "a": "いか",
                 "b": "たこ",
@@ -82,6 +90,7 @@
         {
             "image": "ahiru.png",
             "answer": "あひる",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%92%E3%83%AB",
             "choice": {
                 "a": "だちょう",
                 "b": "ふらみんご",
@@ -92,6 +101,7 @@
         {
             "image": "tebasaki.png",
             "answer": "にわとり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%AF%E3%83%88%E3%83%AA",
             "choice": {
                 "a": "くじら",
                 "b": "やぎ",
@@ -102,6 +112,7 @@
         {
             "image": "tako.png",
             "answer": "たこ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%B3",
             "choice": {
                 "a": "たこ",
                 "b": "まぐろ",
@@ -112,6 +123,7 @@
         {
             "image": "kaba.png",
             "answer": "かば",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%90",
             "choice": {
                 "a": "かば",
                 "b": "わに",
@@ -122,6 +134,7 @@
         {
             "image": "kame.png",
             "answer": "かめ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A1",
             "choice": {
                 "a": "かめ",
                 "b": "とかげ",
@@ -132,6 +145,7 @@
         {
             "image": "kasaobake.png",
             "answer": "かさおばけ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%81%8B%E3%82%89%E3%81%8B%E3%81%95%E5%B0%8F%E5%83%A7",
             "choice": {
                 "a": "かさおばけ",
                 "b": "ぬりかべ",
@@ -142,6 +156,7 @@
         {
             "image": "mizinko.png",
             "answer": "みじんこ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%9F%E3%82%B8%E3%83%B3%E3%82%B3",
             "choice": {
                 "a": "けんみじんこ",
                 "b": "みじんこ",
@@ -152,6 +167,7 @@
         {
             "image": "pengin.png",
             "answer": "ぺんぎん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%9A%E3%83%B3%E3%82%AE%E3%83%B3",
             "choice": {
                 "a": "しろくま",
                 "b": "ぺんぎん",
@@ -162,6 +178,7 @@
         {
             "image": "batta.png",
             "answer": "しょうりょうばった",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A7%E3%82%A6%E3%83%AA%E3%83%A7%E3%82%A6%E3%83%90%E3%83%83%E3%82%BF",
             "choice": {
                 "a": "しょうりょうばった",
                 "b": "とのさまばった",
@@ -172,6 +189,7 @@
         {
             "image": "hasamimusi.png",
             "answer": "はさみむし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%82%B5%E3%83%9F%E3%83%A0%E3%82%B7",
             "choice": {
                 "a": "はさみむし",
                 "b": "たがめ",
@@ -182,6 +200,7 @@
         {
             "image": "mukade.png",
             "answer": "むかで",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A0%E3%82%AB%E3%83%87",
             "choice": {
                 "a": "むかで",
                 "b": "げじげじ",
@@ -192,6 +211,7 @@
         {
             "image": "tentoumusi.png",
             "answer": "てんとうむし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%B3%E3%83%88%E3%82%A6%E3%83%A0%E3%82%B7",
             "choice": {
                 "a": "てんとうむし",
                 "b": "たこ",
@@ -202,6 +222,7 @@
         {
             "image": "oneetyan.png",
             "answer": "おねえちゃん",
+            "url": "https://ja.wikipedia.org/wiki/%E5%A7%89",
             "choice": {
                 "a": "おねえちゃん",
                 "b": "おにいちゃん",
@@ -212,6 +233,7 @@
         {
             "image": "tutinoko.png",
             "answer": "つちのこ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%84%E3%83%81%E3%83%8E%E3%82%B3",
             "choice": {
                 "a": "つちのこ",
                 "b": "いえてぃ",
@@ -222,6 +244,7 @@
         {
             "image": "tatiuo.png",
             "answer": "たちうお",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BF%E3%83%81%E3%82%A6%E3%82%AA",
             "choice": {
                 "a": "たちうお",
                 "b": "かつお",
@@ -232,6 +255,7 @@
         {
             "image": "tutanka-men.png",
             "answer": "つたんかーめん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%84%E3%82%BF%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%A1%E3%83%B3",
             "choice": {
                 "a": "きりん",
                 "b": "つたんかーめん",
@@ -242,6 +266,7 @@
         {
             "image": "tonsoku.png",
             "answer": "ぶた",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%96%E3%82%BF",
             "choice": {
                 "a": "ぶた",
                 "b": "しか",
@@ -252,6 +277,7 @@
         {
             "image": "ziyuunomegami.png",
             "answer": "じゆうのめがみ",
+            "url": "https://ja.wikipedia.org/wiki/%E8%87%AA%E7%94%B1%E3%81%AE%E5%A5%B3%E7%A5%9E",
             "choice": {
                 "a": "じゆうのめがみ",
                 "b": "はち",
@@ -262,6 +288,7 @@
         {
             "image": "dangomusi.png",
             "answer": "だんごむし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%B3%E3%82%B4%E3%83%A0%E3%82%B7",
             "choice": {
                 "a": "むかで",
                 "b": "だんごむし",
@@ -272,6 +299,7 @@
         {
             "image": "sufinkusu.png",
             "answer": "すふぃんくす",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%95%E3%82%A3%E3%83%B3%E3%82%AF%E3%82%B9",
             "choice": {
                 "a": "すふぃんくす",
                 "b": "かんがえるひと",
@@ -282,6 +310,7 @@
         {
             "image": "uni.png",
             "answer": "うに",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%83%8B",
             "choice": {
                 "a": "うに",
                 "b": "いくら",
@@ -292,6 +321,7 @@
         {
             "image": "shati.png",
             "answer": "シャチ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%A3%E3%83%81",
             "choice": {
                 "a": "シャチ",
                 "b": "イルカ",
@@ -301,6 +331,7 @@
         }, {
             "image": "kumanomi.png",
             "answer": "クマノミ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%9E%E3%83%8E%E3%83%9F",
             "choice": {
                 "a": "クマノミ",
                 "b": "メダカ",
@@ -310,6 +341,7 @@
         }, {
             "image": "manbou.png",
             "answer": "マンボウ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%9E%E3%83%B3%E3%83%9C%E3%82%A6",
             "choice": {
                 "a": "マンボウ",
                 "b": "エイ",
@@ -319,6 +351,7 @@
         }, {
             "image": "hitode.png",
             "answer": "ヒトデ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%92%E3%83%88%E3%83%87",
             "choice": {
                 "a": "ヒトデ",
                 "b": "ロバ",
@@ -328,6 +361,7 @@
         }, {
             "image": "ebi.png",
             "answer": "えび",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%93",
             "choice": {
                 "a": "えび",
                 "b": "かに",
@@ -337,6 +371,7 @@
         }, {
             "image": "kurage.png",
             "answer": "くらげ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A9%E3%82%B2",
             "choice": {
                 "a": "くらげ",
                 "b": "ふうせん",
@@ -346,6 +381,7 @@
         }, {
             "image": "ningyo.png",
             "answer": "にんぎょ",
+            "url": "https://ja.wikipedia.org/wiki/%E4%BA%BA%E9%AD%9A",
             "choice": {
                 "a": "にんぎょ",
                 "b": "まんた",
@@ -355,6 +391,7 @@
         }, {
             "image": "hugu.png",
             "answer": "ふぐ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%B0",
             "choice": {
                 "a": "ふぐ",
                 "b": "はりせんぼん",
@@ -364,6 +401,7 @@
         }, {
             "image": "yadokari.png",
             "answer": "やどかり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A4%E3%83%89%E3%82%AB%E3%83%AA",
             "choice": {
                 "a": "かたつむり",
                 "b": "やどかり",
@@ -374,6 +412,7 @@
         {
             "image": "ei.png",
             "answer": "えい",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%82%A4",
             "choice": {
                 "a": "えい",
                 "b": "まんた",
@@ -384,6 +423,7 @@
         {
             "image": "kurione.png",
             "answer": "クリオネ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AA%E3%82%AA%E3%83%8D",
             "choice": {
                 "a": "クリオネ",
                 "b": "クマノミ",
@@ -394,6 +434,7 @@
         {
             "image": "panda.png",
             "answer": "ぱんだ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%91%E3%83%B3%E3%83%80",
             "choice": {
                 "a": "ぱんだ",
                 "b": "くま",
@@ -403,6 +444,7 @@
         }, {
             "image": "hyou.png",
             "answer": "ヒョウ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%92%E3%83%A7%E3%82%A6",
             "choice": {
                 "a": "チーター",
                 "b": "ヒョウ",
@@ -412,6 +454,7 @@
         }, {
             "image": "tora.png",
             "answer": "トラ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%A9",
             "choice": {
                 "a": "チーター",
                 "b": "ヒョウ",
@@ -421,6 +464,7 @@
         }, {
             "image": "harisenbon.png",
             "answer": "ハリセンボン",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%AA%E3%82%BB%E3%83%B3%E3%83%9C%E3%83%B3",
             "choice": {
                 "a": "ハリセンボン",
                 "b": "ふぐ",
@@ -430,6 +474,7 @@
         }, {
             "image": "santa.png",
             "answer": "サンタさん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%B3%E3%82%BF%E3%82%AF%E3%83%AD%E3%83%BC%E3%82%B9",
             "choice": {
                 "a": "サンタさん",
                 "b": "けいさつかん",
@@ -439,6 +484,7 @@
         }, {
             "image": "seireiusi.png",
             "answer": "せいれいうし",
+            "url": "https://dic.pixiv.net/a/精霊牛",
             "choice": {
                 "a": "せいれいうし",
                 "b": "せいれいうま",
@@ -448,6 +494,7 @@
         }, {
             "image": "seireiuma.png",
             "answer": "せいれいうま",
+            "url": "https://dic.pixiv.net/a/%E7%B2%BE%E9%9C%8A%E9%A6%AC",
             "choice": {
                 "a": "せいれいうし",
                 "b": "せいれいうま",
@@ -457,6 +504,7 @@
         }, {
             "image": "amagaeru.png",
             "answer": "あまがえる",
+            "url": "https://dic.pixiv.net/a/%E3%82%A2%E3%83%9E%E3%82%AC%E3%82%A8%E3%83%AB",
             "choice": {
                 "a": "あまがえる",
                 "b": "うしがえる",
@@ -466,6 +514,7 @@
         }, {
             "image": "namakemono.png",
             "answer": "なまけもの",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8A%E3%83%9E%E3%82%B1%E3%83%A2%E3%83%8E",
             "choice": {
                 "a": "なまけもの",
                 "b": "こあら",
@@ -475,6 +524,7 @@
         }, {
             "image": "kani.png",
             "answer": "かに",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%8B",
             "choice": {
                 "a": "かに",
                 "b": "えび",
@@ -484,6 +534,7 @@
         }, {
             "image": "kumamusi.png",
             "answer": "くまむし",
+            "url": "https://ja.wikipedia.org/wiki/%E7%B7%A9%E6%AD%A9%E5%8B%95%E7%89%A9",
             "choice": {
                 "a": "くまむし",
                 "b": "みどりむし",
@@ -493,6 +544,7 @@
         }, {
             "image": "ebisusama.png",
             "answer": "えびすさま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%81%88%E3%81%B3%E3%81%99",
             "choice": {
                 "a": "えびすさま",
                 "b": "べんてんさま",
@@ -502,6 +554,7 @@
         }, {
             "image": "sasori.png",
             "answer": "サソリ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%BD%E3%83%AA",
             "choice": {
                 "a": "サソリ",
                 "b": "ザリガニ",
@@ -512,6 +565,7 @@
         {
             "image": "suketosenshu.png",
             "answer": "スケートせんしゅ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%B1%E3%83%BC%E3%83%88",
             "choice": {
                 "a": "スケートせんしゅ",
                 "b": "ホッケーせんしゅ",
@@ -522,6 +576,7 @@
         {
             "image": "ti-ta-.png",
             "answer": "チーター",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%BC%E3%82%BF%E3%83%BC",
             "choice": {
                 "a": "ジャガー",
                 "b": "チーター",
@@ -532,6 +587,7 @@
         {
             "image": "yatagarasu.png",
             "answer": "やたがらす",
+            "url": "https://ja.wikipedia.org/wiki/%E5%85%AB%E5%92%AB%E7%83%8F",
             "choice": {
                 "a": "やたがらす",
                 "b": "からす",
@@ -542,6 +598,7 @@
         {
             "image": "hikouki.png",
             "answer": "ひこうき",
+            "url": "https://ja.wikipedia.org/wiki/%E9%A3%9B%E8%A1%8C%E6%A9%9F",
             "choice": {
                 "a": "ひこうき",
                 "b": "たくしー",
@@ -552,6 +609,7 @@
         {
             "image": "akatyan.png",
             "answer": "あかちゃん",
+            "url": "https://ja.wikipedia.org/wiki/%E8%B5%A4%E3%81%A1%E3%82%83%E3%82%93",
             "choice": {
                 "a": "あかちゃん",
                 "b": "あおちゃん",
@@ -562,6 +620,7 @@
         {
             "image": "isu.png",
             "answer": "いす",
+            "url": "https://ja.wikipedia.org/wiki/%E6%A4%85%E5%AD%90",
             "choice": {
                 "a": "いす",
                 "b": "つくえ",
@@ -572,6 +631,7 @@
         {
             "image": "karasu.png",
             "answer": "からす",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A9%E3%82%B9",
             "choice": {
                 "a": "からす",
                 "b": "やたがらす",
@@ -582,6 +642,7 @@
         {
             "image": "si-sa-.png",
             "answer": "シーサー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%BC%E3%82%B5%E3%83%BC",
             "choice": {
                 "a": "シーサー",
                 "b": "マーライオン",

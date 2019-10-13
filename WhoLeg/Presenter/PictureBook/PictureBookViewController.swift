@@ -72,7 +72,7 @@ extension PictureBookViewController: UITableViewDelegate {
         let quizData = data.quiz[indexPath.row]
 
         if tableView.cellForRow(at: indexPath)?.tag == 1 {
-            let viewModel = PictureBookDetailViewController.ViewModel(image: UIImage(named: quizData.image)!, text: quizData.answer)
+            let viewModel = PictureBookDetailViewController.ViewModel(image: UIImage(named: quizData.image)!, text: quizData.answer, url: URL(string: quizData.url)!)
 
             let vc = PictureBookDetailViewController(viewModel: viewModel)
             navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

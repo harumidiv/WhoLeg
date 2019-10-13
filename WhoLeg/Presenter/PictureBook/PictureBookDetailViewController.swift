@@ -12,6 +12,7 @@ class PictureBookDetailViewController: UIViewController {
     struct ViewModel {
         var image: UIImage
         var text: String
+        var url: URL
     }
 
     var viewModel: ViewModel
@@ -51,6 +52,7 @@ class PictureBookDetailViewController: UIViewController {
     @IBAction func detailTapped(_ sender: Any) {
         // TODO:
         // JSONの中にwikipediaのurlを含める
-        print("aaaaa")
+
+        print(viewModel.url)
     }
 }

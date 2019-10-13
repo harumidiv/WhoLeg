@@ -15,6 +15,7 @@ struct QuizInfo: Codable {
 struct Quiz: Codable {
     var image: String
     var answer: String
+    var url: String
     var choice: Choice
 }
 
