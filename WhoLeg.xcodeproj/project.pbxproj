@@ -12,6 +12,8 @@
 		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
 		0D3072012353282E00FEFD60 /* InformationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3072002353282E00FEFD60 /* InformationButton.swift */; };
 		0D3072042353285D00FEFD60 /* InformationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3072032353285D00FEFD60 /* InformationButton.xib */; };
+		0D307208235330B800FEFD60 /* QuizWebInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D307206235330B800FEFD60 /* QuizWebInformationViewController.swift */; };
+		0D307209235330B800FEFD60 /* QuizWebInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D307207235330B800FEFD60 /* QuizWebInformationViewController.xib */; };
 		0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */; };
 		0D5D9FEA23531032006EC16E /* PictureBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D9FE823531032006EC16E /* PictureBookDetailViewController.xib */; };
 		0D724D6922AA785D009AACAB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D724D6822AA785C009AACAB /* Settings.bundle */; };
@@ -93,6 +95,8 @@
 		08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLegUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D3072002353282E00FEFD60 /* InformationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationButton.swift; sourceTree = "<group>"; };
 		0D3072032353285D00FEFD60 /* InformationButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationButton.xib; sourceTree = "<group>"; };
+		0D307206235330B800FEFD60 /* QuizWebInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWebInformationViewController.swift; sourceTree = "<group>"; };
+		0D307207235330B800FEFD60 /* QuizWebInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuizWebInformationViewController.xib; sourceTree = "<group>"; };
 		0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailViewController.swift; sourceTree = "<group>"; };
 		0D5D9FE823531032006EC16E /* PictureBookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureBookDetailViewController.xib; sourceTree = "<group>"; };
 		0D724D6822AA785C009AACAB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = WhoLeg/Settings.bundle; sourceTree = "<group>"; };
@@ -191,6 +195,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D3072052353308C00FEFD60 /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				0D307206235330B800FEFD60 /* QuizWebInformationViewController.swift */,
+				0D307207235330B800FEFD60 /* QuizWebInformationViewController.xib */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
 		0D8B59F5228FADE4001D1A44 = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +344,7 @@
 				0D8B5A36228FD235001D1A44 /* Title */,
 				0DC42A652296F03900A19088 /* Information */,
 				0DC42A6D22981BA700A19088 /* PictureBook */,
+				0D3072052353308C00FEFD60 /* WebView */,
 				0DC42A6A2296F24F00A19088 /* AppAbout */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
@@ -536,6 +550,7 @@
 			files = (
 				0D5D9FEA23531032006EC16E /* PictureBookDetailViewController.xib in Resources */,
 				0D724D6922AA785D009AACAB /* Settings.bundle in Resources */,
+				0D307209235330B800FEFD60 /* QuizWebInformationViewController.xib in Resources */,
 				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A712293CBEE001D1A44 /* ResultNormalView.xib in Resources */,
 				0D3072042353285D00FEFD60 /* InformationButton.xib in Resources */,
@@ -740,6 +755,7 @@
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
 				0D3072012353282E00FEFD60 /* InformationButton.swift in Sources */,
 				0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */,
+				0D307208235330B800FEFD60 /* QuizWebInformationViewController.swift in Sources */,
 				0DC42A6C2298139900A19088 /* UILabel+IB.swift in Sources */,
 				0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,

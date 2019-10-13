@@ -35,6 +35,8 @@ class PictureBookDetailViewController: UIViewController {
         }
     }
 
+    // MARK: - Initializer
+    
     init(viewModel: ViewModel) {
         self.viewModel = viewModel
         super.init(nibName: String(describing: PictureBookDetailViewController.self), bundle: nil)
@@ -44,15 +46,18 @@ class PictureBookDetailViewController: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
+    // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "クイズ詳細"
     }
+    
+    //MARK: - Eevnt
 
     @IBAction func detailTapped(_ sender: Any) {
-        // TODO:
-        // JSONの中にwikipediaのurlを含める
-
-        print(viewModel.url)
+        navigationController?.pushViewController(
+            QuizWebInformationViewController(url: viewModel.url), animated: true
+        )
     }
 }
