@@ -9,6 +9,7 @@
 import UIKit
 
 class TitleViewController: UIViewController {
+    @IBOutlet weak var roundBaseView: RoundView!
     @IBOutlet weak var image: RoundImage!
     @IBOutlet weak var label: UILabel!
     private var presenter: TitlePresenter!
@@ -33,6 +34,13 @@ class TitleViewController: UIViewController {
 
         let informationButton: UIBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "information"), style: .plain, target: self, action: #selector(showInformation(_:)))
         navigationItem.rightBarButtonItem = informationButton
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        image.layer.cornerRadius = image.frame.width / 2
+        roundBaseView.layer.cornerRadius = roundBaseView.frame.width / 2
     }
 
     // MAKR: - Event
