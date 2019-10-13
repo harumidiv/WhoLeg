@@ -35,7 +35,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KK9-5O-vf6" customClass="InformationButton" customModule="WhoLeg" customModuleProvider="target">
-                    <rect key="frame" x="107" y="772" width="200" height="60"/>
+                    <rect key="frame" x="107" y="796" width="200" height="36"/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="X3z-Qb-kfz"/>
                     </constraints>

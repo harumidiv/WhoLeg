@@ -35,6 +35,12 @@ class PictureBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ずかん"
+
+        let headerView = PictureBookTableHeaderView.loadNib()
+        headerView.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100)
+        headerView.descriptionLabel.text = "正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!"
+
+        tableView.tableHeaderView = headerView
     }
 }
 
