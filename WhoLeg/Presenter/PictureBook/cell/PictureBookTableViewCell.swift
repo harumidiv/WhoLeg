@@ -11,6 +11,7 @@ import UIKit
 class PictureBookTableViewCell: UITableViewCell {
     @IBOutlet weak var quizImage: RoundImage!
     @IBOutlet weak var label: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

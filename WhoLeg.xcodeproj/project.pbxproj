@@ -10,6 +10,13 @@
 		04E7DAD3B997D3C528517C82 /* Pods_WhoLeg.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */; };
 		053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */; };
 		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
+		0D3072012353282E00FEFD60 /* InformationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3072002353282E00FEFD60 /* InformationButton.swift */; };
+		0D3072042353285D00FEFD60 /* InformationButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D3072032353285D00FEFD60 /* InformationButton.xib */; };
+		0D30720B2353343500FEFD60 /* PictureBookTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30720A2353343500FEFD60 /* PictureBookTableHeaderView.swift */; };
+		0D30720D2353344A00FEFD60 /* PictureBookTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D30720C2353344A00FEFD60 /* PictureBookTableHeaderView.xib */; };
+		0D30720F23533B8C00FEFD60 /* UIView+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30720E23533B8C00FEFD60 /* UIView+IB.swift */; };
+		0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */; };
+		0D5D9FEA23531032006EC16E /* PictureBookDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D5D9FE823531032006EC16E /* PictureBookDetailViewController.xib */; };
 		0D724D6922AA785D009AACAB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D724D6822AA785C009AACAB /* Settings.bundle */; };
 		0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */; };
 		0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A03228FADE4001D1A44 /* ViewController.swift */; };
@@ -87,6 +94,13 @@
 		05E5D722233C840F00916809 /* SnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTests.swift; sourceTree = "<group>"; };
 		08029E2D35A54B2FEEB9B214 /* Pods-WhoLeg-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
 		08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLegUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D3072002353282E00FEFD60 /* InformationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationButton.swift; sourceTree = "<group>"; };
+		0D3072032353285D00FEFD60 /* InformationButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InformationButton.xib; sourceTree = "<group>"; };
+		0D30720A2353343500FEFD60 /* PictureBookTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookTableHeaderView.swift; sourceTree = "<group>"; };
+		0D30720C2353344A00FEFD60 /* PictureBookTableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureBookTableHeaderView.xib; sourceTree = "<group>"; };
+		0D30720E23533B8C00FEFD60 /* UIView+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IB.swift"; sourceTree = "<group>"; };
+		0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailViewController.swift; sourceTree = "<group>"; };
+		0D5D9FE823531032006EC16E /* PictureBookDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PictureBookDetailViewController.xib; sourceTree = "<group>"; };
 		0D724D6822AA785C009AACAB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = WhoLeg/Settings.bundle; sourceTree = "<group>"; };
 		0D8B59FE228FADE4001D1A44 /* WhoLeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoLeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -254,6 +268,7 @@
 				0DC42A6B2298139900A19088 /* UILabel+IB.swift */,
 				0DC42A7722983DDF00A19088 /* UITableView+Addition.swift */,
 				0DC42A7922983E1200A19088 /* NSObject+Addition.swift */,
+				0D30720E23533B8C00FEFD60 /* UIView+IB.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -309,6 +324,8 @@
 				0D8B5A842294261F001D1A44 /* RoundView.xib */,
 				0D8B5A8622942698001D1A44 /* RoundImage.swift */,
 				0D8B5A88229426CE001D1A44 /* RoundImage.xib */,
+				0D3072002353282E00FEFD60 /* InformationButton.swift */,
+				0D3072032353285D00FEFD60 /* InformationButton.xib */,
 				0D8B5A8322942605001D1A44 /* Result */,
 			);
 			path = CustomView;
@@ -372,6 +389,10 @@
 			children = (
 				0DC42A6E22981BC500A19088 /* PictureBookViewController.swift */,
 				0DC42A6F22981BC500A19088 /* PictureBookViewController.xib */,
+				0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */,
+				0D5D9FE823531032006EC16E /* PictureBookDetailViewController.xib */,
+				0D30720A2353343500FEFD60 /* PictureBookTableHeaderView.swift */,
+				0D30720C2353344A00FEFD60 /* PictureBookTableHeaderView.xib */,
 				0DC42A72229820F200A19088 /* cell */,
 			);
 			path = PictureBook;
@@ -522,9 +543,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D5D9FEA23531032006EC16E /* PictureBookDetailViewController.xib in Resources */,
 				0D724D6922AA785D009AACAB /* Settings.bundle in Resources */,
 				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A712293CBEE001D1A44 /* ResultNormalView.xib in Resources */,
+				0D3072042353285D00FEFD60 /* InformationButton.xib in Resources */,
 				0D8B5A46228FE01F001D1A44 /* Resource in Resources */,
 				0DC42A642296F02800A19088 /* InformationViewController.xib in Resources */,
 				0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */,
@@ -537,6 +560,7 @@
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
 				0D8B5A852294261F001D1A44 /* RoundView.xib in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
+				0D30720D2353344A00FEFD60 /* PictureBookTableHeaderView.xib in Resources */,
 				0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */,
 				0DC42A7122981BC500A19088 /* PictureBookViewController.xib in Resources */,
 				0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */,
@@ -724,9 +748,13 @@
 				0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */,
 				0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */,
 				0D8B5A49228FE0EA001D1A44 /* QuizInfo.swift in Sources */,
+				0D3072012353282E00FEFD60 /* InformationButton.swift in Sources */,
 				0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */,
 				0DC42A6C2298139900A19088 /* UILabel+IB.swift in Sources */,
+				0D30720F23533B8C00FEFD60 /* UIView+IB.swift in Sources */,
+				0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
+				0D30720B2353343500FEFD60 /* PictureBookTableHeaderView.swift in Sources */,
 				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,
 				0DC42A752298211000A19088 /* PictureBookTableViewCell.swift in Sources */,
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,

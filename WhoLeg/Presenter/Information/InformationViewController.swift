@@ -64,6 +64,7 @@ extension InformationViewController: UITableViewDataSource {
 
         cell.accessoryType = .disclosureIndicator
         cell.textLabel?.text = information[indexPath.row].label
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
     }
 }

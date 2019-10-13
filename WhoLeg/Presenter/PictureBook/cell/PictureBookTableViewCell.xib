@@ -39,9 +39,6 @@
                         <fontDescription key="fontDescription" type="system" pointSize="35"/>
                         <color key="textColor" name="Text"/>
                         <nil key="highlightedColor"/>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="string" keyPath="textAppColor" value="c3"/>
-                        </userDefinedRuntimeAttributes>
                     </label>
                 </subviews>
                 <constraints>

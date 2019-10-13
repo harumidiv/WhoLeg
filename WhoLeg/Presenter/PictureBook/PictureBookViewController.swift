@@ -35,6 +35,12 @@ class PictureBookViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "ずかん"
+
+        let headerView = PictureBookTableHeaderView.loadNib()
+        headerView.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100)
+        headerView.descriptionLabel.text = "正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!"
+
+        tableView.tableHeaderView = headerView
     }
 }
 
@@ -51,8 +57,12 @@ extension PictureBookViewController: UITableViewDataSource {
 
         if userDefault.object(forKey: quizData.image) != nil {
             cell.label?.text = quizData.answer
+            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            cell.tag = 1
         } else {
             cell.label.text = "? ? ?"
+            cell.accessoryType = UITableViewCell.AccessoryType.none
+            cell.tag = 0
         }
 
         return cell
@@ -63,4 +73,16 @@ extension PictureBookViewController: UITableViewDataSource {
     }
 }
 
-extension PictureBookViewController: UITableViewDelegate {}
+extension PictureBookViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let quizData = data.quiz[indexPath.row]
+
+        if tableView.cellForRow(at: indexPath)?.tag == 1 {
+            let viewModel = PictureBookDetailViewController.ViewModel(image: UIImage(named: quizData.image)!, text: quizData.answer, url: URL(string: quizData.url)!)
+
+            let vc = PictureBookDetailViewController(viewModel: viewModel)
+            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
