@@ -52,9 +52,11 @@ extension PictureBookViewController: UITableViewDataSource {
         if userDefault.object(forKey: quizData.image) != nil {
             cell.label?.text = quizData.answer
             cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
+            cell.tag = 1
         } else {
             cell.label.text = "? ? ?"
             cell.accessoryType = UITableViewCell.AccessoryType.none
+            cell.tag = 0
         }
 
         return cell
@@ -65,4 +67,12 @@ extension PictureBookViewController: UITableViewDataSource {
     }
 }
 
-extension PictureBookViewController: UITableViewDelegate {}
+extension PictureBookViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        if tableView.cellForRow(at: indexPath)?.tag == 1 {
+            navigationController?.pushViewController(PictureBookDetailViewController(), animated: true)
+        }
+    }
+}
