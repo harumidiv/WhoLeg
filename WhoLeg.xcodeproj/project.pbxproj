@@ -68,6 +68,7 @@
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
+		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
 		6A4CE5B3BAE208D357F55077 /* Pods_WhoLegUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */; };
 		CAAB645102F40BAAD6433F80 /* Pods_WhoLeg_WhoLegTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */; };
 /* End PBXBuildFile section */
@@ -160,6 +161,7 @@
 		2263196256B0880C1D3CAF99 /* Pods-WhoLegUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegUITests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegUITests/Pods-WhoLegUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4959F87E23448BE900DEB4DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		49BA403223E061D50075DF5E /* Script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Script; sourceTree = "<group>"; };
 		4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegTests/Pods-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
 		584C3FD79D6FF4C95DCAFF12 /* Pods-WhoLeg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.release.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.release.xcconfig"; sourceTree = "<group>"; };
 		5AC864F7FAFAABB85CEEB6CA /* Pods-WhoLeg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.debug.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		0D8B59F5228FADE4001D1A44 = {
 			isa = PBXGroup;
 			children = (
+				49BA403223E061D50075DF5E /* Script */,
 				0D724D6822AA785C009AACAB /* Settings.bundle */,
 				0D8B5A00228FADE4001D1A44 /* WhoLeg */,
 				0D8B5A15228FADE6001D1A44 /* WhoLegTests */,
@@ -446,6 +449,7 @@
 				0DC8EED822A2A40E008785F4 /* Swiftformat */,
 				0D5C54B622A2A56600654631 /* SwiftLint */,
 				0D31083722A9642000DDE2A7 /* LicensePlist */,
+				49BA403423E062590075DF5E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -564,6 +568,7 @@
 				0D8B5A89229426CE001D1A44 /* RoundImage.xib in Resources */,
 				0DC42A7122981BC500A19088 /* PictureBookViewController.xib in Resources */,
 				0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */,
+				49BA403323E061D50075DF5E /* Script in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -654,6 +659,23 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WhoLeg-WhoLegTests/Pods-WhoLeg-WhoLegTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		49BA403423E062590075DF5E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n./Script/ValidateJson/main.sh\n";
 		};
 		85485B68C7045B8E4A54D04F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
