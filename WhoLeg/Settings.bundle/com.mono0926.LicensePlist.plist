@@ -22,6 +22,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/SimulatorStatusMagic</string>
+			<key>Title</key>
+			<string>SimulatorStatusMagic</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/SwiftFormat</string>
 			<key>Title</key>
 			<string>SwiftFormat</string>

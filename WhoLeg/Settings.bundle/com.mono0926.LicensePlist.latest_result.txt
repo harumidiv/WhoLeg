@@ -16,6 +16,10 @@ body: MIT License
 Copyrig…
 version: 2.6.0
 
+name: SimulatorStatusMagic, nameSpecified: 
+body: The MIT License (MIT…
+version: 2.4.1
+
 name: SwiftFormat, nameSpecified: 
 body: MIT License
 

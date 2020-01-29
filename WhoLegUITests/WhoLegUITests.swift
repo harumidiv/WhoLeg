@@ -6,11 +6,12 @@
 //  Copyright © 2019 佐川晴海. All rights reserved.
 //
 
+import SimulatorStatusMagic
 import XCTest
 
 class WhoLegUITests: XCTestCase {
     override func setUp() {
-        Springboard.deleteMyApp()
+//        Springboard.deleteMyApp()
         continueAfterFailure = false
         let app = XCUIApplication()
         setupSnapshot(app)
@@ -22,6 +23,7 @@ class WhoLegUITests: XCTestCase {
     }
 
     func testSnapShot() {
+        cleanStatusBar()
         snapshot("title")
         XCUIApplication().buttons["Button"].tap()
         let app = XCUIApplication()
@@ -62,5 +64,16 @@ class WhoLegUITests: XCTestCase {
         Thread.sleep(forTimeInterval: 0.3)
         XCUIApplication().tables/*@START_MENU_TOKEN@*/.staticTexts["ずかん"]/*[[".cells.staticTexts[\"ずかん\"]",".staticTexts[\"ずかん\"]"],[[[-1,1],[-1,0]]],[0]]@END_MENU_TOKEN@*/.tap()
         snapshot("zukan")
+    }
+}
+
+extension WhoLegUITests {
+    private func cleanStatusBar() {
+        SDStatusBarManager.sharedInstance().carrierName = ""
+        SDStatusBarManager.sharedInstance()?.dateString = "7月77日(水)"
+        SDStatusBarManager.sharedInstance().timeString = "77:77"
+        SDStatusBarManager.sharedInstance().bluetoothState = .hidden
+        SDStatusBarManager.sharedInstance().batteryDetailEnabled = false
+        SDStatusBarManager.sharedInstance().enableOverrides()
     }
 }
