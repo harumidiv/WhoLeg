@@ -10,6 +10,7 @@ import XCTest
 
 class WhoLegUITests: XCTestCase {
     override func setUp() {
+        Springboard.deleteMyApp()
         continueAfterFailure = false
         let app = XCUIApplication()
         setupSnapshot(app)

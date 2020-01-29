@@ -69,6 +69,7 @@
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
 		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
+		49BA403623E1A5DF0075DF5E /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA403523E1A5DF0075DF5E /* Springboard.swift */; };
 		6A4CE5B3BAE208D357F55077 /* Pods_WhoLegUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */; };
 		CAAB645102F40BAAD6433F80 /* Pods_WhoLeg_WhoLegTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */; };
 /* End PBXBuildFile section */
@@ -162,6 +163,7 @@
 		2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4959F87E23448BE900DEB4DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		49BA403223E061D50075DF5E /* Script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Script; sourceTree = "<group>"; };
+		49BA403523E1A5DF0075DF5E /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegTests/Pods-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
 		584C3FD79D6FF4C95DCAFF12 /* Pods-WhoLeg.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.release.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.release.xcconfig"; sourceTree = "<group>"; };
 		5AC864F7FAFAABB85CEEB6CA /* Pods-WhoLeg.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLeg.debug.xcconfig"; path = "Target Support Files/Pods-WhoLeg/Pods-WhoLeg.debug.xcconfig"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */,
 				0D8B5A21228FADE6001D1A44 /* WhoLegUITests.swift */,
+				49BA403523E1A5DF0075DF5E /* Springboard.swift */,
 				0D8B5A23228FADE6001D1A44 /* Info.plist */,
 			);
 			path = WhoLegUITests;
@@ -803,6 +806,7 @@
 			files = (
 				0D8B5A22228FADE6001D1A44 /* WhoLegUITests.swift in Sources */,
 				0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */,
+				49BA403623E1A5DF0075DF5E /* Springboard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
