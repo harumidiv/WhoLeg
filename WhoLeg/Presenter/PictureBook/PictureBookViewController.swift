@@ -34,13 +34,33 @@ class PictureBookViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "ずかん"
+        setupLargeTitle()
 
         let headerView = PictureBookTableHeaderView.loadNib()
         headerView.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100)
         headerView.descriptionLabel.text = "正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!"
 
         tableView.tableHeaderView = headerView
+    }
+
+    private func setupLargeTitle() {
+        title = "ずかん"
+        navigationItem.largeTitleDisplayMode = .always
+        navigationController?.navigationBar.prefersLargeTitles = true
+
+        if #available(iOS 13.0, *) {
+            let appearance = UINavigationBarAppearance()
+            appearance.configureWithDefaultBackground()
+            appearance.backgroundColor = UIColor(hex: "#0F9D58")
+            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+            appearance.titlePositionAdjustment = UIOffset(horizontal: -(self.view.frame.width / 2), vertical: 0)
+
+            // Large Title 用 NavigationBar の色設定
+            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
+            // 通常の NavigationBar の色設定
+            self.navigationController?.navigationBar.standardAppearance = appearance
+        }
     }
 }
 

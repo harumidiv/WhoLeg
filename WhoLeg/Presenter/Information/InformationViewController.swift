@@ -27,6 +27,8 @@ class InformationViewController: UIViewController {
         }
     }
 
+    let sectionName: [String] = ["せつめい"]
+
     let information: [InformationData] = [
         InformationData(label: "ずかん", pageType: .pictureBook),
         InformationData(label: "このアプリについて", pageType: .appAbout)
@@ -43,9 +45,19 @@ class InformationViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
             tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
         }
+
+        // 図鑑画面でNavigationBarTitle位置をずらしたのを戻す
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.backgroundColor = UIColor(hex: "#0F9D58")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
+        navigationController?.navigationBar.standardAppearance = appearance
     }
 
     override func viewDidLoad() {
@@ -55,6 +67,18 @@ class InformationViewController: UIViewController {
 }
 
 extension InformationViewController: UITableViewDataSource {
+    // section
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionName.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionName[section]
+    }
+
+    // cell
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return information.count
     }

@@ -52,6 +52,16 @@ class PictureBookDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "クイズ詳細"
+        navigationItem.largeTitleDisplayMode = .never
+
+        // 図鑑画面でNavigationBarTitle位置をずらしたのを戻す
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.backgroundColor = UIColor(hex: "#0F9D58")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
+        navigationController?.navigationBar.standardAppearance = appearance
     }
 
     // MARK: - Eevnt

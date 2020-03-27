@@ -24,6 +24,7 @@ class TitleViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationItem.largeTitleDisplayMode = .never
         title = "だれのあし？"
         navigationItem.hidesBackButton = true
         jsonData = presenter.getJsonData()
