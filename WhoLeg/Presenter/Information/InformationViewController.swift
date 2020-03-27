@@ -27,6 +27,8 @@ class InformationViewController: UIViewController {
         }
     }
 
+    let sectionName: [String] = ["せつめい"]
+
     let information: [InformationData] = [
         InformationData(label: "ずかん", pageType: .pictureBook),
         InformationData(label: "このアプリについて", pageType: .appAbout)
@@ -65,6 +67,18 @@ class InformationViewController: UIViewController {
 }
 
 extension InformationViewController: UITableViewDataSource {
+    // section
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return sectionName.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return sectionName[section]
+    }
+
+    // cell
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return information.count
     }
