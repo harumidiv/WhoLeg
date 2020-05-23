@@ -68,6 +68,8 @@
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
+		49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49818E52247907D000BAE8CA /* RelatedAppViewController.swift */; };
+		49818E55247907D000BAE8CA /* RelatedAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49818E53247907D000BAE8CA /* RelatedAppViewController.xib */; };
 		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
 		49BA403623E1A5DF0075DF5E /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA403523E1A5DF0075DF5E /* Springboard.swift */; };
 		6A4CE5B3BAE208D357F55077 /* Pods_WhoLegUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */; };
@@ -162,6 +164,8 @@
 		2263196256B0880C1D3CAF99 /* Pods-WhoLegUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegUITests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegUITests/Pods-WhoLegUITests.release.xcconfig"; sourceTree = "<group>"; };
 		2FDD7114EE921E8B61A4A977 /* Pods_WhoLeg.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WhoLeg.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4959F87E23448BE900DEB4DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		49818E52247907D000BAE8CA /* RelatedAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAppViewController.swift; sourceTree = "<group>"; };
+		49818E53247907D000BAE8CA /* RelatedAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedAppViewController.xib; sourceTree = "<group>"; };
 		49BA403223E061D50075DF5E /* Script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Script; sourceTree = "<group>"; };
 		49BA403523E1A5DF0075DF5E /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegTests/Pods-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -343,8 +347,6 @@
 				0D8B5A5422915055001D1A44 /* CustomView */,
 				0D8B5A36228FD235001D1A44 /* Title */,
 				0DC42A652296F03900A19088 /* Information */,
-				0DC42A6D22981BA700A19088 /* PictureBook */,
-				0DC42A6A2296F24F00A19088 /* AppAbout */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
 			);
@@ -377,6 +379,9 @@
 			children = (
 				0DC42A612296F02800A19088 /* InformationViewController.swift */,
 				0DC42A622296F02800A19088 /* InformationViewController.xib */,
+				0DC42A6D22981BA700A19088 /* PictureBook */,
+				0DC42A6A2296F24F00A19088 /* AppAbout */,
+				49818E512479077800BAE8CA /* RelatedApp */,
 			);
 			path = Information;
 			sourceTree = "<group>";
@@ -436,6 +441,15 @@
 				B6E506E2D5FC569C931ED83D /* Pods_WhoLeg_WhoLegTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		49818E512479077800BAE8CA /* RelatedApp */ = {
+			isa = PBXGroup;
+			children = (
+				49818E52247907D000BAE8CA /* RelatedAppViewController.swift */,
+				49818E53247907D000BAE8CA /* RelatedAppViewController.xib */,
+			);
+			path = RelatedApp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -565,6 +579,7 @@
 				0D8B5A59229150BD001D1A44 /* QuizOptionButton.xib in Resources */,
 				0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */,
 				0D8B5A5322914FC8001D1A44 /* QuizViewController.xib in Resources */,
+				49818E55247907D000BAE8CA /* RelatedAppViewController.xib in Resources */,
 				0D8B5A852294261F001D1A44 /* RoundView.xib in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
 				0D30720D2353344A00FEFD60 /* PictureBookTableHeaderView.xib in Resources */,
@@ -778,6 +793,7 @@
 				0DC42A6C2298139900A19088 /* UILabel+IB.swift in Sources */,
 				0D30720F23533B8C00FEFD60 /* UIView+IB.swift in Sources */,
 				0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */,
+				49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 				0D30720B2353343500FEFD60 /* PictureBookTableHeaderView.swift in Sources */,
 				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,

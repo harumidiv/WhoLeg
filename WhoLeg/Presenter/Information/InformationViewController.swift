@@ -11,7 +11,7 @@ import UIKit
 enum PageType {
     case pictureBook
     case appAbout
-    case relatedApps
+    case relatedApp
 }
 
 struct InformationData {
@@ -33,7 +33,7 @@ class InformationViewController: UIViewController {
     let information: [[InformationData]] = [
         [InformationData(label: "ずかん", pageType: .pictureBook),
          InformationData(label: "このアプリについて", pageType: .appAbout)],
-        [InformationData(label: "関連アプリ", pageType: .relatedApps)]
+        [InformationData(label: "関連アプリ", pageType: .relatedApp)]
     ]
     let jsonData: QuizInfo
 
@@ -102,8 +102,8 @@ extension InformationViewController: UITableViewDelegate {
             navigationController?.pushViewController(PictureBookViewController(data: jsonData), animated: true)
         case .appAbout:
             navigationController?.pushViewController(AppAboutViewController(), animated: true)
-        case .relatedApps:
-            print("TODO")
+        case .relatedApp:
+            navigationController?.pushViewController(RelatedAppViewController(), animated: true)
         }
     }
 }
