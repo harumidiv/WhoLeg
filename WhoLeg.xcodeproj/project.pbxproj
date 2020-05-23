@@ -70,6 +70,8 @@
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
 		49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49818E52247907D000BAE8CA /* RelatedAppViewController.swift */; };
 		49818E55247907D000BAE8CA /* RelatedAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49818E53247907D000BAE8CA /* RelatedAppViewController.xib */; };
+		49818E592479091200BAE8CA /* RelatedAppTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49818E572479091200BAE8CA /* RelatedAppTableViewCell.swift */; };
+		49818E5A2479091200BAE8CA /* RelatedAppTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49818E582479091200BAE8CA /* RelatedAppTableViewCell.xib */; };
 		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
 		49BA403623E1A5DF0075DF5E /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA403523E1A5DF0075DF5E /* Springboard.swift */; };
 		6A4CE5B3BAE208D357F55077 /* Pods_WhoLegUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 08C01891FF897897BC704AE8 /* Pods_WhoLegUITests.framework */; };
@@ -166,6 +168,8 @@
 		4959F87E23448BE900DEB4DB /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		49818E52247907D000BAE8CA /* RelatedAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAppViewController.swift; sourceTree = "<group>"; };
 		49818E53247907D000BAE8CA /* RelatedAppViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedAppViewController.xib; sourceTree = "<group>"; };
+		49818E572479091200BAE8CA /* RelatedAppTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAppTableViewCell.swift; sourceTree = "<group>"; };
+		49818E582479091200BAE8CA /* RelatedAppTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RelatedAppTableViewCell.xib; sourceTree = "<group>"; };
 		49BA403223E061D50075DF5E /* Script */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Script; sourceTree = "<group>"; };
 		49BA403523E1A5DF0075DF5E /* Springboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Springboard.swift; sourceTree = "<group>"; };
 		4CD0F9030F08E995E0B410A4 /* Pods-WhoLegTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WhoLegTests.release.xcconfig"; path = "Target Support Files/Pods-WhoLegTests/Pods-WhoLegTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -448,8 +452,18 @@
 			children = (
 				49818E52247907D000BAE8CA /* RelatedAppViewController.swift */,
 				49818E53247907D000BAE8CA /* RelatedAppViewController.xib */,
+				49818E56247908E800BAE8CA /* cell */,
 			);
 			path = RelatedApp;
+			sourceTree = "<group>";
+		};
+		49818E56247908E800BAE8CA /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				49818E572479091200BAE8CA /* RelatedAppTableViewCell.swift */,
+				49818E582479091200BAE8CA /* RelatedAppTableViewCell.xib */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -573,6 +587,7 @@
 				0DC42A642296F02800A19088 /* InformationViewController.xib in Resources */,
 				0D8B5A752293CC18001D1A44 /* ResultBadView.xib in Resources */,
 				0D8B5A6D2293CB34001D1A44 /* ResultGoodView.xib in Resources */,
+				49818E5A2479091200BAE8CA /* RelatedAppTableViewCell.xib in Resources */,
 				0DC42A692296F24400A19088 /* AppAboutViewController.xib in Resources */,
 				0DC42A762298211000A19088 /* PictureBookTableViewCell.xib in Resources */,
 				4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */,
@@ -781,6 +796,7 @@
 				0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */,
 				0D8B5A4D228FF0D1001D1A44 /* TitleModel.swift in Sources */,
 				0DC42A7822983DDF00A19088 /* UITableView+Addition.swift in Sources */,
+				49818E592479091200BAE8CA /* RelatedAppTableViewCell.swift in Sources */,
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
