@@ -11,6 +11,7 @@ import UIKit
 enum PageType {
     case pictureBook
     case appAbout
+    case relatedApp
 }
 
 struct InformationData {
@@ -27,11 +28,12 @@ class InformationViewController: UIViewController {
         }
     }
 
-    let sectionName: [String] = ["せつめい"]
+    let sectionName: [String] = ["せつめい", "その他"]
 
-    let information: [InformationData] = [
-        InformationData(label: "ずかん", pageType: .pictureBook),
-        InformationData(label: "このアプリについて", pageType: .appAbout)
+    let information: [[InformationData]] = [
+        [InformationData(label: "ずかん", pageType: .pictureBook),
+         InformationData(label: "このアプリについて", pageType: .appAbout)],
+        [InformationData(label: "関連アプリ", pageType: .relatedApp)]
     ]
     let jsonData: QuizInfo
 
@@ -68,7 +70,6 @@ class InformationViewController: UIViewController {
 
 extension InformationViewController: UITableViewDataSource {
     // section
-
     func numberOfSections(in tableView: UITableView) -> Int {
         return sectionName.count
     }
@@ -78,16 +79,15 @@ extension InformationViewController: UITableViewDataSource {
     }
 
     // cell
-
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return information.count
+        return information[section].count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
 
         cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = information[indexPath.row].label
+        cell.textLabel?.text = information[indexPath.section][indexPath.row].label
         cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
         return cell
     }
@@ -96,12 +96,14 @@ extension InformationViewController: UITableViewDataSource {
 extension InformationViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let data = information[indexPath.row]
+        let data = information[indexPath.section][indexPath.row]
         switch data.pageType {
         case .pictureBook:
             navigationController?.pushViewController(PictureBookViewController(data: jsonData), animated: true)
         case .appAbout:
             navigationController?.pushViewController(AppAboutViewController(), animated: true)
+        case .relatedApp:
+            navigationController?.pushViewController(RelatedAppViewController(), animated: true)
         }
     }
 }

@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "tutanka-men.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
