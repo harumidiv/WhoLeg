@@ -18,7 +18,7 @@ class RelatedAppViewController: UIViewController, SKStoreProductViewControllerDe
     }
 
     private var isNotStoreOpen: Bool = true
-    private let secrion = ["ゲーム", "ツール"]
+    private let secrionName = ["ゲーム", "ツール"]
     private let viewModel: [[CellViewModel]] = [[CellViewModel(image: UIImage(named: "natto")!,
                                                                title: "Oh!Natto!",
                                                                description: "納豆ネバネバ新感覚シミュレーションゲーム!\nやみつき間違いなし！！",
@@ -56,7 +56,11 @@ class RelatedAppViewController: UIViewController, SKStoreProductViewControllerDe
 
 extension RelatedAppViewController: UITableViewDelegate, UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return secrion.count
+        return secrionName.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return secrionName[section]
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
