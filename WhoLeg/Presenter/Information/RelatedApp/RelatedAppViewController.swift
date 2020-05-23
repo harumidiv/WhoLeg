@@ -62,12 +62,15 @@ extension RelatedAppViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 173
+        return UITableView.automaticDimension
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: RelatedAppTableViewCell.self, for: indexPath)
-        cell.setup(cellViewModel: viewModel[indexPath.section][indexPath.row])
+        cell.setup(cellViewModel: viewModel[indexPath.section][indexPath.row], buttonAction: { (id) -> Void in
+            print(id)
+            //TODOストアを開く
+        })
         return cell
     }
 }

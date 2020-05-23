@@ -25,6 +25,9 @@
                         <state key="normal" title="ダウンロード" image="square.and.arrow.down" catalog="system">
                             <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </state>
+                        <connections>
+                            <action selector="dawnloadDidTap:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Sl9-0Y-ws2"/>
+                        </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4xp-Pq-OeD">
                         <rect key="frame" x="160" y="8" width="144" height="29"/>
