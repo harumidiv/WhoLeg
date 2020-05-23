@@ -6,9 +6,10 @@
 //  Copyright © 2020 佐川晴海. All rights reserved.
 //
 
+import StoreKit
 import UIKit
 
-class RelatedAppViewController: UIViewController {
+class RelatedAppViewController: UIViewController, SKStoreProductViewControllerDelegate {
     struct CellViewModel {
         var image: UIImage
         var title: String
@@ -16,6 +17,7 @@ class RelatedAppViewController: UIViewController {
         var appID: String
     }
 
+    private var isNotStoreOpen: Bool = true
     private let secrion = ["ゲーム", "ツール"]
     private let viewModel: [[CellViewModel]] = [[CellViewModel(image: UIImage(named: "natto")!,
                                                                title: "Oh!Natto!",
@@ -68,9 +70,27 @@ extension RelatedAppViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(with: RelatedAppTableViewCell.self, for: indexPath)
         cell.setup(cellViewModel: viewModel[indexPath.section][indexPath.row], buttonAction: { (id) -> Void in
-            print(id)
-            //TODOストアを開く
+            if self.isNotStoreOpen {
+                let vc = SKStoreProductViewController()
+                vc.delegate = self
+
+                let parameters = [SKStoreProductParameterITunesItemIdentifier: id]
+                vc.loadProduct(withParameters: parameters) { [weak self] status, error -> Void in
+                    guard let self = self else { return }
+                    if status {
+                        self.present(vc, animated: true)
+                    } else {
+                        if let error = error {
+                            print("Error: \(error.localizedDescription)")
+                        }
+                    }
+                }
+            }
         })
         return cell
+    }
+
+    func productViewControllerDidFinish(_ viewController: SKStoreProductViewController) {
+        isNotStoreOpen = true
     }
 }
