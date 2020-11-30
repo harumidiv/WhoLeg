@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="dark"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,7 +23,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpX-Fc-xCu" customClass="RoundView" customModule="WhoLeg" customModuleProvider="target">
-                    <rect key="frame" x="40" y="94" width="334" height="334"/>
+                    <rect key="frame" x="40" y="84" width="334" height="334"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kirin" translatesAutoresizingMaskIntoConstraints="NO" id="GNb-KU-JB4" customClass="RoundImage" customModule="WhoLeg" customModuleProvider="target">
                             <rect key="frame" x="10" y="10" width="314" height="314"/>
@@ -37,52 +37,102 @@
                         <constraint firstItem="GNb-KU-JB4" firstAttribute="leading" secondItem="MpX-Fc-xCu" secondAttribute="leading" constant="10" id="Co6-e5-L18"/>
                         <constraint firstItem="GNb-KU-JB4" firstAttribute="centerY" secondItem="MpX-Fc-xCu" secondAttribute="centerY" id="MYw-5I-czl"/>
                         <constraint firstAttribute="bottom" secondItem="GNb-KU-JB4" secondAttribute="bottom" constant="10" id="NBb-FD-E6u"/>
+                        <constraint firstAttribute="width" constant="580" id="mUq-FY-E3j"/>
                         <constraint firstItem="GNb-KU-JB4" firstAttribute="top" secondItem="MpX-Fc-xCu" secondAttribute="top" constant="10" id="xpE-xh-ngn"/>
                         <constraint firstAttribute="trailing" secondItem="GNb-KU-JB4" secondAttribute="trailing" constant="10" id="zIo-X2-21k"/>
                     </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="mUq-FY-E3j"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=regular">
+                        <mask key="constraints">
+                            <include reference="mUq-FY-E3j"/>
+                        </mask>
+                    </variation>
                 </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dIK-lq-4Yu">
-                    <rect key="frame" x="119.5" y="671" width="175" height="175"/>
+                    <rect key="frame" x="127" y="670" width="160" height="160"/>
                     <color key="backgroundColor" name="Background"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="175" id="496-OL-Nn0"/>
-                        <constraint firstAttribute="height" constant="175" id="gjr-Sl-PLj"/>
+                        <constraint firstAttribute="width" constant="250" id="496-OL-Nn0"/>
+                        <constraint firstAttribute="height" constant="160" id="G2X-s0-92I"/>
+                        <constraint firstAttribute="width" constant="160" id="Mgk-VX-TtY"/>
+                        <constraint firstAttribute="height" constant="250" id="gjr-Sl-PLj"/>
                     </constraints>
                     <state key="normal" title="Button" image="start"/>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="G2X-s0-92I"/>
+                            <exclude reference="Mgk-VX-TtY"/>
+                        </mask>
+                    </variation>
+                    <variation key="heightClass=regular-widthClass=compact">
+                        <mask key="constraints">
+                            <exclude reference="496-OL-Nn0"/>
+                            <include reference="G2X-s0-92I"/>
+                            <include reference="Mgk-VX-TtY"/>
+                            <exclude reference="gjr-Sl-PLj"/>
+                        </mask>
+                    </variation>
                     <connections>
                         <action selector="quizStart:" destination="-1" eventType="touchUpInside" id="mP4-Gu-R9V"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="きりん" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHm-VT-cCQ">
-                    <rect key="frame" x="146.5" y="444" width="121" height="48"/>
+                    <rect key="frame" x="146.5" y="434" width="121" height="48"/>
                     <fontDescription key="fontDescription" type="system" pointSize="40"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" name="Background"/>
             <constraints>
                 <constraint firstItem="FHm-VT-cCQ" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="03D-AB-f6i"/>
                 <constraint firstItem="FHm-VT-cCQ" firstAttribute="top" secondItem="MpX-Fc-xCu" secondAttribute="bottom" constant="16" id="0Yo-ik-x1U"/>
                 <constraint firstItem="dIK-lq-4Yu" firstAttribute="top" relation="greaterThanOrEqual" secondItem="FHm-VT-cCQ" secondAttribute="bottom" constant="16" id="3a8-2i-AhF"/>
                 <constraint firstItem="MpX-Fc-xCu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="COV-JC-tMx"/>
-                <constraint firstItem="MpX-Fc-xCu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="UeE-Hm-mNm"/>
+                <constraint firstItem="MpX-Fc-xCu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="Ezo-Xv-aLe"/>
+                <constraint firstItem="MpX-Fc-xCu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="80" id="UeE-Hm-mNm"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="FHm-VT-cCQ" secondAttribute="trailing" constant="16" id="ZSX-Tz-Qpy"/>
                 <constraint firstItem="dIK-lq-4Yu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ZXD-n8-aIZ"/>
                 <constraint firstItem="FHm-VT-cCQ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="aIR-Rv-jip"/>
                 <constraint firstItem="MpX-Fc-xCu" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="aPh-1h-7l0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MpX-Fc-xCu" secondAttribute="trailing" constant="40" id="c0W-zu-o7I"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dIK-lq-4Yu" secondAttribute="bottom" constant="16" id="cGx-2N-Sxv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="dIK-lq-4Yu" secondAttribute="bottom" constant="32" id="cGx-2N-Sxv"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Ezo-Xv-aLe"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=compact">
+                <mask key="constraints">
+                    <include reference="Ezo-Xv-aLe"/>
+                    <exclude reference="UeE-Hm-mNm"/>
+                </mask>
+            </variation>
+            <variation key="heightClass=regular-widthClass=regular">
+                <mask key="constraints">
+                    <exclude reference="c0W-zu-o7I"/>
+                    <exclude reference="aPh-1h-7l0"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="137.68115942028987" y="116.51785714285714"/>
         </view>
     </objects>
+    <designables>
+        <designable name="GNb-KU-JB4">
+            <size key="intrinsicContentSize" width="1200" height="1200"/>
+        </designable>
+    </designables>
     <resources>
         <image name="kirin" width="1200" height="1200"/>
         <image name="start" width="691" height="691"/>
         <namedColor name="Background">
-            <color red="0.078000001609325409" green="0.082000002264976501" blue="0.043000001460313797" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.92199999094009399" green="0.92199999094009399" blue="0.93699997663497925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
