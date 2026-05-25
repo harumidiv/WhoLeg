@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -66,6 +66,7 @@
 		0DC42A7822983DDF00A19088 /* UITableView+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7722983DDF00A19088 /* UITableView+Addition.swift */; };
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
+		1C2D3E4F5A6B7C8D9E0F1A2B /* FBSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */; };
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
 		49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49818E52247907D000BAE8CA /* RelatedAppViewController.swift */; };
 		49818E55247907D000BAE8CA /* RelatedAppViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49818E53247907D000BAE8CA /* RelatedAppViewController.xib */; };
@@ -73,7 +74,6 @@
 		49818E5A2479091200BAE8CA /* RelatedAppTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 49818E582479091200BAE8CA /* RelatedAppTableViewCell.xib */; };
 		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
 		49BA403623E1A5DF0075DF5E /* Springboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49BA403523E1A5DF0075DF5E /* Springboard.swift */; };
-		1C2D3E4F5A6B7C8D9E0F1A2B /* FBSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -519,10 +519,10 @@
 				Base,
 			);
 			mainGroup = 0D8B59F5228FADE4001D1A44;
-			productRefGroup = 0D8B59FF228FADE4001D1A44 /* Products */;
 			packageReferences = (
 				3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
 			);
+			productRefGroup = 0D8B59FF228FADE4001D1A44 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -875,14 +875,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 24BSY9Z4H5;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -895,14 +896,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 7;
+				CURRENT_PROJECT_VERSION = 8;
 				DEVELOPMENT_TEAM = 24BSY9Z4H5;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.1.1;
+				MARKETING_VERSION = 2.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -994,25 +996,6 @@
 		};
 /* End XCBuildConfiguration section */
 
-/* Begin XCRemoteSwiftPackageReference section */
-		3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/uber/ios-snapshot-test-case";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 8.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
-			productName = FBSnapshotTestCase;
-		};
-/* End XCSwiftPackageProductDependency section */
-
 /* Begin XCConfigurationList section */
 		0D8B59F9228FADE4001D1A44 /* Build configuration list for PBXProject "WhoLeg" */ = {
 			isa = XCConfigurationList;
@@ -1051,6 +1034,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = FBSnapshotTestCase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0D8B59F6228FADE4001D1A44 /* Project object */;
 }
