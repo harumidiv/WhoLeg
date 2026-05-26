@@ -35,6 +35,7 @@ struct QuizScreen: View {
                     .padding(.bottom, 16)
             }
         }
+        .navigationBarBackButtonHidden(true)
     }
 
     private var imageArea: some View {

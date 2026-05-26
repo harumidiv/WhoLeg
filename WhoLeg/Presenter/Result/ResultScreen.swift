@@ -12,13 +12,16 @@ struct ResultScreen: View {
     let score: Int
 
     var body: some View {
-        if score == 10 {
-            goodView
-        } else if score > 5 {
-            normalView
-        } else {
-            badView
+        Group {
+            if score == 10 {
+                goodView
+            } else if score > 5 {
+                normalView
+            } else {
+                badView
+            }
         }
+        .navigationBarBackButtonHidden(true)
     }
 
     // MARK: - Good (score == 10)
