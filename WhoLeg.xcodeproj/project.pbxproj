@@ -26,6 +26,7 @@
 		0D8B5A22228FADE6001D1A44 /* WhoLegUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A21228FADE6001D1A44 /* WhoLegUITests.swift */; };
 		0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */; };
 		0D8B5A32228FD07F001D1A44 /* TitleViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */; };
+		0D8B5A99228FD07F001D1A44 /* TitleScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A98228FD07F001D1A44 /* TitleScreen.swift */; };
 		0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */; };
 		0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */; };
 		0D8B5A46228FE01F001D1A44 /* Resource in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A45228FE01F001D1A44 /* Resource */; };
@@ -119,6 +120,7 @@
 		0D8B5A23228FADE6001D1A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleViewController.xib; sourceTree = "<group>"; };
+		0D8B5A98228FD07F001D1A44 /* TitleScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleScreen.swift; sourceTree = "<group>"; };
 		0D8B5A34228FD1BA001D1A44 /* UIColor+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Addition.swift"; sourceTree = "<group>"; };
 		0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		0D8B5A45228FE01F001D1A44 /* Resource */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Resource; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */,
+				0D8B5A98228FD07F001D1A44 /* TitleScreen.swift */,
 				0D8B5A682292F2BD001D1A44 /* TitlePresenter.swift */,
 				0D8B5A4C228FF0D1001D1A44 /* TitleModel.swift */,
 				0D8B5A30228FD07F001D1A44 /* TitleViewController.xib */,
@@ -677,6 +680,7 @@
 				0D8B5A6522919513001D1A44 /* QuizModel.swift in Sources */,
 				0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */,
 				0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */,
+				0D8B5A99228FD07F001D1A44 /* TitleScreen.swift in Sources */,
 				0DC42A7022981BC500A19088 /* PictureBookViewController.swift in Sources */,
 				0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */,
 				0D8B5A8722942698001D1A44 /* RoundImage.swift in Sources */,
