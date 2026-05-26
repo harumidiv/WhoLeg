@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import SwiftUI
 
-class ResultViewController: UIViewController {
+class ResultViewController: UIHostingController<ResultScreen> {
     let score: Int
 
     private var presenter: ResultPresenter!
@@ -16,7 +17,7 @@ class ResultViewController: UIViewController {
 
     init(score: Int) {
         self.score = score
-        super.init(nibName: String(describing: ResultViewController.self), bundle: nil)
+        super.init(rootView: ResultScreen(score: score))
     }
 
     func injector(presenter: ResultPresenter, wireframe: ResultWireframe) {
@@ -24,22 +25,8 @@ class ResultViewController: UIViewController {
         self.wireframe = wireframe
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    @MainActor required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
-    }
-
-    override func loadView() {
-        if score == 10 {
-            view = ResultGoodView()
-        } else if score > 5 {
-            let view = ResultNormalView()
-            view.label.text = "\(score)/10\nまずまずだね"
-            self.view = view
-        } else {
-            let view = ResultBadView()
-            view.label.text = "\(score)/10\nうーん..."
-            self.view = view
-        }
     }
 
     override func viewDidLoad() {
@@ -47,24 +34,18 @@ class ResultViewController: UIViewController {
         title = "スコア"
         navigationItem.hidesBackButton = true
 
-        let returnButton: UIBarButtonItem = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(returnStartScreen(_:)))
+        let returnButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(returnStartScreen(_:)))
         navigationItem.leftBarButtonItem = returnButton
 
-        let retryButton: UIBarButtonItem = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(retryQuiz(_:)))
+        let retryButton = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(retryQuiz(_:)))
         navigationItem.rightBarButtonItem = retryButton
     }
 
     @objc func returnStartScreen(_ sender: UIBarButtonItem) {
         wireframe.showTitle(vc: self)
-//        let vc = TitleViewController()
-//        vc.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
-//        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     @objc func retryQuiz(_ sender: UIBarButtonItem) {
         wireframe.showRetryQuiz(vc: self, data: presenter.getjson())
-//        let vc = QuizViewController(quizData: presenter.getjson(), score: 0, count: 1)
-//        vc.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: vc), wireframe: QuizWireframeImpl())
-//        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

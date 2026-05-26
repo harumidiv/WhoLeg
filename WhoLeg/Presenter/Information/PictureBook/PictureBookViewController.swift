@@ -7,102 +7,62 @@
 //
 
 import UIKit
+import SwiftUI
 
-class PictureBookViewController: UIViewController {
-    let data: QuizInfo
-
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(cellType: PictureBookTableViewCell.self)
-        }
-    }
-
-    // MARK: - Initializer
+class PictureBookViewController: UIHostingController<PictureBookScreen> {
+    private let data: QuizInfo
+    private let items: [PictureBookScreen.Item]
 
     init(data: QuizInfo) {
         self.data = data
-        super.init(nibName: String(describing: PictureBookViewController.self), bundle: nil)
+        let items = data.quiz.enumerated().map { index, quiz -> PictureBookScreen.Item in
+            let imageName = URL(fileURLWithPath: quiz.image).deletingPathExtension().lastPathComponent
+            return PictureBookScreen.Item(
+                id: index,
+                imageName: imageName,
+                answer: quiz.answer,
+                isUnlocked: userDefault.object(forKey: quiz.image) != nil
+            )
+        }
+        self.items = items
+        super.init(rootView: PictureBookScreen(items: items, onSelect: { _ in }))
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    @MainActor required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-    // MARK: - LifeCycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLargeTitle()
-
-        let headerView = PictureBookTableHeaderView.loadNib()
-        headerView.frame = CGRect(x: 0, y: 0, width: tableView.frame.width, height: 100)
-        headerView.descriptionLabel.text = "正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!"
-
-        tableView.tableHeaderView = headerView
+        rootView = PictureBookScreen(items: items, onSelect: { [weak self] item in
+            self?.navigate(to: item)
+        })
     }
 
     private func setupLargeTitle() {
         title = "ずかん"
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
-
-        if #available(iOS 13.0, *) {
-            let appearance = UINavigationBarAppearance()
-            appearance.configureWithDefaultBackground()
-            appearance.backgroundColor = UIColor(hex: "#0F9D58")
-            appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-            appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-            appearance.titlePositionAdjustment = UIOffset(horizontal: -(self.view.frame.width / 2), vertical: 0)
-
-            // Large Title 用 NavigationBar の色設定
-            self.navigationController?.navigationBar.scrollEdgeAppearance = appearance
-            // 通常の NavigationBar の色設定
-            self.navigationController?.navigationBar.standardAppearance = appearance
-        }
-    }
-}
-
-extension PictureBookViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return data.quiz.count
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithDefaultBackground()
+        appearance.backgroundColor = UIColor(hex: "#0F9D58")
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        // Shift large title to the left
+        appearance.titlePositionAdjustment = UIOffset(horizontal: -(UIScreen.main.bounds.width / 2), vertical: 0)
+        navigationController?.navigationBar.scrollEdgeAppearance = appearance
+        navigationController?.navigationBar.standardAppearance = appearance
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let quizData = data.quiz[indexPath.row]
-        let cell = tableView.dequeueReusableCell(with: PictureBookTableViewCell.self, for: indexPath)
-        cell.selectionStyle = .none
-        cell.quizImage?.image = UIImage(named: quizData.image)!
-
-        if userDefault.object(forKey: quizData.image) != nil {
-            cell.label?.text = quizData.answer
-            cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-            cell.tag = 1
-        } else {
-            cell.label.text = "? ? ?"
-            cell.accessoryType = UITableViewCell.AccessoryType.none
-            cell.tag = 0
-        }
-
-        return cell
-    }
-
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 66
-    }
-}
-
-extension PictureBookViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let quizData = data.quiz[indexPath.row]
-
-        if tableView.cellForRow(at: indexPath)?.tag == 1 {
-            let viewModel = PictureBookDetailViewController.ViewModel(image: UIImage(named: quizData.image)!, text: quizData.answer, url: URL(string: quizData.url)!)
-
-            let vc = PictureBookDetailViewController(viewModel: viewModel)
-            navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-            navigationController?.pushViewController(vc, animated: true)
-        }
+    private func navigate(to item: PictureBookScreen.Item) {
+        let quiz = data.quiz[item.id]
+        let viewModel = PictureBookDetailScreen.ViewModel(
+            imageName: item.imageName,
+            text: quiz.answer,
+            url: URL(string: quiz.url)!
+        )
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        navigationController?.pushViewController(PictureBookDetailViewController(viewModel: viewModel), animated: true)
     }
 }
