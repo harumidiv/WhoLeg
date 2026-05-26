@@ -7,21 +7,20 @@
 //
 
 import UIKit
+import SwiftUI
 
-class AppAboutViewController: UIViewController {
-    @IBOutlet weak var label: UILabel!
+class AppAboutViewController: UIHostingController<AppAboutScreen> {
+    init() {
+        let version = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
+        super.init(rootView: AppAboutScreen(version: version))
+    }
+
+    @MainActor required dynamic init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "このアプリについて"
-
-        let version: String = Bundle.main.object(forInfoDictionaryKey: "CFBundleShortVersionString") as! String
-        label.text =
-            """
-            だれのあし
-            バージョン : \(version)
-
-            (C) Harumi Sagawa
-            """
     }
 }

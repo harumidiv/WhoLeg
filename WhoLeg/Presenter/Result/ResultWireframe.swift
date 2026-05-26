@@ -15,14 +15,13 @@ protocol ResultWireframe {
 
 class ResultWireframeImpl: ResultWireframe {
     func showTitle(vc: UIViewController) {
-        let titleViewController = TitleViewController()
-        titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
-        vc.navigationController?.pushViewController(titleViewController, animated: true)
+        vc.navigationController?.popToRootViewController(animated: true)
     }
 
     func showRetryQuiz(vc: UIViewController, data: QuizInfo) {
+        guard let nav = vc.navigationController, let titleVC = nav.viewControllers.first else { return }
         let quizViewController = QuizViewController(quizData: data, score: 0, count: 1)
         quizViewController.injector(presenter: QuizPresenterImpl(model: QuizModelImpl(), output: quizViewController), wireframe: QuizWireframeImpl())
-        vc.navigationController?.pushViewController(quizViewController, animated: true)
+        nav.setViewControllers([titleVC, quizViewController], animated: true)
     }
 }

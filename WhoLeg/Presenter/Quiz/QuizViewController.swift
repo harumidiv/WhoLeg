@@ -7,46 +7,17 @@
 //
 
 import UIKit
+import SwiftUI
 
-class QuizViewController: UIViewController {
-    @IBOutlet weak var image: UIImageView!
-    @IBOutlet weak var optionA: QuizOptionButton! {
-        didSet {
-            optionA.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
-        }
-    }
+class QuizViewController: UIHostingController<QuizScreen> {
 
-    @IBOutlet weak var optionB: QuizOptionButton! {
-        didSet {
-            optionB.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
-        }
-    }
-
-    @IBOutlet weak var optionC: QuizOptionButton! {
-        didSet {
-            optionC.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
-        }
-    }
-
-    @IBOutlet weak var optionD: QuizOptionButton! {
-        didSet {
-            optionD.addTarget(self, action: #selector(tapAnswer(_:)), for: .touchUpInside)
-        }
-    }
-
-    @IBOutlet weak var resultLabel: UILabel! {
-        didSet {
-            resultLabel.text = ""
-        }
-    }
-
-    lazy var rand = Int.random(in: 0 ..< quizData.quiz.count)
+    private let state: QuizScreenState
     var quizData: QuizInfo
     private var presenter: QuizPresenter!
     private var wireframe: QuizWireframe!
-    var score: Int
+    private var score: Int
     let count: Int
-    var isBeforeAnswer = true
+    lazy var rand = Int.random(in: 0 ..< quizData.quiz.count)
 
     // MARK: - Initializer
 
@@ -54,10 +25,12 @@ class QuizViewController: UIViewController {
         self.quizData = quizData
         self.score = score
         self.count = count
-        super.init(nibName: String(describing: QuizViewController.self), bundle: nil)
+        let state = QuizScreenState()
+        self.state = state
+        super.init(rootView: QuizScreen(state: state, onAnswer: { _ in }))
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    @MainActor required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
@@ -72,33 +45,33 @@ class QuizViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.hidesBackButton = true
+
+        state.imageName = URL(fileURLWithPath: quizData.quiz[rand].image)
+            .deletingPathExtension().lastPathComponent
+
+        rootView = QuizScreen(state: state, onAnswer: { [weak self] answer in
+            guard let self, self.state.isEnabled else { return }
+            self.state.isEnabled = false
+            self.presenter.answerCheck(select: answer, answer: self.quizData.quiz[self.rand].answer)
+        })
+
+        presenter.createRandomElement(
+            a: quizData.quiz[rand].choice.a,
+            b: quizData.quiz[rand].choice.b,
+            c: quizData.quiz[rand].choice.c,
+            d: quizData.quiz[rand].choice.d
+        )
+
         title = "\(count)/10"
-
-        image.image = UIImage(named: quizData.quiz[rand].image)!
-
-        presenter.createRandomElement(a: quizData.quiz[rand].choice.a,
-                                      b: quizData.quiz[rand].choice.b,
-                                      c: quizData.quiz[rand].choice.c,
-                                      d: quizData.quiz[rand].choice.d)
-    }
-
-    // MARK: - Event
-
-    @objc func tapAnswer(_ sender: UIButton) {
-        if isBeforeAnswer {
-            presenter.answerCheck(select: sender.titleLabel!.text!, answer: quizData.quiz[rand].answer)
-            isBeforeAnswer = false
-        }
+        navigationItem.hidesBackButton = true
     }
 }
 
+// MARK: - QuizPresenterOutput
+
 extension QuizViewController: QuizPresenterOutput {
     func showQuiz(choice: [String]) {
-        optionA.setTitle(choice[0], for: .normal)
-        optionB.setTitle(choice[1], for: .normal)
-        optionC.setTitle(choice[2], for: .normal)
-        optionD.setTitle(choice[3], for: .normal)
+        state.choices = choice
     }
 
     func answerResult(answer: Bool) {
@@ -106,26 +79,18 @@ extension QuizViewController: QuizPresenterOutput {
             presenter.saveCorrectAnswerData(key: quizData.quiz[rand].image)
             presenter.correctSoundPlay()
             score += 1
-            resultLabel.text = "⚪︎"
-            resultLabel.textColor = UIColor(appColor: .c1)
-            optionA.isEnabled = false
-            optionB.isEnabled = false
-            optionC.isEnabled = false
-            optionD.isEnabled = false
+            state.resultSymbol = "⚪︎"
+            state.resultColor = Color(UIColor(appColor: .c1))
         } else {
             presenter.mistakeSoundPlay()
-            resultLabel.text = "✖︎"
-            resultLabel.textColor = UIColor(appColor: .c2)
-            optionA.isEnabled = false
-            optionB.isEnabled = false
-            optionC.isEnabled = false
-            optionD.isEnabled = false
+            state.resultSymbol = "✖︎"
+            state.resultColor = Color(UIColor(appColor: .c2))
         }
 
-        // quizデータの削除
         quizData.quiz.remove(at: rand)
 
-        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { _ in
+        Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { [weak self] _ in
+            guard let self else { return }
             if self.count >= 10 {
                 self.wireframe.showResult(vc: self, score: self.score)
             } else {

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 enum PageType {
     case pictureBook
@@ -19,38 +20,24 @@ struct InformationData {
     var pageType: PageType
 }
 
-class InformationViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView! {
-        didSet {
-            tableView.delegate = self
-            tableView.dataSource = self
-            tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
-        }
-    }
-
-    let sectionName: [String] = ["せつめい", "その他"]
-
-    let information: [[InformationData]] = [
-        [InformationData(label: "ずかん", pageType: .pictureBook),
-         InformationData(label: "このアプリについて", pageType: .appAbout)],
-        [InformationData(label: "関連アプリ", pageType: .relatedApp)]
-    ]
+class InformationViewController: UIHostingController<InformationScreen> {
     let jsonData: QuizInfo
 
     init(data: QuizInfo) {
         jsonData = data
-        super.init(nibName: String(describing: InformationViewController.self), bundle: nil)
+        super.init(rootView: InformationScreen(
+            onSelectPictureBook: {},
+            onSelectAppAbout: {},
+            onSelectRelatedApp: {}
+        ))
     }
 
-    required init?(coder aDecoder: NSCoder) {
+    @MainActor required dynamic init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if let indexPathForSelectedRow = tableView.indexPathForSelectedRow {
-            tableView.deselectRow(at: indexPathForSelectedRow, animated: true)
-        }
 
         // 図鑑画面でNavigationBarTitle位置をずらしたのを戻す
         let appearance = UINavigationBarAppearance()
@@ -65,45 +52,21 @@ class InformationViewController: UIViewController {
     override func viewDidLoad() {
         title = "じょうほう"
         super.viewDidLoad()
-    }
-}
 
-extension InformationViewController: UITableViewDataSource {
-    // section
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return sectionName.count
-    }
-
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionName[section]
-    }
-
-    // cell
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return information[section].count
-    }
-
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-
-        cell.accessoryType = .disclosureIndicator
-        cell.textLabel?.text = information[indexPath.section][indexPath.row].label
-        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
-        return cell
-    }
-}
-
-extension InformationViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        let data = information[indexPath.section][indexPath.row]
-        switch data.pageType {
-        case .pictureBook:
-            navigationController?.pushViewController(PictureBookViewController(data: jsonData), animated: true)
-        case .appAbout:
-            navigationController?.pushViewController(AppAboutViewController(), animated: true)
-        case .relatedApp:
-            navigationController?.pushViewController(RelatedAppViewController(), animated: true)
-        }
+        rootView = InformationScreen(
+            onSelectPictureBook: { [weak self] in
+                guard let self else { return }
+                self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+                self.navigationController?.pushViewController(PictureBookViewController(data: self.jsonData), animated: true)
+            },
+            onSelectAppAbout: { [weak self] in
+                guard let self else { return }
+                self.navigationController?.pushViewController(AppAboutViewController(), animated: true)
+            },
+            onSelectRelatedApp: { [weak self] in
+                guard let self else { return }
+                self.navigationController?.pushViewController(RelatedAppViewController(), animated: true)
+            }
+        )
     }
 }
