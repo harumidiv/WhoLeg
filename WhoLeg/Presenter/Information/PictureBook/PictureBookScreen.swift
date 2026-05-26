@@ -22,34 +22,33 @@ struct PictureBookScreen: View {
 
     var body: some View {
         List {
-            Section {
-                ForEach(items) { item in
-                    Button {
-                        guard item.isUnlocked else { return }
-                        onSelect(item)
-                    } label: {
-                        HStack(spacing: 12) {
-                            Image(item.imageName)
-                                .resizable()
-                                .scaledToFill()
-                                .frame(width: 50, height: 50)
-                                .clipShape(Circle())
-                            Text(item.isUnlocked ? item.answer : "? ? ?")
-                                .foregroundColor(.primary)
-                            Spacer()
-                            if item.isUnlocked {
-                                Image(systemName: "chevron.right")
-                                    .foregroundColor(.secondary)
-                                    .font(.caption.weight(.semibold))
-                            }
+            Text("正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!")
+                .font(.caption)
+                .foregroundColor(.secondary)
+                .listRowSeparator(.hidden)
+
+            ForEach(items) { item in
+                Button {
+                    guard item.isUnlocked else { return }
+                    onSelect(item)
+                } label: {
+                    HStack(spacing: 12) {
+                        Image(item.imageName)
+                            .resizable()
+                            .scaledToFill()
+                            .frame(width: 50, height: 50)
+                            .clipShape(Circle())
+                        Text(item.isUnlocked ? item.answer : "? ? ?")
+                            .foregroundColor(.primary)
+                        Spacer()
+                        if item.isUnlocked {
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(.secondary)
+                                .font(.caption.weight(.semibold))
                         }
-                        .frame(height: 50)
                     }
+                    .frame(height: 50)
                 }
-            } header: {
-                Text("正解した問題は名前が表示されます。 図鑑を完成を目指しましょう!!")
-                    .font(.caption)
-                    .textCase(nil)
             }
         }
         .listStyle(.plain)
