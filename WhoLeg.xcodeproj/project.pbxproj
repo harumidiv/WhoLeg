@@ -42,6 +42,7 @@
 		0D8B5AB5228FD07F001D1A44 /* AppAboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB4228FD07F001D1A44 /* AppAboutScreen.swift */; };
 		0D8B5AB7228FD07F001D1A44 /* PictureBookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB6228FD07F001D1A44 /* PictureBookScreen.swift */; };
 		0D8B5AB9228FD07F001D1A44 /* PictureBookDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB8228FD07F001D1A44 /* PictureBookDetailScreen.swift */; };
+		0DAD0B0C2A00000100000007 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000006 /* BannerAdView.swift */; };
 		0D8B5ABB228FD07F001D1A44 /* RelatedAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5ABA228FD07F001D1A44 /* RelatedAppScreen.swift */; };
 		0DA1B2C32A00000100000002 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1B2C32A00000100000001 /* SceneDelegate.swift */; };
 		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
@@ -119,6 +120,7 @@
 		0D8B5AB4228FD07F001D1A44 /* AppAboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutScreen.swift; sourceTree = "<group>"; };
 		0D8B5AB6228FD07F001D1A44 /* PictureBookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookScreen.swift; sourceTree = "<group>"; };
 		0D8B5AB8228FD07F001D1A44 /* PictureBookDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailScreen.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000006 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		0D8B5ABA228FD07F001D1A44 /* RelatedAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAppScreen.swift; sourceTree = "<group>"; };
 		0DA1B2C32A00000100000001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				0DC42A652296F03900A19088 /* Information */,
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
+				0DAD0B0C2A00000100000006 /* BannerAdView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				0D30720F23533B8C00FEFD60 /* UIView+IB.swift in Sources */,
 				0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */,
 				0D8B5AB9228FD07F001D1A44 /* PictureBookDetailScreen.swift in Sources */,
+				0DAD0B0C2A00000100000007 /* BannerAdView.swift in Sources */,
 				49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */,
 				0D8B5ABB228FD07F001D1A44 /* RelatedAppScreen.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,

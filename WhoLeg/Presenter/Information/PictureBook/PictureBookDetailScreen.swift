@@ -47,6 +47,10 @@ struct PictureBookDetailScreen: View {
             .padding(16)
         }
         .background(Color(.systemGroupedBackground))
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            BannerAdView()
+                .background(Color(.systemGroupedBackground))
+        }
     }
 }
 
