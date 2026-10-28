@@ -17,7 +17,7 @@ class QuizRepositoryImpl: QuizRepository {
         let path: String = Bundle.main.path(forResource: "Resource/quiz", ofType: "json")!
         var jsonData: QuizInfo!
         do {
-            let content = try String(contentsOfFile: path)
+            let content = try String(contentsOfFile: path, encoding: .utf8)
             jsonData = try JSONDecoder().decode(QuizInfo.self, from: content.data(using: .utf8)!)
             return jsonData
         } catch {
