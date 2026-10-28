@@ -31,6 +31,7 @@
 		0D8B5A672292ECA4001D1A44 /* QuizWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A662292ECA4001D1A44 /* QuizWireframe.swift */; };
 		0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A682292F2BD001D1A44 /* TitlePresenter.swift */; };
 		0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A79229413ED001D1A44 /* QuizRepository.swift */; };
+		0DAD0B0C2A00000100000005 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */; };
 		0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */; };
 		0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7D22941599001D1A44 /* ResultModel.swift */; };
 		0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */; };
@@ -52,6 +53,7 @@
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
 		1C2D3E4F5A6B7C8D9E0F1A2B /* FBSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */; };
+		0DAD0B0C2A00000100000003 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAD0B0C2A00000100000002 /* GoogleMobileAds */; };
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
 		49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49818E52247907D000BAE8CA /* RelatedAppViewController.swift */; };
 		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
@@ -106,6 +108,7 @@
 		0D8B5A662292ECA4001D1A44 /* QuizWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWireframe.swift; sourceTree = "<group>"; };
 		0D8B5A682292F2BD001D1A44 /* TitlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePresenter.swift; sourceTree = "<group>"; };
 		0D8B5A79229413ED001D1A44 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
 		0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		0D8B5A7D22941599001D1A44 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWireframe.swift; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DAD0B0C2A00000100000003 /* GoogleMobileAds in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				0D8B5A79229413ED001D1A44 /* QuizRepository.swift */,
+				0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -358,6 +363,9 @@
 			dependencies = (
 			);
 			name = WhoLeg;
+			packageProductDependencies = (
+				0DAD0B0C2A00000100000002 /* GoogleMobileAds */,
+			);
 			productName = WhoLeg;
 			productReference = 0D8B59FE228FADE4001D1A44 /* WhoLeg.app */;
 			productType = "com.apple.product-type.application";
@@ -436,6 +444,7 @@
 			mainGroup = 0D8B59F5228FADE4001D1A44;
 			packageReferences = (
 				3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+				0DAD0B0C2A00000100000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
 			);
 			productRefGroup = 0D8B59FF228FADE4001D1A44 /* Products */;
 			projectDirPath = "";
@@ -546,6 +555,10 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/Script/ValidateJson/main.sh",
+				"$(SRCROOT)/Script/ValidateJson/ValidateJson.swift",
+				"$(SRCROOT)/WhoLeg/Domain/QuizInfo.swift",
+				"$(SRCROOT)/WhoLeg/Resource/quiz.json",
 			);
 			outputFileListPaths = (
 			);
@@ -592,6 +605,7 @@
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 				0D8B5AB1228FD07F001D1A44 /* ResultScreen.swift in Sources */,
 				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,
+				0DAD0B0C2A00000100000005 /* InterstitialAdManager.swift in Sources */,
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,
 				0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */,
 				0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */,
@@ -941,6 +955,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0DAD0B0C2A00000100000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.11.0;
+			};
+		};
 		3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/uber/ios-snapshot-test-case";
@@ -956,6 +978,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
 			productName = FBSnapshotTestCase;
+		};
+		0DAD0B0C2A00000100000002 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DAD0B0C2A00000100000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
