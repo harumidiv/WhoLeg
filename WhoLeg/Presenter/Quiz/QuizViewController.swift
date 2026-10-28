@@ -89,11 +89,17 @@ extension QuizViewController: QuizPresenterOutput {
         quizData.quiz.remove(at: rand)
 
         Timer.scheduledTimer(withTimeInterval: 0.1, repeats: false) { [weak self] _ in
-            guard let self else { return }
-            if self.count >= 10 {
-                self.wireframe.showResult(vc: self, score: self.score)
-            } else {
-                self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score, count: self.count + 1)
+            // メインスレッドのRunLoopで発火するので、MainActorとして扱える
+            MainActor.assumeIsolated {
+                guard let self else { return }
+                if self.count >= 10 {
+                    InterstitialAdManager.shared.showIfNeeded(from: self) { [weak self] in
+                        guard let self else { return }
+                        self.wireframe.showResult(vc: self, score: self.score)
+                    }
+                } else {
+                    self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score, count: self.count + 1)
+                }
             }
         }
     }
