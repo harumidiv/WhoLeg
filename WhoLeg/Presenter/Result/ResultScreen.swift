@@ -11,109 +11,79 @@ import SwiftUI
 struct ResultScreen: View {
     let score: Int
 
+    private struct Style {
+        let background: Color
+        let message: String
+        let imageName: String
+        let imageAlignment: Alignment
+        let imageHeightRatio: CGFloat
+    }
+
+    private var style: Style {
+        if score == 10 {
+            return Style(
+                background: Color(red: 1, green: 0.485, blue: 0.226),
+                message: "全問正解!!",
+                imageName: "white2",
+                imageAlignment: .bottom,
+                imageHeightRatio: 0.65
+            )
+        } else if score > 5 {
+            return Style(
+                background: .brand,
+                message: "まずまずだね",
+                imageName: "white",
+                imageAlignment: .bottomLeading,
+                imageHeightRatio: 0.75
+            )
+        } else {
+            return Style(
+                background: .brandNavy,
+                message: "うーん...",
+                imageName: "black",
+                imageAlignment: .bottomTrailing,
+                imageHeightRatio: 0.40
+            )
+        }
+    }
+
     var body: some View {
-        Group {
-            if score == 10 {
-                goodView
-            } else if score > 5 {
-                normalView
-            } else {
-                badView
+        let style = style
+        GeometryReader { geometry in
+            ZStack(alignment: style.imageAlignment) {
+                style.background
+                    .ignoresSafeArea()
+
+                Image(style.imageName)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: geometry.size.height * style.imageHeightRatio)
+                    .padding(.horizontal, 16)
+                    .accessibilityHidden(true)
+
+                scoreHeader(message: style.message)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
+                    .padding(.top, 24)
             }
         }
         .navigationBarBackButtonHidden(true)
     }
 
-    // MARK: - Good (score == 10)
-
-    private var goodView: some View {
-        GeometryReader { geometry in
-            ZStack(alignment: .top) {
-                Color(red: 1, green: 0.485, blue: 0.226)
-                    .ignoresSafeArea()
-
-                Text("全問正解!!")
-                    .font(.system(size: 70, weight: .ultraLight))
-                    .foregroundStyle(.white)
-                    .multilineTextAlignment(.center)
-                    .padding(.top, geometry.safeAreaInsets.top + 32)
-
-                VStack {
-                    Spacer()
-                    Image("white2")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(height: geometry.size.height * 0.70)
-                }
+    private func scoreHeader(message: String) -> some View {
+        VStack(spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: 4) {
+                Text("\(score)")
+                    .font(.system(size: 96, weight: .heavy, design: .rounded))
+                Text("/ 10")
+                    .font(.system(size: 32, weight: .bold, design: .rounded))
+                    .opacity(0.8)
             }
+            Text(message)
+                .font(.system(size: 32, weight: .bold, design: .rounded))
         }
-        .ignoresSafeArea()
-    }
-
-    // MARK: - Normal (score > 5)
-
-    private var normalView: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color(red: 0, green: 1, blue: 0.332)
-                    .ignoresSafeArea()
-
-                HStack(spacing: 0) {
-                    Image("white")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(
-                            width: geometry.size.width * 0.70,
-                            height: geometry.size.height * 0.80
-                        )
-
-                    Spacer()
-
-                    Text("\(score)/10\nまずまずだね")
-                        .font(.system(size: 35))
-                        .foregroundStyle(Color(red: 0.937, green: 0.937, blue: 0.957))
-                        .multilineTextAlignment(.center)
-                        .padding(.trailing, 16)
-                }
-            }
-        }
-        .ignoresSafeArea()
-    }
-
-    // MARK: - Bad (score <= 5)
-
-    private var badView: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color(red: 0, green: 0.510, blue: 0.392)
-                    .ignoresSafeArea()
-
-                HStack(alignment: .center, spacing: 0) {
-                    Text("\(score)/10\nうーん...")
-                        .font(.system(size: 50))
-                        .foregroundStyle(.white)
-                        .multilineTextAlignment(.center)
-                        .padding(.leading, 16)
-
-                    Spacer()
-                }
-
-                VStack {
-                    Spacer()
-                    HStack {
-                        Spacer()
-                        Image("black")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(
-                                width: geometry.size.width * 0.50,
-                                height: geometry.size.height * 0.50
-                            )
-                    }
-                }
-            }
-        }
-        .ignoresSafeArea()
+        .foregroundStyle(.white)
+        .shadow(color: .black.opacity(0.15), radius: 4, y: 2)
+        .accessibilityElement(children: .combine)
     }
 }
 

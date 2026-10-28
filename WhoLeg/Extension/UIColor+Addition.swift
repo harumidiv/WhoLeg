@@ -46,3 +46,16 @@ extension UIColor {
         self.init(hex: appColor.hex, alpha: 1.0)
     }
 }
+
+import SwiftUI
+
+extension Color {
+    /// メインカラー(緑)
+    static let brand = Color(UIColor(appColor: .c1))
+    /// 不正解などに使う紺色
+    static let brandNavy = Color(UIColor(appColor: .c2))
+    /// 選択肢ボタンなどのアクセントカラー(黄)
+    static let brandAccent = Color(UIColor(hex: "#F4B400"))
+    /// アクセントカラーの影色
+    static let brandAccentShadow = Color(UIColor(hex: "#C99400"))
+}

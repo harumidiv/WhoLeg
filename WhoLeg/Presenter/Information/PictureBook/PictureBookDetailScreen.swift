@@ -24,16 +24,35 @@ struct PictureBookDetailScreen: View {
                 Image(viewModel.imageName)
                     .resizable()
                     .scaledToFit()
-                    .frame(maxWidth: .infinity)
-                    .padding()
+                    .frame(maxWidth: .infinity, maxHeight: 420)
+                    .padding(24)
+                    .background(Color.white, in: RoundedRectangle(cornerRadius: 28, style: .continuous))
+
                 Text(viewModel.text)
-                    .font(.largeTitle)
+                    .font(.system(.largeTitle, design: .rounded, weight: .bold))
                     .multilineTextAlignment(.center)
-                Button(viewModel.text + "って何？") {
-                    onDetailTapped()
+
+                Button(action: onDetailTapped) {
+                    Label(viewModel.text + "って何？", systemImage: "safari")
+                        .font(.system(.headline, design: .rounded))
+                        .padding(.horizontal, 8)
+                        .padding(.vertical, 6)
                 }
                 .buttonStyle(.borderedProminent)
+                .buttonBorderShape(.capsule)
+                .tint(.brand)
             }
+            .frame(maxWidth: 600)
+            .frame(maxWidth: .infinity)
+            .padding(16)
         }
+        .background(Color(.systemGroupedBackground))
     }
+}
+
+#Preview {
+    PictureBookDetailScreen(
+        viewModel: .init(imageName: "kirin", text: "きりん", url: URL(string: "https://example.com")!),
+        onDetailTapped: {}
+    )
 }

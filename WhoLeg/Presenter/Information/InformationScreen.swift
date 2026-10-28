@@ -9,6 +9,8 @@
 import SwiftUI
 
 struct InformationScreen: View {
+    let collectedCount: Int
+    let totalCount: Int
     let onSelectPictureBook: () -> Void
     let onSelectAppAbout: () -> Void
     let onSelectRelatedApp: () -> Void
@@ -16,34 +18,53 @@ struct InformationScreen: View {
     var body: some View {
         List {
             Section("せつめい") {
-                Button(action: onSelectPictureBook) {
-                    HStack {
-                        Text("ずかん")
-                            .foregroundColor(.primary)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
+                row(title: "ずかん", systemImage: "book.closed.fill", color: .brand, action: onSelectPictureBook) {
+                    Text("\(collectedCount) / \(totalCount)")
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(Color(.secondaryLabel))
+                        .monospacedDigit()
                 }
-                Button(action: onSelectAppAbout) {
-                    HStack {
-                        Text("このアプリについて")
-                            .foregroundColor(.primary)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                }
+                row(title: "このアプリについて", systemImage: "info", color: .brandNavy, action: onSelectAppAbout)
             }
             Section("その他") {
-                Button(action: onSelectRelatedApp) {
-                    HStack {
-                        Text("関連アプリ")
-                            .foregroundColor(.primary)
-                        Spacer()
-                        Image(systemName: "chevron.right")
-                    }
-                }
+                row(title: "関連アプリ", systemImage: "square.grid.2x2.fill", color: .brandAccent, action: onSelectRelatedApp)
             }
         }
-        .listStyle(.grouped)
+        .listStyle(.insetGrouped)
     }
+
+    private func row(
+        title: String,
+        systemImage: String,
+        color: Color,
+        action: @escaping () -> Void,
+        @ViewBuilder trailing: () -> some View = { EmptyView() }
+    ) -> some View {
+        Button(action: action) {
+            HStack(spacing: 12) {
+                Image(systemName: systemImage)
+                    .font(.system(size: 15, weight: .bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 30, height: 30)
+                    .background(color, in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+                Text(title)
+                    .foregroundStyle(Color(.label))
+                Spacer()
+                trailing()
+                Image(systemName: "chevron.right")
+                    .font(.footnote.weight(.semibold))
+                    .foregroundStyle(Color(.tertiaryLabel))
+            }
+        }
+    }
+}
+
+#Preview {
+    InformationScreen(
+        collectedCount: 6,
+        totalCount: 50,
+        onSelectPictureBook: {},
+        onSelectAppAbout: {},
+        onSelectRelatedApp: {}
+    )
 }

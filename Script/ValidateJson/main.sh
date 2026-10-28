@@ -15,4 +15,4 @@ cat ${QUIZ_INFO} ${VALIDATE_JSON}
 echo "$(swift_code)" \
 | DEVELOPER_DIR="$DEVELOPER_DIR" \
 xcrun --sdk macosx \
-"$TOOLCHAIN_DIR/usr/bin/"swift -F "$SRCROOT/Carthage/Build/Mac/" -
+"$DT_TOOLCHAIN_DIR/usr/bin/"swift -F "$SRCROOT/Carthage/Build/Mac/" -

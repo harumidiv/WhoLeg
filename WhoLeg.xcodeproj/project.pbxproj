@@ -42,6 +42,7 @@
 		0D8B5AB7228FD07F001D1A44 /* PictureBookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB6228FD07F001D1A44 /* PictureBookScreen.swift */; };
 		0D8B5AB9228FD07F001D1A44 /* PictureBookDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB8228FD07F001D1A44 /* PictureBookDetailScreen.swift */; };
 		0D8B5ABB228FD07F001D1A44 /* RelatedAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5ABA228FD07F001D1A44 /* RelatedAppScreen.swift */; };
+		0DA1B2C32A00000100000002 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1B2C32A00000100000001 /* SceneDelegate.swift */; };
 		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
 		0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A612296F02800A19088 /* InformationViewController.swift */; };
 		0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A662296F24400A19088 /* AppAboutViewController.swift */; };
@@ -116,6 +117,7 @@
 		0D8B5AB6228FD07F001D1A44 /* PictureBookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookScreen.swift; sourceTree = "<group>"; };
 		0D8B5AB8228FD07F001D1A44 /* PictureBookDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailScreen.swift; sourceTree = "<group>"; };
 		0D8B5ABA228FD07F001D1A44 /* RelatedAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAppScreen.swift; sourceTree = "<group>"; };
+		0DA1B2C32A00000100000001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
 		0DC42A612296F02800A19088 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		0DC42A662296F24400A19088 /* AppAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutViewController.swift; sourceTree = "<group>"; };
@@ -184,6 +186,7 @@
 				0D8B5A45228FE01F001D1A44 /* Resource */,
 				0D8B5A33228FD1AB001D1A44 /* Extension */,
 				0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */,
+				0DA1B2C32A00000100000001 /* SceneDelegate.swift */,
 				0D8B5A78229413BA001D1A44 /* Infra */,
 				0D8B5A47228FE0DB001D1A44 /* Domain */,
 				0D8B5A5522915071001D1A44 /* Presenter */,
@@ -559,6 +562,7 @@
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
 				0D8B5A6322919509001D1A44 /* QuizPresenter.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
+				0DA1B2C32A00000100000002 /* SceneDelegate.swift in Sources */,
 				0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */,
 				0D8B5AA1228FD07F001D1A44 /* QuizScreen.swift in Sources */,
 				0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */,
@@ -767,7 +771,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 24BSY9Z4H5;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -776,7 +780,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -789,7 +793,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 24BSY9Z4H5;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
@@ -798,7 +802,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 2.4.0;
+				MARKETING_VERSION = 2.5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

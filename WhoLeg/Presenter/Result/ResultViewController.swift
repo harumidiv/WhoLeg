@@ -34,6 +34,14 @@ class ResultViewController: UIHostingController<ResultScreen> {
         title = "スコア"
         navigationItem.hidesBackButton = true
 
+        // 色付き背景の上でタイトルとボタンを読めるように白にする
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithTransparentBackground()
+        appearance.titleTextAttributes = UINavigationBar.appearance().titleTextAttributes ?? [:]
+        appearance.titleTextAttributes[.foregroundColor] = UIColor.white
+        navigationItem.standardAppearance = appearance
+        navigationItem.scrollEdgeAppearance = appearance
+
         let returnButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(returnStartScreen(_:)))
         navigationItem.leftBarButtonItem = returnButton
 
