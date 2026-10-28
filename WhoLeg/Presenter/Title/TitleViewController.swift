@@ -44,7 +44,7 @@ class TitleViewController: UIHostingController<TitleScreen> {
         navigationItem.hidesBackButton = true
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItem = UIBarButtonItem(
-            image: UIImage(named: "information"),
+            image: UIImage(systemName: "info"),
             style: .plain,
             target: self,
             action: #selector(showInformation)

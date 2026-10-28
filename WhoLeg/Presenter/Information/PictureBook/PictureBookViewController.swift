@@ -44,15 +44,6 @@ class PictureBookViewController: UIHostingController<PictureBookScreen> {
         title = "ずかん"
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithDefaultBackground()
-        appearance.backgroundColor = UIColor(hex: "#0F9D58")
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        // Shift large title to the left
-        appearance.titlePositionAdjustment = UIOffset(horizontal: -(UIScreen.main.bounds.width / 2), vertical: 0)
-        navigationController?.navigationBar.scrollEdgeAppearance = appearance
-        navigationController?.navigationBar.standardAppearance = appearance
     }
 
     private func navigate(to item: PictureBookScreen.Item) {

@@ -16,8 +16,7 @@ struct TitleScreen: View {
 
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
-    private var buttonSize: CGFloat { horizontalSizeClass == .regular ? 250 : 160 }
-    private var topPadding: CGFloat { horizontalSizeClass == .regular ? 80 : 40 }
+    private var isRegular: Bool { horizontalSizeClass == .regular }
 
     var body: some View {
         ZStack {
@@ -25,26 +24,32 @@ struct TitleScreen: View {
                 .ignoresSafeArea()
 
             VStack(spacing: 0) {
+                Spacer(minLength: 16)
+
                 circleImageView
                     .aspectRatio(1, contentMode: .fit)
-                    .frame(maxWidth: horizontalSizeClass == .regular ? 580 : .infinity)
-                    .padding(.horizontal, horizontalSizeClass == .regular ? 0 : 40)
-                    .padding(.top, topPadding)
+                    .frame(maxWidth: isRegular ? 520 : .infinity)
+                    .padding(.horizontal, isRegular ? 0 : 40)
 
-                Text(answerText)
-                    .font(.system(size: 40))
-                    .foregroundColor(Color("Text"))
-                    .padding(.top, 16)
-
-                Spacer()
-
-                Button(action: onStart) {
-                    Image("start")
-                        .resizable()
-                        .scaledToFit()
+                VStack(spacing: 4) {
+                    Text("これは だれの あし？")
+                        .font(.system(.subheadline, design: .rounded, weight: .semibold))
+                        .foregroundStyle(.secondary)
+                    Text(answerText)
+                        .font(.system(size: isRegular ? 48 : 36, weight: .bold, design: .rounded))
+                        .foregroundColor(Color("Text"))
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.5)
                 }
-                .frame(width: buttonSize, height: buttonSize)
-                .padding(.bottom, 32)
+                .padding(.top, 24)
+                .padding(.horizontal, 24)
+
+                Spacer(minLength: 24)
+
+                startButton
+                    .frame(maxWidth: isRegular ? 420 : .infinity)
+                    .padding(.horizontal, 32)
+                    .padding(.bottom, 24)
             }
         }
     }
@@ -52,16 +57,55 @@ struct TitleScreen: View {
     private var circleImageView: some View {
         ZStack {
             Circle()
-                .fill(Color(UIColor(appColor: .c1)))
-            ZStack {
-                Circle()
-                    .fill(Color("Background"))
-                Image(imageName)
-                    .resizable()
-                    .scaledToFit()
-            }
-            .clipShape(Circle())
-            .padding(10)
+                .fill(Color.brand)
+            Circle()
+                .fill(Color.white)
+                .padding(8)
+            Image(imageName)
+                .resizable()
+                .scaledToFit()
+                .padding(24)
+                .clipShape(Circle())
         }
+        .shadow(color: .black.opacity(0.12), radius: 16, y: 8)
     }
+
+    private var startButton: some View {
+        Button(action: onStart) {
+            Label("スタート", systemImage: "play.fill")
+                .font(.system(size: isRegular ? 32 : 26, weight: .bold, design: .rounded))
+                .frame(maxWidth: .infinity)
+                .frame(height: isRegular ? 80 : 64)
+        }
+        .buttonStyle(.chunky(color: .brand, shadowColor: Color(UIColor(hex: "#0B7A44"))))
+    }
+}
+
+/// 押し込むと沈む、立体感のあるカプセルボタン
+struct ChunkyButtonStyle: ButtonStyle {
+    let color: Color
+    let shadowColor: Color
+
+    private let depth: CGFloat = 6
+
+    func makeBody(configuration: Configuration) -> some View {
+        let pressed = configuration.isPressed
+        configuration.label
+            .foregroundStyle(.white)
+            .background(Capsule().fill(color))
+            .offset(y: pressed ? depth : 0)
+            .background(Capsule().fill(shadowColor).offset(y: depth))
+            .padding(.bottom, depth)
+            .animation(.easeOut(duration: 0.08), value: pressed)
+    }
+}
+
+extension ButtonStyle where Self == ChunkyButtonStyle {
+    static func chunky(color: Color, shadowColor: Color) -> ChunkyButtonStyle {
+        ChunkyButtonStyle(color: color, shadowColor: shadowColor)
+    }
+}
+
+#Preview {
+    TitleScreen(imageName: "kirin", answerText: "きりん", onStart: {})
 }

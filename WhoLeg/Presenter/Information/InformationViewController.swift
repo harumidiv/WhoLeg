@@ -26,6 +26,8 @@ class InformationViewController: UIHostingController<InformationScreen> {
     init(data: QuizInfo) {
         jsonData = data
         super.init(rootView: InformationScreen(
+            collectedCount: 0,
+            totalCount: data.quiz.count,
             onSelectPictureBook: {},
             onSelectAppAbout: {},
             onSelectRelatedApp: {}
@@ -36,24 +38,14 @@ class InformationViewController: UIHostingController<InformationScreen> {
         fatalError("init(coder:) has not been implemented")
     }
 
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-
-        // 図鑑画面でNavigationBarTitle位置をずらしたのを戻す
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithDefaultBackground()
-        appearance.backgroundColor = UIColor(hex: "#0F9D58")
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: 0)
-        navigationController?.navigationBar.standardAppearance = appearance
-    }
-
     override func viewDidLoad() {
         title = "じょうほう"
+        navigationItem.largeTitleDisplayMode = .never
         super.viewDidLoad()
 
         rootView = InformationScreen(
+            collectedCount: jsonData.quiz.filter { userDefault.object(forKey: $0.image) != nil }.count,
+            totalCount: jsonData.quiz.count,
             onSelectPictureBook: { [weak self] in
                 guard let self else { return }
                 self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)

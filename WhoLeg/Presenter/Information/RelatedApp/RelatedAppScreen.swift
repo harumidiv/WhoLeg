@@ -37,7 +37,7 @@ struct RelatedAppScreen: View {
                                 .resizable()
                                 .scaledToFill()
                                 .frame(width: 60, height: 60)
-                                .clipShape(RoundedRectangle(cornerRadius: 12))
+                                .clipShape(RoundedRectangle(cornerRadius: 13, style: .continuous))
                             VStack(alignment: .leading, spacing: 4) {
                                 Text(item.title)
                                     .font(.headline)
@@ -47,16 +47,22 @@ struct RelatedAppScreen: View {
                                     .lineLimit(2)
                             }
                             Spacer()
-                            Button("DL") {
+                            Button {
                                 onDownload(item.appID)
+                            } label: {
+                                Text("入手")
+                                    .font(.system(.subheadline, design: .rounded, weight: .bold))
+                                    .padding(.horizontal, 4)
                             }
-                            .buttonStyle(.borderedProminent)
+                            .buttonStyle(.bordered)
+                            .buttonBorderShape(.capsule)
+                            .tint(.brand)
                         }
                         .padding(.vertical, 4)
                     }
                 }
             }
         }
-        .listStyle(.grouped)
+        .listStyle(.insetGrouped)
     }
 }

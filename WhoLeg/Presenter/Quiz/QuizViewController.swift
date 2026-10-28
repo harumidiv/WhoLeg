@@ -26,6 +26,7 @@ class QuizViewController: UIHostingController<QuizScreen> {
         self.score = score
         self.count = count
         let state = QuizScreenState()
+        state.count = count
         self.state = state
         super.init(rootView: QuizScreen(state: state, onAnswer: { _ in }))
     }
@@ -79,12 +80,10 @@ extension QuizViewController: QuizPresenterOutput {
             presenter.saveCorrectAnswerData(key: quizData.quiz[rand].image)
             presenter.correctSoundPlay()
             score += 1
-            state.resultSymbol = "⚪︎"
-            state.resultColor = Color(UIColor(appColor: .c1))
+            state.isCorrect = true
         } else {
             presenter.mistakeSoundPlay()
-            state.resultSymbol = "✖︎"
-            state.resultColor = Color(UIColor(appColor: .c2))
+            state.isCorrect = false
         }
 
         quizData.quiz.remove(at: rand)

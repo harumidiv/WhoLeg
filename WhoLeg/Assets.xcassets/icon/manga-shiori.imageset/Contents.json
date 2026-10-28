@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "manga-shiori.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

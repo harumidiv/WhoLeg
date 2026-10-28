@@ -10,7 +10,7 @@ let fileManager = FileManager.default
 let path = fileManager.currentDirectoryPath
 print(path)
 
-let content = try! String(contentsOfFile: "\(path)/WhoLeg/Resource/quiz.json")
+let content = try! String(contentsOfFile: "\(path)/WhoLeg/Resource/quiz.json", encoding: .utf8)
 
 let decoder = JSONDecoder()
 decoder.keyDecodingStrategy = .convertFromSnakeCase
