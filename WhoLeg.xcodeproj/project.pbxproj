@@ -31,7 +31,6 @@
 		0D8B5A672292ECA4001D1A44 /* QuizWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A662292ECA4001D1A44 /* QuizWireframe.swift */; };
 		0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A682292F2BD001D1A44 /* TitlePresenter.swift */; };
 		0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A79229413ED001D1A44 /* QuizRepository.swift */; };
-		0DAD0B0C2A00000100000005 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */; };
 		0D8B5A7C2294158D001D1A44 /* ResultPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */; };
 		0D8B5A7E22941599001D1A44 /* ResultModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7D22941599001D1A44 /* ResultModel.swift */; };
 		0D8B5A80229418CC001D1A44 /* ResultWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */; };
@@ -42,9 +41,11 @@
 		0D8B5AB5228FD07F001D1A44 /* AppAboutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB4228FD07F001D1A44 /* AppAboutScreen.swift */; };
 		0D8B5AB7228FD07F001D1A44 /* PictureBookScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB6228FD07F001D1A44 /* PictureBookScreen.swift */; };
 		0D8B5AB9228FD07F001D1A44 /* PictureBookDetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5AB8228FD07F001D1A44 /* PictureBookDetailScreen.swift */; };
-		0DAD0B0C2A00000100000007 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000006 /* BannerAdView.swift */; };
 		0D8B5ABB228FD07F001D1A44 /* RelatedAppScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5ABA228FD07F001D1A44 /* RelatedAppScreen.swift */; };
 		0DA1B2C32A00000100000002 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA1B2C32A00000100000001 /* SceneDelegate.swift */; };
+		0DAD0B0C2A00000100000003 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAD0B0C2A00000100000002 /* GoogleMobileAds */; };
+		0DAD0B0C2A00000100000005 /* InterstitialAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */; };
+		0DAD0B0C2A00000100000007 /* BannerAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000006 /* BannerAdView.swift */; };
 		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
 		0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A612296F02800A19088 /* InformationViewController.swift */; };
 		0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A662296F24400A19088 /* AppAboutViewController.swift */; };
@@ -54,7 +55,6 @@
 		0DC42A7A22983E1200A19088 /* NSObject+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7922983E1200A19088 /* NSObject+Addition.swift */; };
 		0DC42A7C22993BEC00A19088 /* SnapshotHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A7B22993BEC00A19088 /* SnapshotHelper.swift */; };
 		1C2D3E4F5A6B7C8D9E0F1A2B /* FBSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */; };
-		0DAD0B0C2A00000100000003 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = 0DAD0B0C2A00000100000002 /* GoogleMobileAds */; };
 		4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4959F87E23448BE900DEB4DB /* Colors.xcassets */; };
 		49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49818E52247907D000BAE8CA /* RelatedAppViewController.swift */; };
 		49BA403323E061D50075DF5E /* Script in Resources */ = {isa = PBXBuildFile; fileRef = 49BA403223E061D50075DF5E /* Script */; };
@@ -109,7 +109,6 @@
 		0D8B5A662292ECA4001D1A44 /* QuizWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizWireframe.swift; sourceTree = "<group>"; };
 		0D8B5A682292F2BD001D1A44 /* TitlePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePresenter.swift; sourceTree = "<group>"; };
 		0D8B5A79229413ED001D1A44 /* QuizRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepository.swift; sourceTree = "<group>"; };
-		0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
 		0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPresenter.swift; sourceTree = "<group>"; };
 		0D8B5A7D22941599001D1A44 /* ResultModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultModel.swift; sourceTree = "<group>"; };
 		0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultWireframe.swift; sourceTree = "<group>"; };
@@ -120,9 +119,10 @@
 		0D8B5AB4228FD07F001D1A44 /* AppAboutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutScreen.swift; sourceTree = "<group>"; };
 		0D8B5AB6228FD07F001D1A44 /* PictureBookScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookScreen.swift; sourceTree = "<group>"; };
 		0D8B5AB8228FD07F001D1A44 /* PictureBookDetailScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailScreen.swift; sourceTree = "<group>"; };
-		0DAD0B0C2A00000100000006 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		0D8B5ABA228FD07F001D1A44 /* RelatedAppScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedAppScreen.swift; sourceTree = "<group>"; };
 		0DA1B2C32A00000100000001 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterstitialAdManager.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000006 /* BannerAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerAdView.swift; sourceTree = "<group>"; };
 		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
 		0DC42A612296F02800A19088 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		0DC42A662296F24400A19088 /* AppAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutViewController.swift; sourceTree = "<group>"; };
@@ -802,7 +802,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -810,7 +810,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = " ";
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -823,7 +823,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 12;
+				CURRENT_PROJECT_VERSION = 13;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 26.0;
@@ -831,7 +831,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = " ";
+				MARKETING_VERSION = 3.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -978,15 +978,15 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
-			productName = FBSnapshotTestCase;
-		};
 		0DAD0B0C2A00000100000002 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0DAD0B0C2A00000100000001 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
 			productName = GoogleMobileAds;
+		};
+		2B3C4D5E6F7A8B9C0D1E2F3A /* FBSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A1B2C3D4E5F6A7B8C9D0E1F /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = FBSnapshotTestCase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
