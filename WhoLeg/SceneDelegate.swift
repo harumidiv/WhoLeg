@@ -29,6 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 直後はまだバックグラウンド扱いでリクエストが無視されるので、次のメインループまで遅らせる
         guard ATTrackingManager.trackingAuthorizationStatus == .notDetermined else {
             InterstitialAdManager.shared.start()
+            RewardedAdManager.shared.start()
             return
         }
         DispatchQueue.main.async {
@@ -36,6 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 // ユーザーの選択が反映されるように、ダイアログを閉じてから広告SDKを開始する
                 DispatchQueue.main.async {
                     InterstitialAdManager.shared.start()
+                    RewardedAdManager.shared.start()
                 }
             }
         }

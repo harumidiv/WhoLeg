@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */; };
+		057AF3E730A446FF000114CE /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AF3E630A446FF000114CE /* RewardedAdManager.swift */; };
 		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
 		0D30720F23533B8C00FEFD60 /* UIView+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30720E23533B8C00FEFD60 /* UIView+IB.swift */; };
 		0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */; };
@@ -80,6 +81,7 @@
 
 /* Begin PBXFileReference section */
 		053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryTests.swift; sourceTree = "<group>"; };
+		057AF3E630A446FF000114CE /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
 		05E5D722233C840F00916809 /* SnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTests.swift; sourceTree = "<group>"; };
 		0D30720E23533B8C00FEFD60 /* UIView+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IB.swift"; sourceTree = "<group>"; };
 		0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailViewController.swift; sourceTree = "<group>"; };
@@ -301,6 +303,7 @@
 			children = (
 				0D8B5A79229413ED001D1A44 /* QuizRepository.swift */,
 				0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */,
+				057AF3E630A446FF000114CE /* RewardedAdManager.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -582,6 +585,7 @@
 				0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */,
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
 				0D8B5A6322919509001D1A44 /* QuizPresenter.swift in Sources */,
+				057AF3E730A446FF000114CE /* RewardedAdManager.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
 				0DA1B2C32A00000100000002 /* SceneDelegate.swift in Sources */,
 				0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */,

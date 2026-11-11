@@ -6,18 +6,23 @@
 //  Copyright © 2019 佐川晴海. All rights reserved.
 //
 
+import Combine
 import UIKit
 import SwiftUI
 
 class ResultViewController: UIHostingController<ResultScreen> {
     let score: Int
+    let wrongQuizzes: [Quiz]
 
     private var presenter: ResultPresenter!
     private var wireframe: ResultWireframe!
+    private let state = ResultScreenState()
+    private var cancellables = Set<AnyCancellable>()
 
-    init(score: Int) {
+    init(score: Int, wrongQuizzes: [Quiz]) {
         self.score = score
-        super.init(rootView: ResultScreen(score: score))
+        self.wrongQuizzes = wrongQuizzes
+        super.init(rootView: ResultScreen(score: score, wrongQuizzes: wrongQuizzes, state: state, onReveal: { _ in }))
     }
 
     func injector(presenter: ResultPresenter, wireframe: ResultWireframe) {
@@ -47,6 +52,26 @@ class ResultViewController: UIHostingController<ResultScreen> {
 
         let retryButton = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(retryQuiz(_:)))
         navigationItem.rightBarButtonItem = retryButton
+
+        rootView = ResultScreen(score: score, wrongQuizzes: wrongQuizzes, state: state, onReveal: { [weak self] index in
+            self?.showRewardedAd(for: index)
+        })
+
+        let adManager = RewardedAdManager.shared
+        adManager.$isReady
+            .receive(on: DispatchQueue.main)
+            .sink { [weak self] isReady in self?.state.isAdReady = isReady }
+            .store(in: &cancellables)
+        if !wrongQuizzes.isEmpty {
+            adManager.loadIfNeeded()
+        }
+    }
+
+    /// リワード広告を最後まで見たら、選んだクイズ1問だけ答えを表示する（図鑑には登録しない）
+    private func showRewardedAd(for index: Int) {
+        RewardedAdManager.shared.show(from: self) { [weak self] in
+            self?.state.revealedIndices.insert(index)
+        }
     }
 
     @objc func returnStartScreen(_ sender: UIBarButtonItem) {
