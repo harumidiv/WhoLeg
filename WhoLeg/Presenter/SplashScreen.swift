@@ -82,7 +82,8 @@ struct SplashScreen: View {
             if !reduceMotion {
                 PopSoundPlayer.shared.prepare()
             }
-            preparedImages = await Self.prepareImages()
+            // 足は画面の短い辺の6割弱なので、3倍の解像度でも足りる大きさにする（数が多いのでメモリも抑える）
+            preparedImages = await LegBurstView.prepareImages(named: Self.legImageNames, maxPixelSize: 680)
             // 準備した画像で1フレーム描いてから動かし始める
             try? await Task.sleep(for: .milliseconds(50))
 
@@ -95,25 +96,6 @@ struct SplashScreen: View {
             // 足が出そろって少し見せてからタイトルへ進む（スプラッシュ全体で1.5秒くらい）
             try? await Task.sleep(for: .seconds(reduceMotion ? 1.0 : 1.45))
             finish()
-        }
-    }
-
-    /// 足の画像を表示する大きさに縮めてデコードしておく
-    private static func prepareImages() async -> [String: UIImage] {
-        // 足は画面の短い辺の6割弱なので、3倍の解像度でも足りる大きさにする（数が多いのでメモリも抑える）
-        let target = CGSize(width: 680, height: 680)
-        return await withTaskGroup(of: (String, UIImage?).self) { group in
-            for name in legImageNames {
-                group.addTask {
-                    let image = await UIImage(named: name)?.byPreparingThumbnail(ofSize: target)
-                    return (name, image)
-                }
-            }
-            var images: [String: UIImage] = [:]
-            for await (name, image) in group {
-                images[name] = image
-            }
-            return images
         }
     }
 

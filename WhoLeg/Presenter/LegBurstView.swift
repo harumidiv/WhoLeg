@@ -36,7 +36,7 @@ struct LegBurstView: View {
 
         var stagger: Double {
             switch self {
-            case .pop: return 0.06
+            case .pop: return 0.04
             case .grow: return 0.035
             }
         }
@@ -101,6 +101,24 @@ struct LegBurstView: View {
         appearanceOrder?.firstIndex(of: index) ?? index
     }
 
+    /// 足の画像を表示する大きさに縮めて、バックグラウンドでデコードしておく。
+    /// 元の画像は大きいので、そのまま何枚も出すとメモリを使い、出てくる途中でカクつくため
+    static func prepareImages(named names: [String], maxPixelSize: CGFloat) async -> [String: UIImage] {
+        let target = CGSize(width: maxPixelSize, height: maxPixelSize)
+        return await withTaskGroup(of: (String, UIImage?).self) { group in
+            for name in Set(names) {
+                group.addTask {
+                    (name, await UIImage(named: name)?.byPreparingThumbnail(ofSize: target))
+                }
+            }
+            var images: [String: UIImage] = [:]
+            for await (name, image) in group {
+                images[name] = image
+            }
+            return images
+        }
+    }
+
     private func image(named name: String) -> Image {
         if let prepared = preparedImages[name] {
             return Image(uiImage: prepared)
@@ -137,24 +155,46 @@ struct LegBurstView: View {
 }
 
 extension LegSlot {
-    /// 結果画面用。ナビゲーションバーのタイトルを避けて、10か所から出す
+    /// 結果画面用。ボタンは真ん中にまとめたので、上下左右と四すみの22か所から出す
     static let result: [LegSlot] = [
-        // 上（左右寄り）
-        LegSlot(edgePoint: UnitPoint(x: 0.18, y: 0), angle: 8, sizeRatio: 0.36),
-        LegSlot(edgePoint: UnitPoint(x: 0.84, y: 0), angle: -10, sizeRatio: 0.32),
+        // 上
+        LegSlot(edgePoint: UnitPoint(x: 0.1, y: 0), angle: 8, sizeRatio: 0.36),
+        LegSlot(edgePoint: UnitPoint(x: 0.3, y: 0), angle: -6, sizeRatio: 0.32),
+        LegSlot(edgePoint: UnitPoint(x: 0.5, y: 0), angle: 3, sizeRatio: 0.34),
+        LegSlot(edgePoint: UnitPoint(x: 0.7, y: 0), angle: -4, sizeRatio: 0.3),
+        LegSlot(edgePoint: UnitPoint(x: 0.9, y: 0), angle: -10, sizeRatio: 0.36),
+        // 右上
+        LegSlot(edgePoint: UnitPoint(x: 1, y: 0), angle: 45, sizeRatio: 0.34),
         // 右
-        LegSlot(edgePoint: UnitPoint(x: 1, y: 0.3), angle: 100, sizeRatio: 0.34),
-        LegSlot(edgePoint: UnitPoint(x: 1, y: 0.62), angle: 80, sizeRatio: 0.38),
+        LegSlot(edgePoint: UnitPoint(x: 1, y: 0.22), angle: 100, sizeRatio: 0.34),
+        LegSlot(edgePoint: UnitPoint(x: 1, y: 0.42), angle: 84, sizeRatio: 0.38),
+        LegSlot(edgePoint: UnitPoint(x: 1, y: 0.62), angle: 96, sizeRatio: 0.34),
+        LegSlot(edgePoint: UnitPoint(x: 1, y: 0.8), angle: 80, sizeRatio: 0.38),
         // 右下
-        LegSlot(edgePoint: UnitPoint(x: 1, y: 1), angle: 140, sizeRatio: 0.44),
+        LegSlot(edgePoint: UnitPoint(x: 1, y: 1), angle: 135, sizeRatio: 0.42),
         // 下
-        LegSlot(edgePoint: UnitPoint(x: 0.66, y: 1), angle: 172, sizeRatio: 0.4),
+        LegSlot(edgePoint: UnitPoint(x: 0.88, y: 1), angle: 172, sizeRatio: 0.4),
+        LegSlot(edgePoint: UnitPoint(x: 0.68, y: 1), angle: 186, sizeRatio: 0.36),
+        LegSlot(edgePoint: UnitPoint(x: 0.5, y: 1), angle: 178, sizeRatio: 0.4),
         LegSlot(edgePoint: UnitPoint(x: 0.32, y: 1), angle: 190, sizeRatio: 0.36),
+        LegSlot(edgePoint: UnitPoint(x: 0.12, y: 1), angle: 184, sizeRatio: 0.4),
         // 左下
-        LegSlot(edgePoint: UnitPoint(x: 0, y: 1), angle: -140, sizeRatio: 0.42),
+        LegSlot(edgePoint: UnitPoint(x: 0, y: 1), angle: -135, sizeRatio: 0.4),
         // 左
-        LegSlot(edgePoint: UnitPoint(x: 0, y: 0.72), angle: -78, sizeRatio: 0.36),
-        LegSlot(edgePoint: UnitPoint(x: 0, y: 0.4), angle: -100, sizeRatio: 0.34),
+        LegSlot(edgePoint: UnitPoint(x: 0, y: 0.78), angle: -82, sizeRatio: 0.38),
+        LegSlot(edgePoint: UnitPoint(x: 0, y: 0.6), angle: -96, sizeRatio: 0.34),
+        LegSlot(edgePoint: UnitPoint(x: 0, y: 0.42), angle: -86, sizeRatio: 0.38),
+        LegSlot(edgePoint: UnitPoint(x: 0, y: 0.22), angle: -100, sizeRatio: 0.34),
+        // 左上
+        LegSlot(edgePoint: UnitPoint(x: 0, y: 0), angle: -45, sizeRatio: 0.34),
+    ]
+
+    /// 結果画面で足が出てくる順番。反対側や別の辺へ飛びながら四方八方から出てくるようにする
+    /// （0〜4: 上、5: 右上、6〜9: 右、10: 右下、11〜15: 下、16: 左下、17〜20: 左、21: 左上）
+    static let resultOrder: [Int] = [
+        2, 13, 19, 8, 21, 10, 5, 16,
+        0, 15, 20, 7, 4, 11, 17, 6,
+        1, 14, 18, 9, 3, 12,
     ]
 
     /// スプラッシュ画面用。細長い足を画面の四辺と四すみからたくさん出して、外から生えているように見せる。

@@ -85,13 +85,14 @@ struct TitleScreen: View {
 struct ChunkyButtonStyle: ButtonStyle {
     let color: Color
     let shadowColor: Color
+    var foregroundColor: Color = .white
 
     private let depth: CGFloat = 6
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         configuration.label
-            .foregroundStyle(.white)
+            .foregroundStyle(foregroundColor)
             .background(Capsule().fill(color))
             .offset(y: pressed ? depth : 0)
             .background(Capsule().fill(shadowColor).offset(y: depth))
@@ -101,8 +102,8 @@ struct ChunkyButtonStyle: ButtonStyle {
 }
 
 extension ButtonStyle where Self == ChunkyButtonStyle {
-    static func chunky(color: Color, shadowColor: Color) -> ChunkyButtonStyle {
-        ChunkyButtonStyle(color: color, shadowColor: shadowColor)
+    static func chunky(color: Color, shadowColor: Color, foregroundColor: Color = .white) -> ChunkyButtonStyle {
+        ChunkyButtonStyle(color: color, shadowColor: shadowColor, foregroundColor: foregroundColor)
     }
 }
 
