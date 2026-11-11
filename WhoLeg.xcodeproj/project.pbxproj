@@ -19,7 +19,6 @@
 		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
 		0D30720F23533B8C00FEFD60 /* UIView+IB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D30720E23533B8C00FEFD60 /* UIView+IB.swift */; };
 		0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */; };
-		0D724D6922AA785D009AACAB /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0D724D6822AA785C009AACAB /* Settings.bundle */; };
 		0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */; };
 		0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A03228FADE4001D1A44 /* ViewController.swift */; };
 		0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A05228FADE4001D1A44 /* Main.storyboard */; };
@@ -98,7 +97,6 @@
 		05E5D722233C840F00916809 /* SnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTests.swift; sourceTree = "<group>"; };
 		0D30720E23533B8C00FEFD60 /* UIView+IB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IB.swift"; sourceTree = "<group>"; };
 		0D5D9FE723531032006EC16E /* PictureBookDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureBookDetailViewController.swift; sourceTree = "<group>"; };
-		0D724D6822AA785C009AACAB /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = WhoLeg/Settings.bundle; sourceTree = "<group>"; };
 		0D8B59FE228FADE4001D1A44 /* WhoLeg.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhoLeg.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8B5A01228FADE4001D1A44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0D8B5A03228FADE4001D1A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -182,7 +180,6 @@
 			isa = PBXGroup;
 			children = (
 				49BA403223E061D50075DF5E /* Script */,
-				0D724D6822AA785C009AACAB /* Settings.bundle */,
 				0D8B5A00228FADE4001D1A44 /* WhoLeg */,
 				0D8B5A15228FADE6001D1A44 /* WhoLegTests */,
 				0D8B5A20228FADE6001D1A44 /* WhoLegUITests */,
@@ -377,9 +374,6 @@
 				0D8B59FA228FADE4001D1A44 /* Sources */,
 				0D8B59FB228FADE4001D1A44 /* Frameworks */,
 				0D8B59FC228FADE4001D1A44 /* Resources */,
-				0DC8EED822A2A40E008785F4 /* Swiftformat */,
-				0D5C54B622A2A56600654631 /* SwiftLint */,
-				0D31083722A9642000DDE2A7 /* LicensePlist */,
 				49BA403423E062590075DF5E /* ShellScript */,
 			);
 			buildRules = (
@@ -486,7 +480,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D724D6922AA785D009AACAB /* Settings.bundle in Resources */,
 				0D8B5A46228FE01F001D1A44 /* Resource in Resources */,
 				4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
@@ -512,63 +505,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0D31083722A9642000DDE2A7 /* LicensePlist */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = LicensePlist;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if [ $CONFIGURATION = \"Debug\" ]; then\nif which license-plist >/dev/null; then\nlicense-plist --output-path $PRODUCT_NAME/Settings.bundle\nelse\necho \"warning: LicensePlist not installed, run: brew install mono0926/license-plist/license-plist\"\nfi\nfi\n";
-		};
-		0D5C54B622A2A56600654631 /* SwiftLint */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = SwiftLint;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, run: brew install swiftlint\"\nfi\n";
-		};
-		0DC8EED822A2A40E008785F4 /* Swiftformat */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			name = Swiftformat;
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "if which swiftformat >/dev/null; then\nswiftformat . --exclude Carthage --stripunusedargs closure-only --disable strongOutlets,trailingCommas\nelse\necho \"warning: SwiftFormat not installed, run: brew install swiftformat\"\nfi\n";
-		};
 		49BA403423E062590075DF5E /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			alwaysOutOfDate = 1;
