@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DAD0B0C2A0000010000001D /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001C /* ConfettiView.swift */; };
 		0DAD0B0C2A0000010000001B /* PopSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */; };
 		0DAD0B0C2A00000100000019 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000018 /* SplashScreen.swift */; };
 		0DAD0B0C2A00000100000017 /* LegBurstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000016 /* LegBurstView.swift */; };
@@ -23,7 +24,6 @@
 		0D8B5A04228FADE4001D1A44 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A03228FADE4001D1A44 /* ViewController.swift */; };
 		0D8B5A07228FADE4001D1A44 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A05228FADE4001D1A44 /* Main.storyboard */; };
 		0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A08228FADE6001D1A44 /* Assets.xcassets */; };
-		0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D8B5A0A228FADE6001D1A44 /* LaunchScreen.storyboard */; };
 		0D8B5A17228FADE6001D1A44 /* WhoLegTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A16228FADE6001D1A44 /* WhoLegTests.swift */; };
 		0D8B5A22228FADE6001D1A44 /* WhoLegUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A21228FADE6001D1A44 /* WhoLegUITests.swift */; };
 		0D8B5A31228FD07F001D1A44 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D8B5A2F228FD07F001D1A44 /* TitleViewController.swift */; };
@@ -86,6 +86,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DAD0B0C2A0000010000001C /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
 		0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopSoundPlayer.swift; sourceTree = "<group>"; };
 		0DAD0B0C2A00000100000018 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0DAD0B0C2A00000100000016 /* LegBurstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegBurstView.swift; sourceTree = "<group>"; };
@@ -103,7 +104,6 @@
 		0D8B5A03228FADE4001D1A44 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D8B5A06228FADE4001D1A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D8B5A08228FADE6001D1A44 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0D8B5A0B228FADE6001D1A44 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0D8B5A0D228FADE6001D1A44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D8B5A12228FADE6001D1A44 /* WhoLegTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhoLegTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D8B5A16228FADE6001D1A44 /* WhoLegTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhoLegTests.swift; sourceTree = "<group>"; };
@@ -214,7 +214,6 @@
 				0D8B5A05228FADE4001D1A44 /* Main.storyboard */,
 				0D8B5A08228FADE6001D1A44 /* Assets.xcassets */,
 				4959F87E23448BE900DEB4DB /* Colors.xcassets */,
-				0D8B5A0A228FADE6001D1A44 /* LaunchScreen.storyboard */,
 				0D8B5A0D228FADE6001D1A44 /* Info.plist */,
 			);
 			path = WhoLeg;
@@ -283,6 +282,7 @@
 			children = (
 				0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */,
 				0D8B5AB0228FD07F001D1A44 /* ResultScreen.swift */,
+				0DAD0B0C2A0000010000001C /* ConfettiView.swift */,
 				0DAD0B0C2A00000100000012 /* ScratchFoil.metal */,
 				0DAD0B0C2A00000100000010 /* ScratchCardView.swift */,
 				0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */,
@@ -487,7 +487,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D724D6922AA785D009AACAB /* Settings.bundle in Resources */,
-				0D8B5A0C228FADE6001D1A44 /* LaunchScreen.storyboard in Resources */,
 				0D8B5A46228FE01F001D1A44 /* Resource in Resources */,
 				4959F87F23448BE900DEB4DB /* Colors.xcassets in Resources */,
 				0D8B5A09228FADE6001D1A44 /* Assets.xcassets in Resources */,
@@ -633,6 +632,7 @@
 				0D8B5ABB228FD07F001D1A44 /* RelatedAppScreen.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 				0D8B5AB1228FD07F001D1A44 /* ResultScreen.swift in Sources */,
+				0DAD0B0C2A0000010000001D /* ConfettiView.swift in Sources */,
 				0DAD0B0C2A00000100000015 /* ScratchSoundPlayer.swift in Sources */,
 				0DAD0B0C2A00000100000013 /* ScratchFoil.metal in Sources */,
 				0DAD0B0C2A00000100000011 /* ScratchCardView.swift in Sources */,
@@ -688,14 +688,6 @@
 				0D8B5A06228FADE4001D1A44 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0D8B5A0A228FADE6001D1A44 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D8B5A0B228FADE6001D1A44 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

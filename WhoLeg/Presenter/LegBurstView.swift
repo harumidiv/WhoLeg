@@ -205,7 +205,7 @@ extension LegSlot {
 
 #Preview("スプラッシュの足") {
     ZStack {
-        Color(red: 0.922, green: 0.918, blue: 0.937)
+        Color("Background")
         LegBurstView(imageNames: SplashScreen.legImageNames, slots: LegSlot.splash, motion: .grow, sways: false)
     }
     .ignoresSafeArea()

@@ -76,6 +76,14 @@ struct ResultScreen: View {
                 .padding(.horizontal, 28)
                 .padding(.top, hasWrongQuizzes ? geometry.size.height * 0.03 : 0)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: hasWrongQuizzes ? .top : .center)
+
+                // 全問正解のお祝いに紙吹雪を降らせる
+                if score == 10 {
+                    ConfettiView()
+                        .ignoresSafeArea()
+                        .allowsHitTesting(false)
+                        .accessibilityHidden(true)
+                }
             }
         }
         .navigationBarBackButtonHidden(true)
