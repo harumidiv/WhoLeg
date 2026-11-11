@@ -15,6 +15,9 @@ final class ScratchSoundPlayer {
 
     private let engine = AVAudioEngine()
     private let filter = AVAudioUnitEQ(numberOfBands: 2)
+    /// オーディオエンジンの操作はメインスレッドで行うと画面が固まることがあるので、専用のキューで順番に行う。
+    /// engine と sourceNode はこのキューの中でだけ触る
+    private let queue = DispatchQueue(label: "WhoLeg.ScratchSoundPlayer", qos: .userInitiated)
     private var sourceNode: AVAudioSourceNode?
     /// オーディオスレッドと共有する音量の目標値と現在値
     private let levels = UnsafeMutablePointer<Float>.allocate(capacity: 2)
@@ -25,6 +28,10 @@ final class ScratchSoundPlayer {
 
     /// 削り始める前に呼んでエンジンを準備する
     func prepare() {
+        queue.async { self.setUpAndStart() }
+    }
+
+    private func setUpAndStart() {
         guard sourceNode == nil else {
             startIfNeeded()
             return
@@ -91,7 +98,7 @@ final class ScratchSoundPlayer {
     func stop() {
         levels[0] = 0
         // 音がなめらかに消えるのを待ってから止める
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
+        queue.asyncAfter(deadline: .now() + 0.2) { [weak self] in
             guard let self, self.levels[0] < 0.001 else { return }
             self.engine.pause()
         }

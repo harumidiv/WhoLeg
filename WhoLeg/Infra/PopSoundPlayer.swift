@@ -14,6 +14,9 @@ final class PopSoundPlayer {
 
     private let engine = AVAudioEngine()
     private let player = AVAudioPlayerNode()
+    /// オーディオセッションやエンジンの操作はメインスレッドで行うと画面が固まることがあるので、専用のキューで順番に行う。
+    /// 以下のプロパティはこのキューの中でだけ触る
+    private let queue = DispatchQueue(label: "WhoLeg.PopSoundPlayer", qos: .userInitiated)
     private var isConfigured = false
 
     private let sampleRate = 44_100.0
@@ -22,6 +25,17 @@ final class PopSoundPlayer {
     /// 鳴らす前に呼んで、オーディオエンジンを起動しておく。
     /// 鳴らす瞬間に起動すると、そのぶん音が遅れて見た目とずれるため
     func prepare() {
+        queue.async { self.startEngineIfNeeded() }
+    }
+
+    /// count回の「ぽ」をinterval秒おきに鳴らす。1回ごとに少しずつ音を高くする
+    func playPops(count: Int, interval: TimeInterval) {
+        guard count > 0 else { return }
+        // キューは順番に処理されるので、先に呼んだ prepare() でエンジンが起動したあとに予約される
+        queue.async { self.schedulePops(count: count, interval: interval) }
+    }
+
+    private func startEngineIfNeeded() {
         guard let format else { return }
         configureIfNeeded(format: format)
         do {
@@ -36,10 +50,9 @@ final class PopSoundPlayer {
         }
     }
 
-    /// count回の「ぽ」をinterval秒おきに鳴らす。1回ごとに少しずつ音を高くする
-    func playPops(count: Int, interval: TimeInterval) {
+    private func schedulePops(count: Int, interval: TimeInterval) {
         let sampleRate = self.sampleRate
-        guard count > 0, let format else { return }
+        guard let format else { return }
 
         // 1つのバッファに全部の「ぽ」を並べて書き込み、足が出るタイミングとずれないようにする
         let popDuration = 0.12
@@ -59,14 +72,15 @@ final class PopSoundPlayer {
         }
 
         if !engine.isRunning {
-            prepare()
+            startEngineIfNeeded()
         }
         guard engine.isRunning else { return }
-        // プレイヤーは prepare() で再生状態にしてあるので、予約した瞬間に鳴り始める
+        // プレイヤーは startEngineIfNeeded() で再生状態にしてあるので、予約した瞬間に鳴り始める
         player.scheduleBuffer(buffer) { [weak self] in
-            DispatchQueue.main.async {
-                self?.player.stop()
-                self?.engine.pause()
+            guard let self else { return }
+            self.queue.async {
+                self.player.stop()
+                self.engine.pause()
             }
         }
     }
