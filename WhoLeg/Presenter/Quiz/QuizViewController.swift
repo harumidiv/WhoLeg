@@ -17,14 +17,17 @@ class QuizViewController: UIHostingController<QuizScreen> {
     private var wireframe: QuizWireframe!
     private var score: Int
     let count: Int
+    /// これまでに間違えたクイズ。結果画面で一覧表示する
+    private var wrongQuizzes: [Quiz]
     lazy var rand = Int.random(in: 0 ..< quizData.quiz.count)
 
     // MARK: - Initializer
 
-    init(quizData: QuizInfo, score: Int, count: Int) {
+    init(quizData: QuizInfo, score: Int, count: Int, wrongQuizzes: [Quiz] = []) {
         self.quizData = quizData
         self.score = score
         self.count = count
+        self.wrongQuizzes = wrongQuizzes
         let state = QuizScreenState()
         state.count = count
         self.state = state
@@ -83,6 +86,7 @@ extension QuizViewController: QuizPresenterOutput {
             state.isCorrect = true
         } else {
             presenter.mistakeSoundPlay()
+            wrongQuizzes.append(quizData.quiz[rand])
             state.isCorrect = false
         }
 
@@ -95,10 +99,10 @@ extension QuizViewController: QuizPresenterOutput {
                 if self.count >= 10 {
                     InterstitialAdManager.shared.showIfNeeded(from: self) { [weak self] in
                         guard let self else { return }
-                        self.wireframe.showResult(vc: self, score: self.score)
+                        self.wireframe.showResult(vc: self, score: self.score, wrongQuizzes: self.wrongQuizzes)
                     }
                 } else {
-                    self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score, count: self.count + 1)
+                    self.wireframe.showNextQuiz(vc: self, data: self.quizData, score: self.score, count: self.count + 1, wrongQuizzes: self.wrongQuizzes)
                 }
             }
         }

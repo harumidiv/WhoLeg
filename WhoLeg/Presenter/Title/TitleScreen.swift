@@ -57,15 +57,15 @@ struct TitleScreen: View {
     private var circleImageView: some View {
         ZStack {
             Circle()
-                .fill(Color.brand)
-            Circle()
                 .fill(Color.white)
-                .padding(8)
             Image(imageName)
                 .resizable()
                 .scaledToFit()
                 .padding(24)
                 .clipShape(Circle())
+            // 画像がはみ出しても枠線が隠れないよう最前面に描画する
+            Circle()
+                .strokeBorder(Color.brand, lineWidth: 8)
         }
         .shadow(color: .black.opacity(0.12), radius: 16, y: 8)
     }

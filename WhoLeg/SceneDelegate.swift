@@ -18,8 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let titleViewController = TitleViewController()
         titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
 
+        let navigationController = UINavigationController(rootViewController: titleViewController)
+
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: titleViewController)
+        // まずスプラッシュで足が生えてくる演出を見せてから、タイトル画面に切り替える
+        window.rootViewController = SplashViewController { [weak window] in
+            guard let window else { return }
+            UIView.transition(with: window, duration: 0.4, options: .transitionCrossDissolve) {
+                window.rootViewController = navigationController
+            }
+        }
         window.makeKeyAndVisible()
         self.window = window
     }
@@ -29,6 +37,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // 直後はまだバックグラウンド扱いでリクエストが無視されるので、次のメインループまで遅らせる
         guard ATTrackingManager.trackingAuthorizationStatus == .notDetermined else {
             InterstitialAdManager.shared.start()
+            RewardedAdManager.shared.start()
             return
         }
         DispatchQueue.main.async {
@@ -36,6 +45,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                 // ユーザーの選択が反映されるように、ダイアログを閉じてから広告SDKを開始する
                 DispatchQueue.main.async {
                     InterstitialAdManager.shared.start()
+                    RewardedAdManager.shared.start()
                 }
             }
         }
