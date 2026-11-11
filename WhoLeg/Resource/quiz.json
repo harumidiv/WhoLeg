@@ -649,6 +649,1271 @@
                 "c": "スフィンクス",
                 "d": "シーソー"
             }
+        },
+        {
+            "image": "kangaru-.png",
+            "answer": "かんがるー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%B3%E3%82%AC%E3%83%AB%E3%83%BC",
+            "choice": {
+                "a": "うさぎ",
+                "b": "かんがるー",
+                "c": "わらびー",
+                "d": "しか"
+            }
+        },
+        {
+            "image": "datyou.png",
+            "answer": "だちょう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%80%E3%83%81%E3%83%A7%E3%82%A6",
+            "choice": {
+                "a": "ふらみんご",
+                "b": "えみゅー",
+                "c": "だちょう",
+                "d": "にわとり"
+            }
+        },
+        {
+            "image": "wani.png",
+            "answer": "わに",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%AF%E3%83%8B",
+            "choice": {
+                "a": "かめ",
+                "b": "とかげ",
+                "c": "かえる",
+                "d": "わに"
+            }
+        },
+        {
+            "image": "kuma.png",
+            "answer": "くま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%9E",
+            "choice": {
+                "a": "くま",
+                "b": "ぱんだ",
+                "c": "いぬ",
+                "d": "おおかみ"
+            }
+        },
+        {
+            "image": "usagi.png",
+            "answer": "うさぎ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%B5%E3%82%AE",
+            "choice": {
+                "a": "ねこ",
+                "b": "うさぎ",
+                "c": "かんがるー",
+                "d": "りす"
+            }
+        },
+        {
+            "image": "gorira.png",
+            "answer": "ごりら",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B4%E3%83%AA%E3%83%A9",
+            "choice": {
+                "a": "ちんぱんじー",
+                "b": "おらんうーたん",
+                "c": "にんげん",
+                "d": "ごりら"
+            }
+        },
+        {
+            "image": "basutabu.png",
+            "answer": "ばすたぶ",
+            "url": "https://ja.wikipedia.org/wiki/%E6%B5%B4%E6%A7%BD",
+            "choice": {
+                "a": "せんめんだい",
+                "b": "といれ",
+                "c": "ばすたぶ",
+                "d": "さうな"
+            }
+        },
+        {
+            "image": "piano.png",
+            "answer": "ぴあの",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%94%E3%82%A2%E3%83%8E",
+            "choice": {
+                "a": "ぴあの",
+                "b": "おるがん",
+                "c": "ばいおりん",
+                "d": "たいこ"
+            }
+        },
+        {
+            "image": "tyakurikusen.png",
+            "answer": "げつめんちゃくりくせん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%9D%E3%83%AD%E6%9C%88%E7%9D%80%E9%99%B8%E8%88%B9",
+            "choice": {
+                "a": "ろけっと",
+                "b": "じんこうえいせい",
+                "c": "うちゅうすてーしょん",
+                "d": "げつめんちゃくりくせん"
+            }
+        },
+        {
+            "image": "toukyoutawa-.png",
+            "answer": "とうきょうタワー",
+            "url": "https://ja.wikipedia.org/wiki/%E6%9D%B1%E4%BA%AC%E3%82%BF%E3%83%AF%E3%83%BC",
+            "choice": {
+                "a": "すかいつりー",
+                "b": "とうきょうタワー",
+                "c": "えっふぇるとう",
+                "d": "つうてんかく"
+            }
+        },
+        {
+            "image": "ta-ki-.png",
+            "answer": "たーきーれっぐ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%83%81%E3%83%A1%E3%83%B3%E3%83%81%E3%83%A7%E3%82%A6",
+            "choice": {
+                "a": "からあげ",
+                "b": "ふらいどちきん",
+                "c": "たーきーれっぐ",
+                "d": "やきとり"
+            }
+        },
+        {
+            "image": "takosan.png",
+            "answer": "たこさんうぃんなー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%A4%E3%83%B3%E3%83%8A%E3%83%BC",
+            "choice": {
+                "a": "たこさんうぃんなー",
+                "b": "たこやき",
+                "c": "いかげそ",
+                "d": "かにかま"
+            }
+        },
+        {
+            "image": "geta.png",
+            "answer": "いっぽんばげた",
+            "url": "https://ja.wikipedia.org/wiki/%E4%B8%8B%E9%A7%84",
+            "choice": {
+                "a": "ぞうり",
+                "b": "すりっぱ",
+                "c": "はいひーる",
+                "d": "いっぽんばげた"
+            }
+        },
+        {
+            "image": "kappa.png",
+            "answer": "かっぱ",
+            "url": "https://ja.wikipedia.org/wiki/%E6%B2%B3%E7%AB%A5",
+            "choice": {
+                "a": "かえる",
+                "b": "かっぱ",
+                "c": "かめ",
+                "d": "わに"
+            }
+        },
+        {
+            "image": "bareri-na.png",
+            "answer": "ばれりーな",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%90%E3%83%AC%E3%82%A8%E3%83%80%E3%83%B3%E3%82%B5%E3%83%BC",
+            "choice": {
+                "a": "すけーとせんしゅ",
+                "b": "ちありーだー",
+                "c": "ばれりーな",
+                "d": "じょゆう"
+            }
+        },
+        {
+            "image": "raion.png",
+            "answer": "らいおん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%A4%E3%82%AA%E3%83%B3",
+            "choice": {
+                "a": "らいおん",
+                "b": "とら",
+                "c": "ねこ",
+                "d": "ひょう"
+            }
+        },
+        {
+            "image": "uma.png",
+            "answer": "うま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%83%9E",
+            "choice": {
+                "a": "ろば",
+                "b": "うま",
+                "c": "しか",
+                "d": "うし"
+            }
+        },
+        {
+            "image": "usi.png",
+            "answer": "うし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A6%E3%82%B7",
+            "choice": {
+                "a": "うま",
+                "b": "ひつじ",
+                "c": "うし",
+                "d": "やぎ"
+            }
+        },
+        {
+            "image": "hituji.png",
+            "answer": "ひつじ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%92%E3%83%84%E3%82%B8",
+            "choice": {
+                "a": "やぎ",
+                "b": "あるぱか",
+                "c": "うし",
+                "d": "ひつじ"
+            }
+        },
+        {
+            "image": "yagi.png",
+            "answer": "やぎ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A4%E3%82%AE",
+            "choice": {
+                "a": "やぎ",
+                "b": "ひつじ",
+                "c": "しか",
+                "d": "かもしか"
+            }
+        },
+        {
+            "image": "sibainu.png",
+            "answer": "しばいぬ",
+            "url": "https://ja.wikipedia.org/wiki/%E6%9F%B4%E7%8A%AC",
+            "choice": {
+                "a": "ねこ",
+                "b": "しばいぬ",
+                "c": "きつね",
+                "d": "たぬき"
+            }
+        },
+        {
+            "image": "tanuki.png",
+            "answer": "たぬき",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BF%E3%83%8C%E3%82%AD",
+            "choice": {
+                "a": "あらいぐま",
+                "b": "きつね",
+                "c": "たぬき",
+                "d": "あなぐま"
+            }
+        },
+        {
+            "image": "kitune.png",
+            "answer": "きつね",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%84%E3%83%8D",
+            "choice": {
+                "a": "たぬき",
+                "b": "しばいぬ",
+                "c": "おおかみ",
+                "d": "きつね"
+            }
+        },
+        {
+            "image": "ookami.png",
+            "answer": "おおかみ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%82%AA%E3%82%AB%E3%83%9F",
+            "choice": {
+                "a": "おおかみ",
+                "b": "しばいぬ",
+                "c": "きつね",
+                "d": "はいえな"
+            }
+        },
+        {
+            "image": "sika.png",
+            "answer": "しか",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B7%E3%82%AB",
+            "choice": {
+                "a": "かもしか",
+                "b": "しか",
+                "c": "となかい",
+                "d": "うま"
+            }
+        },
+        {
+            "image": "inosisi.png",
+            "answer": "いのしし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A4%E3%83%8E%E3%82%B7%E3%82%B7",
+            "choice": {
+                "a": "ぶた",
+                "b": "さい",
+                "c": "いのしし",
+                "d": "ばく"
+            }
+        },
+        {
+            "image": "sai.png",
+            "answer": "さい",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%82%A4",
+            "choice": {
+                "a": "ぞう",
+                "b": "かば",
+                "c": "すいぎゅう",
+                "d": "さい"
+            }
+        },
+        {
+            "image": "rakuda.png",
+            "answer": "らくだ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A9%E3%82%AF%E3%83%80",
+            "choice": {
+                "a": "らくだ",
+                "b": "あるぱか",
+                "c": "らま",
+                "d": "うま"
+            }
+        },
+        {
+            "image": "arupaka.png",
+            "answer": "あるぱか",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%91%E3%82%AB",
+            "choice": {
+                "a": "ひつじ",
+                "b": "あるぱか",
+                "c": "らま",
+                "d": "やぎ"
+            }
+        },
+        {
+            "image": "koara.png",
+            "answer": "こあら",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%82%A2%E3%83%A9",
+            "choice": {
+                "a": "なまけもの",
+                "b": "れっさーぱんだ",
+                "c": "こあら",
+                "d": "うぉんばっと"
+            }
+        },
+        {
+            "image": "kawauso.png",
+            "answer": "かわうそ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%AF%E3%82%A6%E3%82%BD",
+            "choice": {
+                "a": "あざらし",
+                "b": "びーばー",
+                "c": "かものはし",
+                "d": "かわうそ"
+            }
+        },
+        {
+            "image": "harinezumi.png",
+            "answer": "はりねずみ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%AA%E3%83%8D%E3%82%BA%E3%83%9F",
+            "choice": {
+                "a": "はりねずみ",
+                "b": "やまあらし",
+                "c": "もぐら",
+                "d": "はりもぐら"
+            }
+        },
+        {
+            "image": "mogura.png",
+            "answer": "もぐら",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A2%E3%82%B0%E3%83%A9",
+            "choice": {
+                "a": "はりねずみ",
+                "b": "もぐら",
+                "c": "ねずみ",
+                "d": "りす"
+            }
+        },
+        {
+            "image": "risu.png",
+            "answer": "りす",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%AA%E3%82%B9",
+            "choice": {
+                "a": "ねずみ",
+                "b": "ももんが",
+                "c": "りす",
+                "d": "はむすたー"
+            }
+        },
+        {
+            "image": "hamusuta-.png",
+            "answer": "はむすたー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%A0%E3%82%B9%E3%82%BF%E3%83%BC",
+            "choice": {
+                "a": "ねずみ",
+                "b": "りす",
+                "c": "もるもっと",
+                "d": "はむすたー"
+            }
+        },
+        {
+            "image": "tinpanji-.png",
+            "answer": "ちんぱんじー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%81%E3%83%B3%E3%83%91%E3%83%B3%E3%82%B8%E3%83%BC",
+            "choice": {
+                "a": "ちんぱんじー",
+                "b": "ごりら",
+                "c": "おらんうーたん",
+                "d": "にほんざる"
+            }
+        },
+        {
+            "image": "oranu-tan.png",
+            "answer": "おらんうーたん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%A9%E3%83%B3%E3%82%A6%E3%83%BC%E3%82%BF%E3%83%B3",
+            "choice": {
+                "a": "ちんぱんじー",
+                "b": "おらんうーたん",
+                "c": "ごりら",
+                "d": "てながざる"
+            }
+        },
+        {
+            "image": "nihonzaru.png",
+            "answer": "にほんざる",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%9B%E3%83%B3%E3%82%B6%E3%83%AB",
+            "choice": {
+                "a": "ちんぱんじー",
+                "b": "おらんうーたん",
+                "c": "にほんざる",
+                "d": "あかげざる"
+            }
+        },
+        {
+            "image": "azarasi.png",
+            "answer": "あざらし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%B6%E3%83%A9%E3%82%B7",
+            "choice": {
+                "a": "せいうち",
+                "b": "とど",
+                "c": "あしか",
+                "d": "あざらし"
+            }
+        },
+        {
+            "image": "seiuti.png",
+            "answer": "せいうち",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BB%E3%82%A4%E3%82%A6%E3%83%81",
+            "choice": {
+                "a": "せいうち",
+                "b": "あざらし",
+                "c": "とど",
+                "d": "らっこ"
+            }
+        },
+        {
+            "image": "momonga.png",
+            "answer": "ももんが",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A2%E3%83%A2%E3%83%B3%E3%82%AC",
+            "choice": {
+                "a": "むささび",
+                "b": "ももんが",
+                "c": "りす",
+                "d": "ふくろももんが"
+            }
+        },
+        {
+            "image": "bi-ba-.png",
+            "answer": "びーばー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%93%E3%83%BC%E3%83%90%E3%83%BC",
+            "choice": {
+                "a": "らっこ",
+                "b": "かわうそ",
+                "c": "びーばー",
+                "d": "ぬーとりあ"
+            }
+        },
+        {
+            "image": "sukanku.png",
+            "answer": "すかんく",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AB%E3%83%B3%E3%82%AF",
+            "choice": {
+                "a": "いたち",
+                "b": "あなぐま",
+                "c": "てん",
+                "d": "すかんく"
+            }
+        },
+        {
+            "image": "araiguma.png",
+            "answer": "あらいぐま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%A9%E3%82%A4%E3%82%B0%E3%83%9E",
+            "choice": {
+                "a": "あらいぐま",
+                "b": "れっさーぱんだ",
+                "c": "たぬき",
+                "d": "はくびしん"
+            }
+        },
+        {
+            "image": "ressa-panda.png",
+            "answer": "れっさーぱんだ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%AC%E3%83%83%E3%82%B5%E3%83%BC%E3%83%91%E3%83%B3%E3%83%80",
+            "choice": {
+                "a": "あらいぐま",
+                "b": "れっさーぱんだ",
+                "c": "たぬき",
+                "d": "こあら"
+            }
+        },
+        {
+            "image": "yamaarasi.png",
+            "answer": "やまあらし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A4%E3%83%9E%E3%82%A2%E3%83%A9%E3%82%B7",
+            "choice": {
+                "a": "はりねずみ",
+                "b": "あなぐま",
+                "c": "やまあらし",
+                "d": "あるまじろ"
+            }
+        },
+        {
+            "image": "anaguma.png",
+            "answer": "あなぐま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%8A%E3%82%B0%E3%83%9E",
+            "choice": {
+                "a": "いたち",
+                "b": "すかんく",
+                "c": "もぐら",
+                "d": "あなぐま"
+            }
+        },
+        {
+            "image": "itati.png",
+            "answer": "いたち",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A4%E3%82%BF%E3%83%81",
+            "choice": {
+                "a": "いたち",
+                "b": "てん",
+                "c": "おこじょ",
+                "d": "かわうそ"
+            }
+        },
+        {
+            "image": "herazika.png",
+            "answer": "へらじか",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%A9%E3%82%B8%E3%82%AB",
+            "choice": {
+                "a": "となかい",
+                "b": "へらじか",
+                "c": "にほんじか",
+                "d": "あかしか"
+            }
+        },
+        {
+            "image": "tonakai.png",
+            "answer": "となかい",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%8A%E3%82%AB%E3%82%A4",
+            "choice": {
+                "a": "へらじか",
+                "b": "にほんじか",
+                "c": "となかい",
+                "d": "ろば"
+            }
+        },
+        {
+            "image": "roba.png",
+            "answer": "ろば",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%90",
+            "choice": {
+                "a": "うま",
+                "b": "らま",
+                "c": "あるぱか",
+                "d": "ろば"
+            }
+        },
+        {
+            "image": "rama.png",
+            "answer": "らま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A9%E3%83%9E",
+            "choice": {
+                "a": "らま",
+                "b": "あるぱか",
+                "c": "ひつじ",
+                "d": "やぎ"
+            }
+        },
+        {
+            "image": "baku.png",
+            "answer": "ばく",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%90%E3%82%AF",
+            "choice": {
+                "a": "さい",
+                "b": "ばく",
+                "c": "ぞう",
+                "d": "かば"
+            }
+        },
+        {
+            "image": "arumaziro.png",
+            "answer": "あるまじろ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AB%E3%83%9E%E3%82%B8%E3%83%AD",
+            "choice": {
+                "a": "せんざんこう",
+                "b": "はりねずみ",
+                "c": "あるまじろ",
+                "d": "おおありくい"
+            }
+        },
+        {
+            "image": "ooarikui.png",
+            "answer": "おおありくい",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%82%AA%E3%82%A2%E3%83%AA%E3%82%AF%E3%82%A4",
+            "choice": {
+                "a": "あるまじろ",
+                "b": "せんざんこう",
+                "c": "こありくい",
+                "d": "おおありくい"
+            }
+        },
+        {
+            "image": "hakutyou.png",
+            "answer": "はくちょう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%82%AF%E3%83%81%E3%83%A7%E3%82%A6",
+            "choice": {
+                "a": "はくちょう",
+                "b": "あひる",
+                "c": "かも",
+                "d": "がちょう"
+            }
+        },
+        {
+            "image": "hato.png",
+            "answer": "はと",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%88",
+            "choice": {
+                "a": "すずめ",
+                "b": "はと",
+                "c": "からす",
+                "d": "にわとり"
+            }
+        },
+        {
+            "image": "hukurou.png",
+            "answer": "ふくろう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%AF%E3%83%AD%E3%82%A6",
+            "choice": {
+                "a": "たか",
+                "b": "みみずく",
+                "c": "ふくろう",
+                "d": "わし"
+            }
+        },
+        {
+            "image": "taka.png",
+            "answer": "たか",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BF%E3%82%AB",
+            "choice": {
+                "a": "わし",
+                "b": "とんび",
+                "c": "ふくろう",
+                "d": "たか"
+            }
+        },
+        {
+            "image": "turu.png",
+            "answer": "つる",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%84%E3%83%AB",
+            "choice": {
+                "a": "つる",
+                "b": "あおさぎ",
+                "c": "こうのとり",
+                "d": "とき"
+            }
+        },
+        {
+            "image": "emyu-.png",
+            "answer": "えみゅー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%9F%E3%83%A5%E3%83%BC",
+            "choice": {
+                "a": "だちょう",
+                "b": "えみゅー",
+                "c": "きうい",
+                "d": "ぺんぎん"
+            }
+        },
+        {
+            "image": "kiui.png",
+            "answer": "きうい",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%BC%E3%82%A6%E3%82%A3_(%E9%B3%A5)",
+            "choice": {
+                "a": "えみゅー",
+                "b": "だちょう",
+                "c": "きうい",
+                "d": "にわとり"
+            }
+        },
+        {
+            "image": "perikan.png",
+            "answer": "ぺりかん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%9A%E3%83%AA%E3%82%AB%E3%83%B3",
+            "choice": {
+                "a": "かもめ",
+                "b": "ふらみんご",
+                "c": "うみう",
+                "d": "ぺりかん"
+            }
+        },
+        {
+            "image": "hiyoko.png",
+            "answer": "ひよこ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8B%E3%83%AF%E3%83%88%E3%83%AA",
+            "choice": {
+                "a": "ひよこ",
+                "b": "うずら",
+                "c": "あひる",
+                "d": "すずめ"
+            }
+        },
+        {
+            "image": "suzume.png",
+            "answer": "すずめ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%BA%E3%83%A1",
+            "choice": {
+                "a": "めじろ",
+                "b": "すずめ",
+                "c": "むくどり",
+                "d": "はと"
+            }
+        },
+        {
+            "image": "kamome.png",
+            "answer": "かもめ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%A2%E3%83%A1",
+            "choice": {
+                "a": "うみねこ",
+                "b": "あひる",
+                "c": "かもめ",
+                "d": "ぺりかん"
+            }
+        },
+        {
+            "image": "aosagi.png",
+            "answer": "あおさぎ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AA%E3%82%B5%E3%82%AE",
+            "choice": {
+                "a": "つる",
+                "b": "しらさぎ",
+                "c": "ごいさぎ",
+                "d": "あおさぎ"
+            }
+        },
+        {
+            "image": "kitutuki.png",
+            "answer": "きつつき",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AD%E3%83%84%E3%83%84%E3%82%AD",
+            "choice": {
+                "a": "きつつき",
+                "b": "かわせみ",
+                "c": "もず",
+                "d": "ひばり"
+            }
+        },
+        {
+            "image": "tokage.png",
+            "answer": "とかげ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%82%AB%E3%82%B2",
+            "choice": {
+                "a": "やもり",
+                "b": "とかげ",
+                "c": "いもり",
+                "d": "かめれおん"
+            }
+        },
+        {
+            "image": "yamori.png",
+            "answer": "やもり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A4%E3%83%A2%E3%83%AA",
+            "choice": {
+                "a": "とかげ",
+                "b": "いもり",
+                "c": "やもり",
+                "d": "かえる"
+            }
+        },
+        {
+            "image": "sansyouuo.png",
+            "answer": "さんしょううお",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A7%E3%82%A6%E3%82%A6%E3%82%AA",
+            "choice": {
+                "a": "いもり",
+                "b": "うーぱーるーぱー",
+                "c": "かえる",
+                "d": "さんしょううお"
+            }
+        },
+        {
+            "image": "imori.png",
+            "answer": "いもり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%AB%E3%83%8F%E3%83%A9%E3%82%A4%E3%83%A2%E3%83%AA",
+            "choice": {
+                "a": "いもり",
+                "b": "さんしょううお",
+                "c": "やもり",
+                "d": "とかげ"
+            }
+        },
+        {
+            "image": "u-pa-ru-pa-.png",
+            "answer": "うーぱーるーぱー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A1%E3%82%AD%E3%82%B7%E3%82%B3%E3%82%B5%E3%83%B3%E3%82%B7%E3%83%A7%E3%82%A6%E3%82%A6%E3%82%AA",
+            "choice": {
+                "a": "いもり",
+                "b": "うーぱーるーぱー",
+                "c": "さんしょううお",
+                "d": "どじょう"
+            }
+        },
+        {
+            "image": "kapibara.png",
+            "answer": "かぴばら",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%94%E3%83%90%E3%83%A9",
+            "choice": {
+                "a": "びーばー",
+                "b": "かわうそ",
+                "c": "かぴばら",
+                "d": "あらいぐま"
+            }
+        },
+        {
+            "image": "koumori.png",
+            "answer": "こうもり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B3%E3%82%A6%E3%83%A2%E3%83%AA",
+            "choice": {
+                "a": "むささび",
+                "b": "ももんが",
+                "c": "からす",
+                "d": "こうもり"
+            }
+        },
+        {
+            "image": "kabutomusi.png",
+            "answer": "かぶとむし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%96%E3%83%88%E3%83%A0%E3%82%B7",
+            "choice": {
+                "a": "かぶとむし",
+                "b": "くわがた",
+                "c": "かまきり",
+                "d": "こがねむし"
+            }
+        },
+        {
+            "image": "kuwagata.png",
+            "answer": "くわがた",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%AF%E3%82%AC%E3%82%BF%E3%83%A0%E3%82%B7",
+            "choice": {
+                "a": "かぶとむし",
+                "b": "くわがた",
+                "c": "てんとうむし",
+                "d": "こがねむし"
+            }
+        },
+        {
+            "image": "kamakiri.png",
+            "answer": "かまきり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%83%9E%E3%82%AD%E3%83%AA",
+            "choice": {
+                "a": "ばった",
+                "b": "きりぎりす",
+                "c": "かまきり",
+                "d": "ななふし"
+            }
+        },
+        {
+            "image": "tonosamabatta.png",
+            "answer": "とのさまばった",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%88%E3%83%8E%E3%82%B5%E3%83%9E%E3%83%90%E3%83%83%E3%82%BF",
+            "choice": {
+                "a": "きりぎりす",
+                "b": "こおろぎ",
+                "c": "いなご",
+                "d": "とのさまばった"
+            }
+        },
+        {
+            "image": "agehatyou.png",
+            "answer": "あげはちょう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%82%B2%E3%83%8F%E3%83%81%E3%83%A7%E3%82%A6",
+            "choice": {
+                "a": "あげはちょう",
+                "b": "もんしろちょう",
+                "c": "とんぼ",
+                "d": "せみ"
+            }
+        },
+        {
+            "image": "hati.png",
+            "answer": "はち",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%83%81",
+            "choice": {
+                "a": "あぶ",
+                "b": "はち",
+                "c": "か",
+                "d": "はえ"
+            }
+        },
+        {
+            "image": "ari.png",
+            "answer": "あり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A2%E3%83%AA",
+            "choice": {
+                "a": "くも",
+                "b": "のみ",
+                "c": "あり",
+                "d": "だに"
+            }
+        },
+        {
+            "image": "kumo.png",
+            "answer": "くも",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AF%E3%83%A2",
+            "choice": {
+                "a": "あり",
+                "b": "せみ",
+                "c": "だに",
+                "d": "くも"
+            }
+        },
+        {
+            "image": "semi.png",
+            "answer": "せみ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%9F",
+            "choice": {
+                "a": "せみ",
+                "b": "とんぼ",
+                "c": "はち",
+                "d": "あぶ"
+            }
+        },
+        {
+            "image": "oniyanma.png",
+            "answer": "おにやんま",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AA%E3%83%8B%E3%83%A4%E3%83%B3%E3%83%9E",
+            "choice": {
+                "a": "しおからとんぼ",
+                "b": "おにやんま",
+                "c": "あきあかね",
+                "d": "ぎんやんま"
+            }
+        },
+        {
+            "image": "nanafusi.png",
+            "answer": "ななふし",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8A%E3%83%8A%E3%83%95%E3%82%B7",
+            "choice": {
+                "a": "かまきり",
+                "b": "しゃくとりむし",
+                "c": "ななふし",
+                "d": "いもむし"
+            }
+        },
+        {
+            "image": "hebi.png",
+            "answer": "へび",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%98%E3%83%93",
+            "choice": {
+                "a": "とかげ",
+                "b": "わに",
+                "c": "うなぎ",
+                "d": "へび"
+            }
+        },
+        {
+            "image": "katatumuri.png",
+            "answer": "かたつむり",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%AB%E3%82%BF%E3%83%84%E3%83%A0%E3%83%AA",
+            "choice": {
+                "a": "かたつむり",
+                "b": "なめくじ",
+                "c": "やどかり",
+                "d": "かめ"
+            }
+        },
+        {
+            "image": "senzankou.png",
+            "answer": "せんざんこう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BB%E3%83%B3%E3%82%B6%E3%83%B3%E3%82%B3%E3%82%A6%E7%A7%91",
+            "choice": {
+                "a": "あるまじろ",
+                "b": "せんざんこう",
+                "c": "おおありくい",
+                "d": "なまけもの"
+            }
+        },
+        {
+            "image": "te-buru.png",
+            "answer": "てーぶる",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%BC%E3%83%96%E3%83%AB_%28%E5%AE%B6%E5%85%B7%29",
+            "choice": {
+                "a": "いす",
+                "b": "たんす",
+                "c": "てーぶる",
+                "d": "ほんだな"
+            }
+        },
+        {
+            "image": "sofa.png",
+            "answer": "そふぁ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%BD%E3%83%95%E3%82%A1",
+            "choice": {
+                "a": "べっど",
+                "b": "いす",
+                "c": "てーぶる",
+                "d": "そふぁ"
+            }
+        },
+        {
+            "image": "tansu.png",
+            "answer": "たんす",
+            "url": "https://ja.wikipedia.org/wiki/%E7%AE%AA%E7%AC%A5",
+            "choice": {
+                "a": "たんす",
+                "b": "とだな",
+                "c": "ほんだな",
+                "d": "げたばこ"
+            }
+        },
+        {
+            "image": "roketto.png",
+            "answer": "ろけっと",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%AD%E3%82%B1%E3%83%83%E3%83%88",
+            "choice": {
+                "a": "ひこうき",
+                "b": "ろけっと",
+                "c": "へりこぷたー",
+                "d": "じんこうえいせい"
+            }
+        },
+        {
+            "image": "tento.png",
+            "answer": "てんと",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%86%E3%83%B3%E3%83%88",
+            "choice": {
+                "a": "たーぷ",
+                "b": "はんもっく",
+                "c": "てんと",
+                "d": "ねぶくろ"
+            }
+        },
+        {
+            "image": "toudai.png",
+            "answer": "とうだい",
+            "url": "https://ja.wikipedia.org/wiki/%E7%81%AF%E5%8F%B0",
+            "choice": {
+                "a": "とうきょうタワー",
+                "b": "すかいつりー",
+                "c": "ふうしゃ",
+                "d": "とうだい"
+            }
+        },
+        {
+            "image": "torii.png",
+            "answer": "とりい",
+            "url": "https://ja.wikipedia.org/wiki/%E9%B3%A5%E5%B1%85",
+            "choice": {
+                "a": "とりい",
+                "b": "とうろう",
+                "c": "しめなわ",
+                "d": "もん"
+            }
+        },
+        {
+            "image": "efferutou.png",
+            "answer": "えっふぇるとう",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%A8%E3%83%83%E3%83%95%E3%82%A7%E3%83%AB%E5%A1%94",
+            "choice": {
+                "a": "とうきょうタワー",
+                "b": "えっふぇるとう",
+                "c": "すかいつりー",
+                "d": "つうてんかく"
+            }
+        },
+        {
+            "image": "haihi-ru.png",
+            "answer": "はいひーる",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%8F%E3%82%A4%E3%83%92%E3%83%BC%E3%83%AB",
+            "choice": {
+                "a": "ぶーつ",
+                "b": "すにーかー",
+                "c": "はいひーる",
+                "d": "さんだる"
+            }
+        },
+        {
+            "image": "bu-tu.png",
+            "answer": "ぶーつ",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%96%E3%83%BC%E3%83%84",
+            "choice": {
+                "a": "はいひーる",
+                "b": "ながぐつ",
+                "c": "すにーかー",
+                "d": "ぶーつ"
+            }
+        },
+        {
+            "image": "suni-ka-.png",
+            "answer": "すにーかー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%83%8B%E3%83%BC%E3%82%AB%E3%83%BC",
+            "choice": {
+                "a": "すにーかー",
+                "b": "ぶーつ",
+                "c": "さんだる",
+                "d": "はいひーる"
+            }
+        },
+        {
+            "image": "sandaru.png",
+            "answer": "さんだる",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B5%E3%83%B3%E3%83%80%E3%83%AB",
+            "choice": {
+                "a": "げた",
+                "b": "さんだる",
+                "c": "ぞうり",
+                "d": "すりっぱ"
+            }
+        },
+        {
+            "image": "suki-.png",
+            "answer": "すきー",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B9%E3%82%AD%E3%83%BC",
+            "choice": {
+                "a": "すのーぼーど",
+                "b": "そり",
+                "c": "すきー",
+                "d": "すけーと"
+            }
+        },
+        {
+            "image": "itirinsya.png",
+            "answer": "いちりんしゃ",
+            "url": "https://ja.wikipedia.org/wiki/%E4%B8%80%E8%BC%AA%E8%BB%8A",
+            "choice": {
+                "a": "じてんしゃ",
+                "b": "さんりんしゃ",
+                "c": "きっくぼーど",
+                "d": "いちりんしゃ"
+            }
+        },
+        {
+            "image": "sanrinsya.png",
+            "answer": "さんりんしゃ",
+            "url": "https://ja.wikipedia.org/wiki/%E4%B8%89%E8%BC%AA%E8%BB%8A",
+            "choice": {
+                "a": "さんりんしゃ",
+                "b": "いちりんしゃ",
+                "c": "じてんしゃ",
+                "d": "べびーかー"
+            }
+        },
+        {
+            "image": "manekineko.png",
+            "answer": "まねきねこ",
+            "url": "https://ja.wikipedia.org/wiki/%E6%8B%9B%E3%81%8D%E7%8C%AB",
+            "choice": {
+                "a": "だるま",
+                "b": "まねきねこ",
+                "c": "こまいぬ",
+                "d": "しーさー"
+            }
+        },
+        {
+            "image": "komainu.png",
+            "answer": "こまいぬ",
+            "url": "https://ja.wikipedia.org/wiki/%E7%8B%9B%E7%8A%AC",
+            "choice": {
+                "a": "まねきねこ",
+                "b": "しーさー",
+                "c": "こまいぬ",
+                "d": "だるま"
+            }
+        },
+        {
+            "image": "yukidaruma.png",
+            "answer": "ゆきだるま",
+            "url": "https://ja.wikipedia.org/wiki/%E9%9B%AA%E3%81%A0%E3%82%8B%E3%81%BE",
+            "choice": {
+                "a": "かまくら",
+                "b": "ゆきうさぎ",
+                "c": "つらら",
+                "d": "ゆきだるま"
+            }
+        },
+        {
+            "image": "robotto.png",
+            "answer": "ろぼっと",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%AD%E3%83%9C%E3%83%83%E3%83%88",
+            "choice": {
+                "a": "ろぼっと",
+                "b": "ろけっと",
+                "c": "でんしゃ",
+                "d": "ひこうき"
+            }
+        },
+        {
+            "image": "utyuujin.png",
+            "answer": "うちゅうじん",
+            "url": "https://ja.wikipedia.org/wiki/%E5%AE%87%E5%AE%99%E4%BA%BA",
+            "choice": {
+                "a": "ようかい",
+                "b": "うちゅうじん",
+                "c": "ろぼっと",
+                "d": "まほうつかい"
+            }
+        },
+        {
+            "image": "doragon.png",
+            "answer": "どらごん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%89%E3%83%A9%E3%82%B4%E3%83%B3",
+            "choice": {
+                "a": "わに",
+                "b": "とかげ",
+                "c": "どらごん",
+                "d": "きょうりゅう"
+            }
+        },
+        {
+            "image": "yuniko-n.png",
+            "answer": "ゆにこーん",
+            "url": "https://ja.wikipedia.org/wiki/%E3%83%A6%E3%83%8B%E3%82%B3%E3%83%BC%E3%83%B3",
+            "choice": {
+                "a": "うま",
+                "b": "けんたうろす",
+                "c": "ぺがさす",
+                "d": "ゆにこーん"
+            }
+        },
+        {
+            "image": "kentaurosu.png",
+            "answer": "けんたうろす",
+            "url": "https://ja.wikipedia.org/wiki/%E3%82%B1%E3%83%B3%E3%82%BF%E3%82%A6%E3%83%AD%E3%82%B9",
+            "choice": {
+                "a": "けんたうろす",
+                "b": "ゆにこーん",
+                "c": "うま",
+                "d": "みのたうろす"
+            }
+        },
+        {
+            "image": "rikisi.png",
+            "answer": "りきし",
+            "url": "https://ja.wikipedia.org/wiki/%E5%8A%9B%E5%A3%AB",
+            "choice": {
+                "a": "ぼくさー",
+                "b": "りきし",
+                "c": "やきゅうせんしゅ",
+                "d": "さっかーせんしゅ"
+            }
+        },
+        {
+            "image": "ninja.png",
+            "answer": "にんじゃ",
+            "url": "https://ja.wikipedia.org/wiki/%E5%BF%8D%E8%80%85",
+            "choice": {
+                "a": "さむらい",
+                "b": "かいぞく",
+                "c": "にんじゃ",
+                "d": "きし"
+            }
+        },
+        {
+            "image": "piero.png",
+            "answer": "ぴえろ",
+            "url": "https://ja.wikipedia.org/wiki/%E9%81%93%E5%8C%96%E5%B8%AB",
+            "choice": {
+                "a": "まじしゃん",
+                "b": "かいぞく",
+                "c": "おどりこ",
+                "d": "ぴえろ"
+            }
         }
     ]
 }
