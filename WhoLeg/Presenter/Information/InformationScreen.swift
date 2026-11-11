@@ -31,6 +31,10 @@ struct InformationScreen: View {
             }
         }
         .listStyle(.insetGrouped)
+        .safeAreaInset(edge: .bottom, spacing: 0) {
+            BannerAdView()
+                .background(Color(.systemGroupedBackground))
+        }
     }
 
     private func row(
