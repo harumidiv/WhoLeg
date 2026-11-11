@@ -18,8 +18,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let titleViewController = TitleViewController()
         titleViewController.injector(presenter: TitlePresenterImpl(model: TitleModelImpl(quizRepository: QuizRepositoryImpl())))
 
+        let navigationController = UINavigationController(rootViewController: titleViewController)
+
         let window = UIWindow(windowScene: windowScene)
-        window.rootViewController = UINavigationController(rootViewController: titleViewController)
+        // まずスプラッシュで足が生えてくる演出を見せてから、タイトル画面に切り替える
+        window.rootViewController = SplashViewController { [weak window] in
+            guard let window else { return }
+            UIView.transition(with: window, duration: 0.4, options: .transitionCrossDissolve) {
+                window.rootViewController = navigationController
+            }
+        }
         window.makeKeyAndVisible()
         self.window = window
     }

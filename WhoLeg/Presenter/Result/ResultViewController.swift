@@ -22,7 +22,7 @@ class ResultViewController: UIHostingController<ResultScreen> {
     init(score: Int, wrongQuizzes: [Quiz]) {
         self.score = score
         self.wrongQuizzes = wrongQuizzes
-        super.init(rootView: ResultScreen(score: score, wrongQuizzes: wrongQuizzes, state: state, onReveal: { _ in }))
+        super.init(rootView: ResultScreen(score: score, wrongQuizzes: wrongQuizzes, legImageNames: [], state: state, onUnlock: { _ in }))
     }
 
     func injector(presenter: ResultPresenter, wireframe: ResultWireframe) {
@@ -53,7 +53,13 @@ class ResultViewController: UIHostingController<ResultScreen> {
         let retryButton = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(retryQuiz(_:)))
         navigationItem.rightBarButtonItem = retryButton
 
-        rootView = ResultScreen(score: score, wrongQuizzes: wrongQuizzes, state: state, onReveal: { [weak self] index in
+        // まわりに出す足は、全問の中からランダムに選ぶ
+        let legImageNames = presenter.getjson().quiz
+            .map { URL(fileURLWithPath: $0.image).deletingPathExtension().lastPathComponent }
+            .shuffled()
+            .prefix(ResultScreen.legCount)
+
+        rootView = ResultScreen(score: score, wrongQuizzes: wrongQuizzes, legImageNames: Array(legImageNames), state: state, onUnlock: { [weak self] index in
             self?.showRewardedAd(for: index)
         })
 
@@ -67,10 +73,10 @@ class ResultViewController: UIHostingController<ResultScreen> {
         }
     }
 
-    /// リワード広告を最後まで見たら、選んだクイズ1問だけ答えを表示する（図鑑には登録しない）
+    /// リワード広告を最後まで見たら、選んだクイズ1問だけスクラッチを削れるようにする（図鑑には登録しない）
     private func showRewardedAd(for index: Int) {
         RewardedAdManager.shared.show(from: self) { [weak self] in
-            self?.state.revealedIndices.insert(index)
+            self?.state.unlockedIndices.insert(index)
         }
     }
 

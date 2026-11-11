@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DAD0B0C2A0000010000001B /* PopSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */; };
+		0DAD0B0C2A00000100000019 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000018 /* SplashScreen.swift */; };
+		0DAD0B0C2A00000100000017 /* LegBurstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000016 /* LegBurstView.swift */; };
+		0DAD0B0C2A00000100000015 /* ScratchSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000014 /* ScratchSoundPlayer.swift */; };
+		0DAD0B0C2A00000100000013 /* ScratchFoil.metal in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000012 /* ScratchFoil.metal */; };
+		0DAD0B0C2A00000100000011 /* ScratchCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000010 /* ScratchCardView.swift */; };
 		053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */; };
 		057AF3E730A446FF000114CE /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AF3E630A446FF000114CE /* RewardedAdManager.swift */; };
 		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
@@ -80,6 +86,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopSoundPlayer.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000018 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000016 /* LegBurstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegBurstView.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000014 /* ScratchSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchSoundPlayer.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000012 /* ScratchFoil.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = ScratchFoil.metal; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000010 /* ScratchCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScratchCardView.swift; sourceTree = "<group>"; };
 		053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryTests.swift; sourceTree = "<group>"; };
 		057AF3E630A446FF000114CE /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
 		05E5D722233C840F00916809 /* SnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTests.swift; sourceTree = "<group>"; };
@@ -271,6 +283,8 @@
 			children = (
 				0D8B5A3D228FD2FD001D1A44 /* ResultViewController.swift */,
 				0D8B5AB0228FD07F001D1A44 /* ResultScreen.swift */,
+				0DAD0B0C2A00000100000012 /* ScratchFoil.metal */,
+				0DAD0B0C2A00000100000010 /* ScratchCardView.swift */,
 				0D8B5A7B2294158D001D1A44 /* ResultPresenter.swift */,
 				0D8B5A7F229418CC001D1A44 /* ResultWireframe.swift */,
 				0D8B5A7D22941599001D1A44 /* ResultModel.swift */,
@@ -294,6 +308,8 @@
 				0D8B5A37228FD242001D1A44 /* Quiz */,
 				0D8B5A38228FD24C001D1A44 /* Result */,
 				0DAD0B0C2A00000100000006 /* BannerAdView.swift */,
+				0DAD0B0C2A00000100000018 /* SplashScreen.swift */,
+				0DAD0B0C2A00000100000016 /* LegBurstView.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -304,6 +320,8 @@
 				0D8B5A79229413ED001D1A44 /* QuizRepository.swift */,
 				0DAD0B0C2A00000100000004 /* InterstitialAdManager.swift */,
 				057AF3E630A446FF000114CE /* RewardedAdManager.swift */,
+				0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */,
+				0DAD0B0C2A00000100000014 /* ScratchSoundPlayer.swift */,
 			);
 			path = Infra;
 			sourceTree = "<group>";
@@ -586,6 +604,7 @@
 				0D8B5A35228FD1BA001D1A44 /* UIColor+Addition.swift in Sources */,
 				0D8B5A6322919509001D1A44 /* QuizPresenter.swift in Sources */,
 				057AF3E730A446FF000114CE /* RewardedAdManager.swift in Sources */,
+				0DAD0B0C2A0000010000001B /* PopSoundPlayer.swift in Sources */,
 				0D8B5A02228FADE4001D1A44 /* AppDelegate.swift in Sources */,
 				0DA1B2C32A00000100000002 /* SceneDelegate.swift in Sources */,
 				0D8B5A5222914FC8001D1A44 /* QuizViewController.swift in Sources */,
@@ -608,10 +627,15 @@
 				0D5D9FE923531032006EC16E /* PictureBookDetailViewController.swift in Sources */,
 				0D8B5AB9228FD07F001D1A44 /* PictureBookDetailScreen.swift in Sources */,
 				0DAD0B0C2A00000100000007 /* BannerAdView.swift in Sources */,
+				0DAD0B0C2A00000100000019 /* SplashScreen.swift in Sources */,
+				0DAD0B0C2A00000100000017 /* LegBurstView.swift in Sources */,
 				49818E54247907D000BAE8CA /* RelatedAppViewController.swift in Sources */,
 				0D8B5ABB228FD07F001D1A44 /* RelatedAppScreen.swift in Sources */,
 				0D8B5A3F228FD2FD001D1A44 /* ResultViewController.swift in Sources */,
 				0D8B5AB1228FD07F001D1A44 /* ResultScreen.swift in Sources */,
+				0DAD0B0C2A00000100000015 /* ScratchSoundPlayer.swift in Sources */,
+				0DAD0B0C2A00000100000013 /* ScratchFoil.metal in Sources */,
+				0DAD0B0C2A00000100000011 /* ScratchCardView.swift in Sources */,
 				0D8B5A7A229413ED001D1A44 /* QuizRepository.swift in Sources */,
 				0DAD0B0C2A00000100000005 /* InterstitialAdManager.swift in Sources */,
 				0D8B5A692292F2BD001D1A44 /* TitlePresenter.swift in Sources */,
