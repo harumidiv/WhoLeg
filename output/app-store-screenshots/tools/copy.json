@@ -1,0 +1,62 @@
+{
+  "en": {
+    "title": "Whose Legs?",
+    "subtitle": "Guess who it is, just from the legs!"
+  },
+  "de": {
+    "title": "Wessen Beine?",
+    "subtitle": "Erkenne das Tier nur an seinen Beinen!"
+  },
+  "fr": {
+    "title": "À qui ces pattes ?",
+    "subtitle": "Devine qui se cache derrière ces pattes !"
+  },
+  "es": {
+    "title": "¿Patas de quién?",
+    "subtitle": "¡Adivina quién es solo por sus patas!"
+  },
+  "it": {
+    "title": "Zampe di chi?",
+    "subtitle": "Indovina chi è guardando solo le zampe!"
+  },
+  "pt-BR": {
+    "title": "Patas de quem?",
+    "subtitle": "Adivinhe quem é só de olhar as patas!"
+  },
+  "nl": {
+    "title": "Wiens poten?",
+    "subtitle": "Raad wie het is, alleen aan de poten!"
+  },
+  "pl": {
+    "title": "Czyje nóżki?",
+    "subtitle": "Zgadnij, kto to, patrząc tylko na nóżki!"
+  },
+  "tr": {
+    "title": "Kimin Bacakları?",
+    "subtitle": "Sadece bacaklarına bak, kim olduğunu bul!"
+  },
+  "zh-Hans": {
+    "title": "谁的腿？",
+    "subtitle": "只看腿，猜猜是谁！"
+  },
+  "zh-Hant": {
+    "title": "誰的腿？",
+    "subtitle": "只看腿，猜猜是誰！"
+  },
+  "ko": {
+    "title": "누구 다리일까?",
+    "subtitle": "다리만 보고 누구인지 맞혀 봐요!"
+  },
+  "id": {
+    "title": "Kaki Siapa?",
+    "subtitle": "Tebak siapa hanya dari kakinya!"
+  },
+  "vi": {
+    "title": "Chân của ai?",
+    "subtitle": "Chỉ nhìn chân, đoán xem là ai!"
+  },
+  "th": {
+    "title": "ขาของใคร?",
+    "subtitle": "ดูแค่ขา แล้วทายว่าเป็นใคร!"
+  }
+}

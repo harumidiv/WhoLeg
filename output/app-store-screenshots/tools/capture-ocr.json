@@ -1,0 +1,526 @@
+[
+  {
+    "device" : "iPhone",
+    "language" : "en",
+    "text" : [
+      "9:41",
+      "Whose Legs?",
+      "Whose legs are these?",
+      "Penguin",
+      "• Start",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "de",
+    "text" : [
+      "9:41",
+      "Wessen Beine?",
+      "Wessen Beine sind das?",
+      "Pinguin",
+      "• Start",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "fr",
+    "text" : [
+      "9:41",
+      "À qui ces pattes ?",
+      "À qui sont ces pattes ?",
+      "Pingouin",
+      "• Jouer",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "es",
+    "text" : [
+      "9:41",
+      "¿Patas de quién?",
+      "¿De quién son estas patas?",
+      "Pingüino",
+      "•Empezar",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "it",
+    "text" : [
+      "9:41",
+      "Zampe di chi?",
+      "Di chi sono queste zampe?",
+      "Pinguino",
+      "• Inizia",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "pt-BR",
+    "text" : [
+      "9:41",
+      "Patas de quem?",
+      "De quem são estas patas?",
+      "Pinguim",
+      "• Começar",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "nl",
+    "text" : [
+      "9:41",
+      "Wiens poten?",
+      "Van wie zijn deze poten?",
+      "Pinguin",
+      "• Start",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "pl",
+    "text" : [
+      "9:41",
+      "Czyje nóżki?",
+      "Czyje to nóżki?",
+      "Pingwin",
+      "• Start",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "tr",
+    "text" : [
+      "9:41",
+      "Kimin Bacakları?",
+      "Bu kimin bacakları?",
+      "Penguen",
+      "• Başla",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "zh-Hans",
+    "text" : [
+      "9:41",
+      "谁的腿？",
+      "这是谁的腿？",
+      "企鹅",
+      "开始",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "zh-Hant",
+    "text" : [
+      "9:41",
+      "誰的腿？",
+      "這是誰的腿？",
+      "企鵝",
+      "開始",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "ko",
+    "text" : [
+      "9:41",
+      "누구 다리일까?",
+      "이건 누구 다리일까?",
+      "펭귄",
+      "• 시작",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "id",
+    "text" : [
+      "9:41",
+      "Kaki Siapa?",
+      "Ini kaki siapa?",
+      "Penguin",
+      "• Mulai"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "vi",
+    "text" : [
+      "9:41",
+      "Chân của ai?",
+      "i",
+      "Đây là chân của ai?",
+      "Chim cánh cụt",
+      "• Bắt đầu"
+    ]
+  },
+  {
+    "device" : "iPhone",
+    "language" : "th",
+    "text" : [
+      "9:41",
+      "ขาของใคร?",
+      "นี่คือขาของใคร?",
+      "เพนกวิน",
+      "• เริ่ม",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "en",
+    "text" : [
+      "Whose Legs?",
+      "9:41",
+      "Whose legs are these?",
+      "Penguin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "de",
+    "text" : [
+      "Wessen Beine?",
+      "9:41",
+      "Wessen Beine sind das?",
+      "Pinguin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "fr",
+    "text" : [
+      "À qui ces pattes ?",
+      "9:41",
+      "À qui sont ces pattes ?",
+      "Pingouin",
+      "• Jouer"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "es",
+    "text" : [
+      "¿Patas de quién?",
+      "9:41",
+      "¿De quién son estas patas?",
+      "Pingüino",
+      "• Empezar"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "it",
+    "text" : [
+      "Zampe di chi?",
+      "9:41",
+      "Di chi sono queste zampe?",
+      "Pinguino",
+      "• Inizia"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "pt-BR",
+    "text" : [
+      "Patas de quem?",
+      "9:41",
+      "De quem são estas patas?",
+      "Pinguim",
+      "• Começar"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "nl",
+    "text" : [
+      "Wiens poten?",
+      "9:41",
+      "Van wie zijn deze poten?",
+      "Pinguin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "pl",
+    "text" : [
+      "Czyje nóżki?",
+      "9:41",
+      "Czyje to nóżki?",
+      "Pingwin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "tr",
+    "text" : [
+      "Kimin Bacakları?",
+      "9:41",
+      "Bu kimin bacakları?",
+      "Penguen",
+      "• Başla"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "zh-Hans",
+    "text" : [
+      "谁的腿？",
+      "9:41",
+      "这是谁的腿？",
+      "企鹅",
+      "开始"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "zh-Hant",
+    "text" : [
+      "誰的腿？",
+      "9:41",
+      "這是誰的腿？",
+      "企鵝",
+      "開始"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "ko",
+    "text" : [
+      "누구 다리일까?",
+      "i",
+      "9:41",
+      "이건 누구 다리일까?",
+      "펭귄",
+      "• 시작"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "id",
+    "text" : [
+      "Kaki Siapa?",
+      "i",
+      "9:41",
+      "Ini kaki siapa?",
+      "Penguin",
+      "• Mulai"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "vi",
+    "text" : [
+      "Chân của ai?",
+      "9:41",
+      "Đây là chân của ai?",
+      "Chim cánh cụt",
+      "• Bắt đầu"
+    ]
+  },
+  {
+    "device" : "iPhone-Duo",
+    "language" : "th",
+    "text" : [
+      "ขาของใคร?",
+      "9:41",
+      "นี่คือขาของใคร?",
+      "เพนกวิน",
+      "• เริ่ม"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "en",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Whose Legs?",
+      "Whose legs are these?",
+      "Penguin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "de",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Wessen Beine?",
+      "Wessen Beine sind das?",
+      "Pinguin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "fr",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "À qui ces pattes?",
+      "À qui sont ces pattes ?",
+      "Pingouin",
+      "→ Jouer",
+      "1"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "es",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "¿Patas de quién?",
+      "¿De quién son estas patas?",
+      "Pinguino",
+      "• Empezar",
+      "1"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "it",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Zampe di chi?",
+      "Di chi sono queste zampe?",
+      "Pinguino",
+      "•Inizia"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "pt-BR",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Patas de quem?",
+      "De quem são estas patas?",
+      "Pinguim",
+      "• Começar",
+      "1"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "nl",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Wiens poten?",
+      "Van wie zijn deze poten?",
+      "Pinguin",
+      "• Start"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "pl",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Czyje nóżki?",
+      "Czyje to nóżki?",
+      "Pingwin",
+      "•Start"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "tr",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Kimin Bacakları?",
+      "Bu kimin bacakları?",
+      "Penguen",
+      "• Başla",
+      "1"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "zh-Hans",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "の",
+      "進的腿？",
+      "这是谁的腿？",
+      "企鵝",
+      "▶开始",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "zh-Hant",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "の",
+      "誰的腿？",
+      "這是誰的腿？",
+      "企鵝",
+      "＞開始",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "ko",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "の",
+      "누구 다리일까?",
+      "이건 누구 다리일까?",
+      "펭귄",
+      "• 시작",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "id",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Kaki Siapa?",
+      "Ini kaki siapa?",
+      "Penguin",
+      "• Muai",
+      "i"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "vi",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "Chân của ai?",
+      "Đây là chân của ai?",
+      "Chim cánh cụt",
+      "•Bắt đầu",
+      "1"
+    ]
+  },
+  {
+    "device" : "iPad",
+    "language" : "th",
+    "text" : [
+      "9:41 11月12日（木） だれのあし",
+      "ขาของใคร?",
+      "นี่คือขาของใคร?",
+      "เพนกวิน",
+      "› เริ่ม",
+      "i"
+    ]
+  }
+]
