@@ -4,10 +4,10 @@
     "CFBundleDisplayName" : {
       "extractionState" : "manual",
       "localizations" : {
-        "ja" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "だれのあし"
+            "value" : "Wessen Beine"
           }
         },
         "en" : {
@@ -16,10 +16,10 @@
             "value" : "Whose Legs"
           }
         },
-        "de" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wessen Beine"
+            "value" : "Patas de quién"
           }
         },
         "fr" : {
@@ -28,10 +28,10 @@
             "value" : "À qui ces pattes"
           }
         },
-        "es" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Patas de quién"
+            "value" : "Kaki Siapa"
           }
         },
         "it" : {
@@ -40,10 +40,16 @@
             "value" : "Zampe di chi"
           }
         },
-        "pt-BR" : {
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Patas de quem"
+            "value" : "だれのあし"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "누구 다리일까"
           }
         },
         "nl" : {
@@ -58,10 +64,28 @@
             "value" : "Czyje nóżki"
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Patas de quem"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขาของใคร"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kimin Bacakları"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chân của ai"
           }
         },
         "zh-Hans" : {
@@ -75,29 +99,17 @@
             "state" : "translated",
             "value" : "誰的腿"
           }
-        },
-        "ko" : {
+        }
+      }
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
           "stringUnit" : {
-            "state" : "translated",
-            "value" : "누구 다리일까"
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Kaki Siapa"
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chân của ai"
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ขาของใคร"
+            "state" : "new",
+            "value" : "WhoLeg"
           }
         }
       }
@@ -105,10 +117,10 @@
     "NSUserTrackingUsageDescription" : {
       "extractionState" : "manual",
       "localizations" : {
-        "ja" : {
+        "de" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "あなたに合った広告を表示するために使用します。"
+            "value" : "Wird verwendet, um dir passende Werbung anzuzeigen."
           }
         },
         "en" : {
@@ -117,10 +129,10 @@
             "value" : "This is used to show ads that are relevant to you."
           }
         },
-        "de" : {
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Wird verwendet, um dir passende Werbung anzuzeigen."
+            "value" : "Se usa para mostrarte anuncios relevantes para ti."
           }
         },
         "fr" : {
@@ -129,10 +141,10 @@
             "value" : "Utilisé pour vous proposer des publicités adaptées."
           }
         },
-        "es" : {
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Se usa para mostrarte anuncios relevantes para ti."
+            "value" : "Digunakan untuk menampilkan iklan yang sesuai untukmu."
           }
         },
         "it" : {
@@ -141,10 +153,16 @@
             "value" : "Viene utilizzato per mostrarti annunci pertinenti."
           }
         },
-        "pt-BR" : {
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Usado para mostrar anúncios relevantes para você."
+            "value" : "あなたに合った広告を表示するために使用します。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "맞춤형 광고를 표시하는 데 사용됩니다."
           }
         },
         "nl" : {
@@ -159,10 +177,28 @@
             "value" : "Służy do wyświetlania reklam dopasowanych do Ciebie."
           }
         },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usado para mostrar anúncios relevantes para você."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้เพื่อแสดงโฆษณาที่เหมาะกับคุณ"
+          }
+        },
         "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sana uygun reklamlar göstermek için kullanılır."
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Được dùng để hiển thị quảng cáo phù hợp với bạn."
           }
         },
         "zh-Hans" : {
@@ -175,30 +211,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用於向你顯示適合你的廣告。"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "맞춤형 광고를 표시하는 데 사용됩니다."
-          }
-        },
-        "id" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Digunakan untuk menampilkan iklan yang sesuai untukmu."
-          }
-        },
-        "vi" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Được dùng để hiển thị quảng cáo phù hợp với bạn."
-          }
-        },
-        "th" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "ใช้เพื่อแสดงโฆษณาที่เหมาะกับคุณ"
           }
         }
       }

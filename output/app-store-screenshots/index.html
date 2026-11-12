@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WhoLeg — App Storeスクリーンショット</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f6f4;color:#173727;font:16px -apple-system,BlinkMacSystemFont,sans-serif}header{padding:28px clamp(18px,4vw,64px);background:white;border-bottom:1px solid #dce3dc;position:sticky;top:0;z-index:1}h1{font-size:23px;margin:0 0 10px}p{margin:8px 0;color:#526657}label{display:inline-flex;align-items:center;gap:10px;margin:8px 20px 0 0}select{font:inherit;padding:8px;border:1px solid #bdcbbf;border-radius:7px;background:white}main{max-width:1500px;margin:auto;padding:24px}.pair{display:grid;grid-template-columns:1fr 1fr;gap:0;box-shadow:0 3px 25px #17372720}.pair img{display:block;width:100%;height:auto}a{color:#087b44}.files{display:flex;justify-content:space-between;margin-top:15px}footer{margin-top:24px;font-size:13px;color:#526657}
+</style>
+<header>
+<h1>WhoLeg — App Storeスクリーンショット</h1>
+<p>15言語 × 3端末 × 2枚。画像をクリックすると原寸で開きます。</p>
+<label>言語<select id="language"></select></label>
+<label>端末<select id="device"><option value="iPhone">iPhone · 1206×2622</option><option value="iPhone-Duo" selected>iPhone Duo · 2007×2853</option><option value="iPad">iPad · 2064×2752</option></select></label>
+</header>
+<main>
+<div class="pair"><a id="a1" target="_blank"><img id="i1" alt="1枚目"></a><a id="a2" target="_blank"><img id="i2" alt="2枚目"></a></div>
+<div class="files"><a id="download1" download>1枚目を保存</a><a id="download2" download>2枚目を保存</a></div>
+<footer>App Storeには各フォルダの01、02の順に登録してください。Duoは内側ディスプレイのみ撮影しています。</footer>
+</main>
+<script>
+const languages=['en','de','fr','es','it','pt-BR','nl','pl','tr','zh-Hans','zh-Hant','ko','id','vi','th'];
+const l=document.querySelector('#language'),d=document.querySelector('#device');
+for(const code of languages){const o=document.createElement('option');o.value=code;o.textContent=code;l.append(o)}
+function show(){const size={iPhone:'1206x2622','iPhone-Duo':'2007x2853',iPad:'2064x2752'}[d.value];for(let n=1;n<=2;n++){const url='exports/'+l.value+'/'+d.value+'/0'+n+'-'+size+'.png';document.querySelector('#i'+n).src=url;document.querySelector('#a'+n).href=url;document.querySelector('#download'+n).href=url;}}
+l.onchange=d.onchange=show;show();
+</script>
+</html>
