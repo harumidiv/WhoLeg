@@ -9,13 +9,14 @@
 import SwiftUI
 import UIKit
 
-/// 起動画面（LaunchScreen.storyboard）の続きとして、ロゴのまわりから足が生えてくる画面
+/// 起動画面（Info.plist の UILaunchScreen で背景色だけ表示）の続きとして、ロゴのまわりから足が生えてくる画面
 struct SplashScreen: View {
     let onFinish: () -> Void
 
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var didFinish = false
     @State private var isStarted = false
+    @State private var isLogoVisible = false
     @State private var preparedImages: [String: UIImage] = [:]
 
     /// 画面の外から生やす足。ランダムにせず、細長い足を固定で並べる（LegSlot.splash と同じ順番）
@@ -40,16 +41,18 @@ struct SplashScreen: View {
 
     var body: some View {
         ZStack {
-            // LaunchScreen.storyboard と同じ背景色にして、切り替わりを目立たなくする
-            Color(red: 0.922, green: 0.918, blue: 0.937)
+            // 起動画面と同じ背景色（ダークモード対応の "Background"）にして、切り替わりを目立たなくする
+            Color("Background")
                 .ignoresSafeArea()
 
-            // LaunchScreen.storyboard と同じ大きさ・位置（中央から25pt上）
+            // 起動画面は背景色だけなので、ロゴはふわっと出す
             Image("logo")
                 .resizable()
                 .scaledToFit()
                 .frame(width: 250, height: 250)
                 .offset(y: -25)
+                .opacity(isLogoVisible ? 1 : 0)
+                .scaleEffect(isLogoVisible || reduceMotion ? 1 : 0.92)
                 .accessibilityLabel("だれのあし？")
 
             // 足はロゴより手前に出して、ロゴに重なってもよいことにする
@@ -68,13 +71,19 @@ struct SplashScreen: View {
         .contentShape(Rectangle())
         // 待ちたくない人はタップで飛ばせる
         .onTapGesture { finish() }
+        .onAppear {
+            withAnimation(.easeOut(duration: reduceMotion ? 0.15 : 0.25)) {
+                isLogoVisible = true
+            }
+        }
         .task {
             // 起動直後に大きな画像をデコードするとアニメーションがカクついて音とずれるので、
             // 画像と音を先に準備してから、足と音を同時にスタートさせる
             if !reduceMotion {
                 PopSoundPlayer.shared.prepare()
             }
-            preparedImages = await Self.prepareImages()
+            // 足は画面の短い辺の6割弱なので、3倍の解像度でも足りる大きさにする（数が多いのでメモリも抑える）
+            preparedImages = await LegBurstView.prepareImages(named: Self.legImageNames, maxPixelSize: 680)
             // 準備した画像で1フレーム描いてから動かし始める
             try? await Task.sleep(for: .milliseconds(50))
 
@@ -87,25 +96,6 @@ struct SplashScreen: View {
             // 足が出そろって少し見せてからタイトルへ進む（スプラッシュ全体で1.5秒くらい）
             try? await Task.sleep(for: .seconds(reduceMotion ? 1.0 : 1.45))
             finish()
-        }
-    }
-
-    /// 足の画像を表示する大きさに縮めてデコードしておく
-    private static func prepareImages() async -> [String: UIImage] {
-        // 足は画面の短い辺の6割弱なので、3倍の解像度でも足りる大きさにする（数が多いのでメモリも抑える）
-        let target = CGSize(width: 680, height: 680)
-        return await withTaskGroup(of: (String, UIImage?).self) { group in
-            for name in legImageNames {
-                group.addTask {
-                    let image = await UIImage(named: name)?.byPreparingThumbnail(ofSize: target)
-                    return (name, image)
-                }
-            }
-            var images: [String: UIImage] = [:]
-            for await (name, image) in group {
-                images[name] = image
-            }
-            return images
         }
     }
 

@@ -25,9 +25,15 @@ struct ResultScreen: View {
     @ObservedObject var state: ResultScreenState
     /// 広告を見てスクラッチを削れるようにするボタンが押されたときに、そのクイズのインデックスを渡して呼ぶ
     let onUnlock: (Int) -> Void
+    /// タイトルにもどる
+    var onBack: () -> Void = {}
+    /// もう一度クイズをする
+    var onRetry: () -> Void = {}
 
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var rowsHeight: CGFloat = 0
+    @State private var preparedLegImages: [String: UIImage] = [:]
+    @State private var isLegsStarted = false
 
     private struct Style {
         let background: Color
@@ -38,17 +44,17 @@ struct ResultScreen: View {
         if score == 10 {
             return Style(
                 background: Color(red: 1, green: 0.485, blue: 0.226),
-                message: "全問正解!!"
+                message: String(localized: "全問正解!!")
             )
         } else if score > 5 {
             return Style(
                 background: .brand,
-                message: "まずまずだね"
+                message: String(localized: "まずまずだね")
             )
         } else {
             return Style(
                 background: .brandNavy,
-                message: "うーん..."
+                message: String(localized: "うーん...")
             )
         }
     }
@@ -60,25 +66,83 @@ struct ResultScreen: View {
                 style.background
                     .ignoresSafeArea()
 
-                LegBurstView(imageNames: legImageNames, slots: LegSlot.result)
-                    .ignoresSafeArea()
+                LegBurstView(
+                    imageNames: legImageNames,
+                    slots: LegSlot.result,
+                    isStarted: isLegsStarted,
+                    appearanceOrder: LegSlot.resultOrder,
+                    preparedImages: preparedLegImages
+                )
+                .ignoresSafeArea()
 
-                // 足に囲まれた中にスコアと間違えた問題を出す。
+                // 足に囲まれた中にスコアと間違えた問題、もどる・リトライのボタンを出す。
+                // ボタンは画面のはしに置くと足に隠れて見にくいので、真ん中にまとめる。
                 // 間違えた問題があるときは一覧の場所を広く取れるよう上寄せにする
                 let hasWrongQuizzes = !wrongQuizzes.isEmpty
                 VStack(spacing: 16) {
                     scoreHeader(message: style.message)
                     if hasWrongQuizzes {
-                        wrongQuizPanel(maxHeight: geometry.size.height * 0.5)
+                        wrongQuizPanel(maxHeight: geometry.size.height * 0.44)
                     }
+                    actionButtons
+                        .padding(.top, 4)
                 }
                 .frame(maxWidth: horizontalSizeClass == .regular ? 520 : .infinity)
                 .padding(.horizontal, 28)
-                .padding(.top, hasWrongQuizzes ? geometry.size.height * 0.03 : 0)
+                .padding(.top, hasWrongQuizzes ? geometry.size.height * 0.05 : 0)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: hasWrongQuizzes ? .top : .center)
+
+                // 全問正解のお祝いに紙吹雪を降らせる
+                if score == 10 {
+                    ConfettiView()
+                        .ignoresSafeArea()
+                        .allowsHitTesting(false)
+                        .accessibilityHidden(true)
+                }
             }
         }
         .navigationBarBackButtonHidden(true)
+        .task(id: legImageNames) {
+            guard !legImageNames.isEmpty else { return }
+            // 足は画面の短い辺の4割ほどなので、3倍の解像度でも足りる大きさに縮めておく
+            preparedLegImages = await LegBurstView.prepareImages(named: legImageNames, maxPixelSize: 540)
+            isLegsStarted = true
+        }
+    }
+
+    private var actionButtons: some View {
+        HStack(spacing: 12) {
+            Button(action: onBack) {
+                Label("もどる", systemImage: "arrow.uturn.backward")
+                    .font(.system(size: 20, weight: .heavy, design: .rounded))
+                    // 言語によっては文字が長くなるので、収まらなければ小さくする
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 12)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 56)
+            }
+            .buttonStyle(.chunky(color: Color(UIColor(hex: "#2B3240")), shadowColor: Color(UIColor(hex: "#161A22"))))
+            .accessibilityLabel("タイトルに もどる")
+
+            Button(action: onRetry) {
+                Label("リトライ", systemImage: "arrow.clockwise")
+                    .font(.system(size: 20, weight: .heavy, design: .rounded))
+                    // 言語によっては文字が長くなるので、収まらなければ小さくする
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 12)
+                    .frame(maxWidth: .infinity)
+                    .frame(height: 56)
+            }
+            // どの背景色（オレンジ・緑・紺）の上でも目立つよう白いボタンにする
+            .buttonStyle(.chunky(
+                color: .white,
+                shadowColor: Color(UIColor(hex: "#C9CED6")),
+                foregroundColor: Color(UIColor(hex: "#0B7A44"))
+            ))
+            .accessibilityLabel("もう いちど あそぶ")
+        }
     }
 
     private func scoreHeader(message: String) -> some View {
@@ -92,6 +156,8 @@ struct ResultScreen: View {
             }
             Text(message)
                 .font(.system(size: 32, weight: .bold, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
         }
         .foregroundStyle(.white)
         // 後ろの足に重なっても読めるように影を濃くする

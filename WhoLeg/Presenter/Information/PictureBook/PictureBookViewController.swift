@@ -41,7 +41,7 @@ class PictureBookViewController: UIHostingController<PictureBookScreen> {
     }
 
     private func setupLargeTitle() {
-        title = "ずかん"
+        title = String(localized: "ずかん")
         navigationItem.largeTitleDisplayMode = .always
         navigationController?.navigationBar.prefersLargeTitles = true
     }

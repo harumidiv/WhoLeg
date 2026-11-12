@@ -61,6 +61,8 @@ struct ScratchCardView: View {
     /// なぞった点。x < 0 の点はなぞりの区切り
     @State private var points: [CGPoint] = []
     @State private var coveredCells: Set<Int> = []
+    /// 削った場所に戻ってなぞったときは点を足さないので、次に点を足すときになぞり線を区切る
+    @State private var needsStrokeBreak = false
     @State private var size: CGSize = .zero
     @State private var fade: Double = 1
     @State private var isFinished = false
@@ -89,10 +91,14 @@ struct ScratchCardView: View {
 
     private let radius: CGFloat = 14
     private let cellSize: CGFloat = 6
-    /// どこまで削るかはユーザーに任せる。ほぼ削りきって残りがわずかになったときだけ、細かい削り残しを消す
-    private let fullyScratchedRatio = 0.95
-    /// シェーダーに渡す点の上限。ここまでなぞったら十分削ったとみなす
+    /// 全部削りきったときだけ、触覚フィードバックと一緒に削り跡のふちの細かいカスを消す
+    private let fullyScratchedRatio = 1.0
+    /// シェーダーに渡す点の上限。新しく削れる場所がある点しか足さないので、普通に削りきるまでには届かない
     private let maxPoints = 400
+    private let cornerRadius: CGFloat = 12
+    /// 削れたかを数えるときの半径。削り跡のふちはギザギザで数pt外まで削れて見えるので、少し広めに数える。
+    /// 見た目では全部削れたのにフィードバックが来ない、ということがないようにするため
+    private var coverageRadius: CGFloat { radius + 3 }
     private let height: CGFloat = 52
 
     var body: some View {
@@ -119,7 +125,7 @@ struct ScratchCardView: View {
     }
 
     private var answerLayer: some View {
-        RoundedRectangle(cornerRadius: 12, style: .continuous)
+        RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
             .fill(Color(UIColor(hex: "#E9F7EF")))
             .overlay {
                 Text(answer)
@@ -137,7 +143,7 @@ struct ScratchCardView: View {
     private var foilLayer: some View {
         let foil = foilSurface
             .colorEffect(foilShader)
-            .clipShape(RoundedRectangle(cornerRadius: 12, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: cornerRadius, style: .continuous))
 
         if isUnlocked {
             foil
@@ -155,7 +161,7 @@ struct ScratchCardView: View {
                 foil
             }
             .buttonStyle(FoilButtonStyle())
-            .accessibilityLabel(isAdReady ? "どうがを みて けずる" : "じゅんびちゅう")
+            .accessibilityLabel(isAdReady ? Text("どうがを みて けずる") : Text("じゅんびちゅう"))
             .accessibilityHint("広告を見ると、けずって答えを見られます")
         }
     }
@@ -172,14 +178,14 @@ struct ScratchCardView: View {
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(Color(UIColor(hex: "#2B3240")).opacity(isUnlocked || isAdReady ? 1 : 0.5))
                 .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                .minimumScaleFactor(0.6)
                 .padding(.horizontal, 8)
         }
     }
 
     private var foilLabel: String {
-        if isUnlocked { return "ゆびで けずってね" }
-        return isAdReady ? "どうがを みて けずる" : "じゅんびちゅう"
+        if isUnlocked { return String(localized: "ゆびで けずってね") }
+        return isAdReady ? String(localized: "どうがを みて けずる") : String(localized: "じゅんびちゅう")
     }
 
     private var foilShader: Shader {
@@ -235,34 +241,69 @@ struct ScratchCardView: View {
     }
 
     private func addPoint(_ point: CGPoint, from previous: CGPoint? = nil) {
-        points.append(point)
         // 線分に沿って削れたマスを記録し、どのくらい削ったかを数える
         let start = previous ?? point
         let steps = max(1, Int(hypot(point.x - start.x, point.y - start.y) / (cellSize / 2)))
+        var newlyCovered = 0
         for step in 0 ... steps {
             let t = CGFloat(step) / CGFloat(steps)
-            markCells(around: CGPoint(x: start.x + (point.x - start.x) * t, y: start.y + (point.y - start.y) * t))
+            newlyCovered += markCells(around: CGPoint(x: start.x + (point.x - start.x) * t, y: start.y + (point.y - start.y) * t))
         }
+
+        // もう削った場所をなぞっているだけなら点を足さず、シェーダーに渡す点の上限を節約する
+        if previous != nil, newlyCovered == 0 {
+            needsStrokeBreak = true
+            return
+        }
+        if needsStrokeBreak {
+            points.append(CGPoint(x: -1, y: -1))
+            needsStrokeBreak = false
+        }
+        points.append(point)
     }
 
-    private func markCells(around point: CGPoint) {
+    /// pointのまわりの削れたマスを記録し、新しく削れたマスの数を返す
+    @discardableResult
+    private func markCells(around point: CGPoint) -> Int {
         let columns = Int(ceil(size.width / cellSize))
         let rows = Int(ceil(size.height / cellSize))
-        let reach = Int(ceil(radius / cellSize))
+        let reach = Int(ceil(coverageRadius / cellSize))
         let centerColumn = Int(point.x / cellSize)
         let centerRow = Int(point.y / cellSize)
+        var added = 0
         for row in (centerRow - reach) ... (centerRow + reach) where row >= 0 && row < rows {
             for column in (centerColumn - reach) ... (centerColumn + reach) where column >= 0 && column < columns {
-                let cellCenter = CGPoint(x: (CGFloat(column) + 0.5) * cellSize, y: (CGFloat(row) + 0.5) * cellSize)
-                if hypot(cellCenter.x - point.x, cellCenter.y - point.y) <= radius {
-                    coveredCells.insert(row * columns + column)
+                let cellCenter = cellCenter(column: column, row: row)
+                guard isVisible(cellCenter), hypot(cellCenter.x - point.x, cellCenter.y - point.y) <= coverageRadius else { continue }
+                if coveredCells.insert(row * columns + column).inserted {
+                    added += 1
                 }
             }
         }
+        return added
+    }
+
+    private func cellCenter(column: Int, row: Int) -> CGPoint {
+        CGPoint(x: (CGFloat(column) + 0.5) * cellSize, y: (CGFloat(row) + 0.5) * cellSize)
+    }
+
+    /// 角丸で切り取られて見えない四すみのマスは、削らなくてよいので数えない
+    private func isVisible(_ point: CGPoint) -> Bool {
+        let r = cornerRadius
+        let nearestX = min(max(point.x, r), size.width - r)
+        let nearestY = min(max(point.y, r), size.height - r)
+        return hypot(point.x - nearestX, point.y - nearestY) <= r
     }
 
     private var coverage: Double {
-        let total = Int(ceil(size.width / cellSize)) * Int(ceil(size.height / cellSize))
+        let columns = Int(ceil(size.width / cellSize))
+        let rows = Int(ceil(size.height / cellSize))
+        var total = 0
+        for row in 0 ..< rows {
+            for column in 0 ..< columns where isVisible(cellCenter(column: column, row: row)) {
+                total += 1
+            }
+        }
         guard total > 0 else { return 0 }
         return Double(coveredCells.count) / Double(total)
     }

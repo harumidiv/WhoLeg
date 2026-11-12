@@ -36,22 +36,8 @@ class ResultViewController: UIHostingController<ResultScreen> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "スコア"
+        title = String(localized: "スコア")
         navigationItem.hidesBackButton = true
-
-        // 色付き背景の上でタイトルとボタンを読めるように白にする
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        appearance.titleTextAttributes = UINavigationBar.appearance().titleTextAttributes ?? [:]
-        appearance.titleTextAttributes[.foregroundColor] = UIColor.white
-        navigationItem.standardAppearance = appearance
-        navigationItem.scrollEdgeAppearance = appearance
-
-        let returnButton = UIBarButtonItem(barButtonSystemItem: .reply, target: self, action: #selector(returnStartScreen(_:)))
-        navigationItem.leftBarButtonItem = returnButton
-
-        let retryButton = UIBarButtonItem(title: "リトライ", style: .plain, target: self, action: #selector(retryQuiz(_:)))
-        navigationItem.rightBarButtonItem = retryButton
 
         // まわりに出す足は、全問の中からランダムに選ぶ
         let legImageNames = presenter.getjson().quiz
@@ -61,6 +47,10 @@ class ResultViewController: UIHostingController<ResultScreen> {
 
         rootView = ResultScreen(score: score, wrongQuizzes: wrongQuizzes, legImageNames: Array(legImageNames), state: state, onUnlock: { [weak self] index in
             self?.showRewardedAd(for: index)
+        }, onBack: { [weak self] in
+            self?.returnStartScreen()
+        }, onRetry: { [weak self] in
+            self?.retryQuiz()
         })
 
         let adManager = RewardedAdManager.shared
@@ -73,6 +63,17 @@ class ResultViewController: UIHostingController<ResultScreen> {
         }
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // もどる・リトライは画面の真ん中に出すので、足に隠れるナビゲーションバーは消す
+        navigationController?.setNavigationBarHidden(true, animated: animated)
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+
     /// リワード広告を最後まで見たら、選んだクイズ1問だけスクラッチを削れるようにする（図鑑には登録しない）
     private func showRewardedAd(for index: Int) {
         RewardedAdManager.shared.show(from: self) { [weak self] in
@@ -80,11 +81,11 @@ class ResultViewController: UIHostingController<ResultScreen> {
         }
     }
 
-    @objc func returnStartScreen(_ sender: UIBarButtonItem) {
+    private func returnStartScreen() {
         wireframe.showTitle(vc: self)
     }
 
-    @objc func retryQuiz(_ sender: UIBarButtonItem) {
+    private func retryQuiz() {
         wireframe.showRetryQuiz(vc: self, data: presenter.getjson())
     }
 }

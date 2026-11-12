@@ -74,6 +74,8 @@ struct TitleScreen: View {
         Button(action: onStart) {
             Label("スタート", systemImage: "play.fill")
                 .font(.system(size: isRegular ? 32 : 26, weight: .bold, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
                 .frame(maxWidth: .infinity)
                 .frame(height: isRegular ? 80 : 64)
         }
@@ -85,13 +87,14 @@ struct TitleScreen: View {
 struct ChunkyButtonStyle: ButtonStyle {
     let color: Color
     let shadowColor: Color
+    var foregroundColor: Color = .white
 
     private let depth: CGFloat = 6
 
     func makeBody(configuration: Configuration) -> some View {
         let pressed = configuration.isPressed
         configuration.label
-            .foregroundStyle(.white)
+            .foregroundStyle(foregroundColor)
             .background(Capsule().fill(color))
             .offset(y: pressed ? depth : 0)
             .background(Capsule().fill(shadowColor).offset(y: depth))
@@ -101,8 +104,8 @@ struct ChunkyButtonStyle: ButtonStyle {
 }
 
 extension ButtonStyle where Self == ChunkyButtonStyle {
-    static func chunky(color: Color, shadowColor: Color) -> ChunkyButtonStyle {
-        ChunkyButtonStyle(color: color, shadowColor: shadowColor)
+    static func chunky(color: Color, shadowColor: Color, foregroundColor: Color = .white) -> ChunkyButtonStyle {
+        ChunkyButtonStyle(color: color, shadowColor: shadowColor, foregroundColor: foregroundColor)
     }
 }
 
