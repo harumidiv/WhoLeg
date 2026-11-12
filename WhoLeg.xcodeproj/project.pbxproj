@@ -7,9 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DAD0B0C2A00000100000023 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000022 /* InfoPlist.xcstrings */; };
-		0DAD0B0C2A00000100000021 /* Animals.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000020 /* Animals.xcstrings */; };
-		0DAD0B0C2A0000010000001F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001E /* Localizable.xcstrings */; };
 		053DE7E2232DC6E90091B7CD /* QuizRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */; };
 		057AF3E730A446FF000114CE /* RewardedAdManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 057AF3E630A446FF000114CE /* RewardedAdManager.swift */; };
 		05E5D723233C840F00916809 /* SnapShotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05E5D722233C840F00916809 /* SnapShotTests.swift */; };
@@ -55,6 +52,9 @@
 		0DAD0B0C2A00000100000019 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000018 /* SplashScreen.swift */; };
 		0DAD0B0C2A0000010000001B /* PopSoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */; };
 		0DAD0B0C2A0000010000001D /* ConfettiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001C /* ConfettiView.swift */; };
+		0DAD0B0C2A0000010000001F /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A0000010000001E /* Localizable.xcstrings */; };
+		0DAD0B0C2A00000100000021 /* Animals.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000020 /* Animals.xcstrings */; };
+		0DAD0B0C2A00000100000023 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 0DAD0B0C2A00000100000022 /* InfoPlist.xcstrings */; };
 		0DC42A60229592AA00A19088 /* Swift+Addition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A5F229592AA00A19088 /* Swift+Addition.swift */; };
 		0DC42A632296F02800A19088 /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A612296F02800A19088 /* InformationViewController.swift */; };
 		0DC42A682296F24400A19088 /* AppAboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DC42A662296F24400A19088 /* AppAboutViewController.swift */; };
@@ -88,9 +88,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DAD0B0C2A00000100000022 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
-		0DAD0B0C2A00000100000020 /* Animals.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Animals.xcstrings; sourceTree = "<group>"; };
-		0DAD0B0C2A0000010000001E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		053DE7E1232DC6E90091B7CD /* QuizRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizRepositoryTests.swift; sourceTree = "<group>"; };
 		057AF3E630A446FF000114CE /* RewardedAdManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RewardedAdManager.swift; sourceTree = "<group>"; };
 		05E5D722233C840F00916809 /* SnapShotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapShotTests.swift; sourceTree = "<group>"; };
@@ -141,6 +138,9 @@
 		0DAD0B0C2A00000100000018 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
 		0DAD0B0C2A0000010000001A /* PopSoundPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopSoundPlayer.swift; sourceTree = "<group>"; };
 		0DAD0B0C2A0000010000001C /* ConfettiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfettiView.swift; sourceTree = "<group>"; };
+		0DAD0B0C2A0000010000001E /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000020 /* Animals.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Animals.xcstrings; sourceTree = "<group>"; };
+		0DAD0B0C2A00000100000022 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		0DC42A5F229592AA00A19088 /* Swift+Addition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Swift+Addition.swift"; sourceTree = "<group>"; };
 		0DC42A612296F02800A19088 /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
 		0DC42A662296F24400A19088 /* AppAboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAboutViewController.swift; sourceTree = "<group>"; };
@@ -785,7 +785,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -793,7 +793,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1.1;
+				MARKETING_VERSION = 3.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -806,7 +806,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				INFOPLIST_FILE = WhoLeg/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.games";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
@@ -814,7 +814,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.1.1;
+				MARKETING_VERSION = 3.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = harumidiv.WhoLeg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
