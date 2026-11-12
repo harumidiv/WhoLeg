@@ -33,7 +33,7 @@ struct PictureBookDetailScreen: View {
                     .multilineTextAlignment(.center)
 
                 Button(action: onDetailTapped) {
-                    Label(viewModel.text + "って何？", systemImage: "safari")
+                    Label(String(localized: "\(viewModel.text)って何？"), systemImage: "safari")
                         .font(.system(.headline, design: .rounded))
                         .padding(.horizontal, 8)
                         .padding(.vertical, 6)

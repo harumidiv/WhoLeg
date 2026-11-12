@@ -24,7 +24,7 @@ class PictureBookDetailViewController: UIHostingController<PictureBookDetailScre
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "クイズ詳細"
+        title = String(localized: "クイズ詳細")
         navigationItem.largeTitleDisplayMode = .never
 
         rootView = PictureBookDetailScreen(viewModel: viewModel, onDetailTapped: { [weak self] in

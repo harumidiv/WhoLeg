@@ -74,6 +74,8 @@ struct TitleScreen: View {
         Button(action: onStart) {
             Label("スタート", systemImage: "play.fill")
                 .font(.system(size: isRegular ? 32 : 26, weight: .bold, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.6)
                 .frame(maxWidth: .infinity)
                 .frame(height: isRegular ? 80 : 64)
         }

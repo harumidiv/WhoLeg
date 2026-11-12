@@ -38,7 +38,7 @@ struct InformationScreen: View {
     }
 
     private func row(
-        title: String,
+        title: LocalizedStringKey,
         systemImage: String,
         color: Color,
         action: @escaping () -> Void,

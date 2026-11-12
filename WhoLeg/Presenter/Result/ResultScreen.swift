@@ -44,17 +44,17 @@ struct ResultScreen: View {
         if score == 10 {
             return Style(
                 background: Color(red: 1, green: 0.485, blue: 0.226),
-                message: "全問正解!!"
+                message: String(localized: "全問正解!!")
             )
         } else if score > 5 {
             return Style(
                 background: .brand,
-                message: "まずまずだね"
+                message: String(localized: "まずまずだね")
             )
         } else {
             return Style(
                 background: .brandNavy,
-                message: "うーん..."
+                message: String(localized: "うーん...")
             )
         }
     }
@@ -115,6 +115,10 @@ struct ResultScreen: View {
             Button(action: onBack) {
                 Label("もどる", systemImage: "arrow.uturn.backward")
                     .font(.system(size: 20, weight: .heavy, design: .rounded))
+                    // 言語によっては文字が長くなるので、収まらなければ小さくする
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 12)
                     .frame(maxWidth: .infinity)
                     .frame(height: 56)
             }
@@ -124,6 +128,10 @@ struct ResultScreen: View {
             Button(action: onRetry) {
                 Label("リトライ", systemImage: "arrow.clockwise")
                     .font(.system(size: 20, weight: .heavy, design: .rounded))
+                    // 言語によっては文字が長くなるので、収まらなければ小さくする
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.6)
+                    .padding(.horizontal, 12)
                     .frame(maxWidth: .infinity)
                     .frame(height: 56)
             }
@@ -148,6 +156,8 @@ struct ResultScreen: View {
             }
             Text(message)
                 .font(.system(size: 32, weight: .bold, design: .rounded))
+                .lineLimit(1)
+                .minimumScaleFactor(0.5)
         }
         .foregroundStyle(.white)
         // 後ろの足に重なっても読めるように影を濃くする

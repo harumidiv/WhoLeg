@@ -77,7 +77,7 @@ struct QuizScreen: View {
             .font(.system(size: 220, weight: .heavy))
             .foregroundStyle(isCorrect ? Color.brand : Color.brandNavy)
             .shadow(color: .white, radius: 2)
-            .accessibilityLabel(isCorrect ? "せいかい" : "ふせいかい")
+            .accessibilityLabel(isCorrect ? Text("せいかい") : Text("ふせいかい"))
     }
 
     private var optionButtons: some View {

@@ -39,7 +39,7 @@ class InformationViewController: UIHostingController<InformationScreen> {
     }
 
     override func viewDidLoad() {
-        title = "じょうほう"
+        title = String(localized: "じょうほう")
         navigationItem.largeTitleDisplayMode = .never
         super.viewDidLoad()
 

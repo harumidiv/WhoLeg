@@ -21,6 +21,6 @@ class AppAboutViewController: UIHostingController<AppAboutScreen> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "このアプリについて"
+        title = String(localized: "このアプリについて")
     }
 }

@@ -36,7 +36,7 @@ class ResultViewController: UIHostingController<ResultScreen> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = "スコア"
+        title = String(localized: "スコア")
         navigationItem.hidesBackButton = true
 
         // まわりに出す足は、全問の中からランダムに選ぶ

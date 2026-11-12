@@ -40,7 +40,7 @@ class TitleViewController: UIHostingController<TitleScreen> {
             onStart: { [weak self] in self?.quizStart() }
         )
 
-        title = "だれのあし？"
+        title = String(localized: "だれのあし？")
         navigationItem.hidesBackButton = true
         navigationItem.largeTitleDisplayMode = .never
         navigationItem.rightBarButtonItem = UIBarButtonItem(

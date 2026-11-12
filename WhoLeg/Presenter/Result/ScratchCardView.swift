@@ -161,7 +161,7 @@ struct ScratchCardView: View {
                 foil
             }
             .buttonStyle(FoilButtonStyle())
-            .accessibilityLabel(isAdReady ? "どうがを みて けずる" : "じゅんびちゅう")
+            .accessibilityLabel(isAdReady ? Text("どうがを みて けずる") : Text("じゅんびちゅう"))
             .accessibilityHint("広告を見ると、けずって答えを見られます")
         }
     }
@@ -178,14 +178,14 @@ struct ScratchCardView: View {
                 .font(.system(.subheadline, design: .rounded, weight: .heavy))
                 .foregroundStyle(Color(UIColor(hex: "#2B3240")).opacity(isUnlocked || isAdReady ? 1 : 0.5))
                 .lineLimit(1)
-                .minimumScaleFactor(0.7)
+                .minimumScaleFactor(0.6)
                 .padding(.horizontal, 8)
         }
     }
 
     private var foilLabel: String {
-        if isUnlocked { return "ゆびで けずってね" }
-        return isAdReady ? "どうがを みて けずる" : "じゅんびちゅう"
+        if isUnlocked { return String(localized: "ゆびで けずってね") }
+        return isAdReady ? String(localized: "どうがを みて けずる") : String(localized: "じゅんびちゅう")
     }
 
     private var foilShader: Shader {
